@@ -1,0 +1,121 @@
+@import "gruvbox-theme.css";
+
+* {
+  font-family: georgia, serif;
+  transition: background-color 0.3s ease, color 0.3s ease, fill 0.3s ease;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h3 {
+  color: var(--fg3);
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  /* Space between nav items */
+  padding: 20px 40px;
+  /* Internal spacing */
+}
+
+a {
+  color: var(--blue);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--red);
+}
+
+nav a.active {
+  color: var(--red);
+  font-weight: bold;
+}
+
+#theme-toggle {
+  height: 50px;
+  width: 50px;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--fg);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  #theme-toggle {
+    height: 35px;
+    width: 35px;
+    padding: 6px;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+#theme-toggle:hover {
+  background-color: var(--fg3)
+}
+
+#theme-toggle svg {
+  fill: var(--bg);
+}
+
+#theme-toggle svg:last-child {
+  display: none;
+}
+
+[data-theme="dark"] #theme-toggle svg:first-child {
+  display: none;
+}
+
+[data-theme="dark"] #theme-toggle svg:last-child {
+  display: block;
+}
+
+/* Content section styling */
+.content-section {
+  display: none;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.content-section h2 {
+  color: var(--fg);
+  margin-bottom: 1rem;
+}
+
+.content-section ul {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.content-section li {
+  margin-bottom: 0.5rem;
+}
