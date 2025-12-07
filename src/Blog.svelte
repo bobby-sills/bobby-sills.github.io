@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Nav from './lib/Nav.svelte';
+  import Nav from "./lib/Nav.svelte";
 </script>
 
 <main>
-  <Nav currentPage="blog" />
+  <Nav />
 
-  <h1>Blog</h1>
-  <p>Blog posts coming soon.</p>
+  <h1>blog</h1>
+  <p>blog posts coming soon.</p>
 </main>

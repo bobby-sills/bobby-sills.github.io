@@ -1,13 +1,22 @@
 <script lang="ts">
   import ThemeToggle from "./ThemeToggle.svelte";
-
-  const { currentPage }: { currentPage: string } = $props();
+  import { location } from 'svelte-spa-router'
 
   const links = {
-    home: "/",
-    blog: "/blog.html",
-    books: "/books.html",
+    home: "/#/",
+    blog: "/#/blog",
+    books: "/#/books",
   };
+
+  // Map routes to page names for active state
+  const routeToPage: Record<string, string> = {
+    '/': 'home',
+    '/blog': 'blog',
+    '/books': 'books',
+  }
+
+  // Automatically derive current page from route
+  let currentPage = $derived(routeToPage[$location] || 'home')
 </script>
 
 <header>

@@ -64,7 +64,7 @@
 </script>
 
 <main>
-  <Nav currentPage="books" />
+  <Nav />
 
   <h1>reading stats</h1>
 

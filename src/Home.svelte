@@ -3,7 +3,7 @@
 </script>
 
 <main>
-  <Nav currentPage="home" />
+  <Nav />
 
   <div
     style:display="flex"
