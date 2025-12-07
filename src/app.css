@@ -1,0 +1,55 @@
+:root {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.125rem;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg);
+  width: 100%;
+}
+
+#app {
+  width: 100%;
+  max-width: 700px;
+}
+
+main {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  font-weight: normal;
+  color: var(--red);
+}
+
+h2 {
+  font-weight: normal;
+  color: var(--green);
+}
+
+p {
+  color: var(--fg);
+}
+
+a:link,
+a:visited {
+  color: var(--aqua-dim)
+}
+
+main {
+  margin-top: 24px;
+}
+
+span {
+  color: var(--fg);
+}

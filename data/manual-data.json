@@ -1,0 +1,26 @@
+{
+  "currently_reading": [
+    {
+      "title": "Salem's Lot",
+      "authors": "Stephen King",
+      "pages_read": 0,
+      "total_pages": 653
+    }
+  ],
+  "completed": [
+    {
+      "title": "Purple Hibiscus",
+      "authors": "Chimamanda Ngozi Adichie",
+      "date_completed": "11 Oct 2025"
+    }
+  ],
+  "want_to_read": [
+    {
+      "title": "All Quiet on the Western Front",
+      "authors": "Erich Maria Remarque"
+    }
+  ],
+  "page_counts": {
+    "Middlemarch": 713
+  }
+}
