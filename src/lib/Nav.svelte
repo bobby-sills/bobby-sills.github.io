@@ -3,9 +3,9 @@
   import { location } from 'svelte-spa-router'
 
   const links = {
-    home: "/#/",
-    blog: "/#/blog",
-    books: "/#/books",
+    home: "#/",
+    blog: "#/blog",
+    books: "#/books",
   };
 
   // Map routes to page names for active state

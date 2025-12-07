@@ -11,7 +11,12 @@
     style:gap="24px"
     style:flex-wrap="wrap"
   >
-    <img src="/profile-photo.jpg" alt="Portrait of a 9th grader" />
+    <img
+      src="/profile-photo.jpg"
+      alt="Portrait of a 9th grader"
+      width="200"
+      height="200"
+    />
     <div
       style:display="flex"
       style:flex-direction="column"
@@ -33,8 +38,6 @@
 <style>
   img {
     border-radius: 10px;
-    max-width: 200px;
-    height: auto;
   }
   h3 {
     font-weight: normal;
