@@ -1,0 +1,1 @@
+import{f as m,N as t,a as e,c as i,i as r,m as s}from"./Nav-Nmpe-UVH.js";var g=m("<main><!> <h1>Blog</h1> <p>Blog posts coming soon.</p></main>");function p(o){var a=g(),n=i(a);t(n,{currentPage:"blog"}),e(o,a)}r();s(p,{target:document.getElementById("app")});
