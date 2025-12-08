@@ -2,7 +2,7 @@
   import Nav from "./lib/Nav.svelte";
 
   $effect(() => {
-    document.title = "bobby sills | blog";
+    document.title = "blog | bobby sills";
   });
 </script>
 

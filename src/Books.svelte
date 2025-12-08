@@ -1,11 +1,12 @@
 <script lang="ts">
   import Book from "./lib/Book.svelte";
   import Nav from "./lib/Nav.svelte";
+  import ContributionGraph from "./lib/ContributionGraph.svelte";
   import koreaderBooks from "../data/koreader-books.json";
   import manualData from "../data/manual-data.json";
 
   $effect(() => {
-    document.title = "bobby sills | books";
+    document.title = "books | bobby sills";
   });
 
   interface Book {
@@ -71,6 +72,8 @@
   <Nav />
 
   <h1>books</h1>
+
+  <ContributionGraph />
 
   <h2>currently reading</h2>
   {#each currentlyReading as book (book.title)}
