@@ -42,6 +42,9 @@
 <style>
   img {
     border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    display: block;
   }
   h3 {
     font-weight: normal;
