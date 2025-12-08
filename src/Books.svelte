@@ -1,8 +1,12 @@
 <script lang="ts">
   import Book from "./lib/Book.svelte";
-  import Nav from './lib/Nav.svelte';
+  import Nav from "./lib/Nav.svelte";
   import koreaderData from "../data/koreader-data.json";
   import manualData from "../data/manual-data.json";
+
+  $effect(() => {
+    document.title = "bobby sills | books";
+  });
 
   interface Book {
     title: string;
@@ -66,7 +70,7 @@
 <main>
   <Nav />
 
-  <h1>reading stats</h1>
+  <h1>books</h1>
 
   <h2>currently reading</h2>
   {#each currentlyReading as book (book.title)}

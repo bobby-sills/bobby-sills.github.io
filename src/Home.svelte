@@ -1,5 +1,9 @@
 <script lang="ts">
   import Nav from "./lib/Nav.svelte";
+
+  $effect(() => {
+    document.title = "bobby sills";
+  });
 </script>
 
 <main>
