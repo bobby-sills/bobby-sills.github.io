@@ -1,7 +1,7 @@
 <script lang="ts">
   import Book from "./lib/Book.svelte";
   import Nav from "./lib/Nav.svelte";
-  import koreaderData from "../data/koreader-data.json";
+  import koreaderBooks from "../data/koreader-books.json";
   import manualData from "../data/manual-data.json";
 
   $effect(() => {
@@ -17,14 +17,14 @@
   }
 
   // Combine koreader books with manual books (prefer KOReader data)
-  const koreaderBooks = koreaderData.books.map((book) => ({
+  const koreaderBooksWithPages = koreaderBooks.books.map((book) => ({
     ...book,
     total_pages:
       manualData.page_counts[book.title as keyof typeof manualData.page_counts],
   }));
 
   // Get titles from KOReader to avoid duplicates
-  const koreaderTitles = new Set(koreaderBooks.map((b) => b.title));
+  const koreaderTitles = new Set(koreaderBooksWithPages.map((b) => b.title));
 
   // Add manual currently_reading books that aren't in KOReader data
   const manualCurrentlyReading = manualData.currently_reading
@@ -53,7 +53,7 @@
   }));
 
   const allBooks: Book[] = [
-    ...koreaderBooks,
+    ...koreaderBooksWithPages,
     ...manualCurrentlyReading,
     ...manualCompleted,
   ];

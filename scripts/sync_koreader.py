@@ -115,18 +115,28 @@ for row in books:
             book_data["date_completed"] = date_obj.strftime("%d %b %Y")
         filtered_books.append(book_data)
 
-# Process and create JSON output
-reading_data = {
-    "updated_at": datetime.now().isoformat(),
-    "books": filtered_books,
-    "yearly_stats": yearly_stats
-}
-
 # Create data directory if it doesn't exist
 os.makedirs('data', exist_ok=True)
 
-# Write JSON file
-with open('data/koreader-data.json', 'w') as f:
-    json.dump(reading_data, f, indent=2)
+# Split into two separate files
+# 1. Book information
+book_data = {
+    "updated_at": datetime.now().isoformat(),
+    "books": filtered_books
+}
+
+# 2. Reading statistics (time read per day)
+stats_data = {
+    "updated_at": datetime.now().isoformat(),
+    "yearly_stats": yearly_stats
+}
+
+# Write book data file
+with open('data/koreader-books.json', 'w') as f:
+    json.dump(book_data, f, indent=2)
+
+# Write reading stats file
+with open('data/koreader-stats.json', 'w') as f:
+    json.dump(stats_data, f, indent=2)
 
 conn.close()
