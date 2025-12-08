@@ -51,9 +51,10 @@
   // Generate array of all days in the past 6 months
   const generateYearData = () => {
     // Find the most recent date in the data
-    const mostRecentDate = koreaderStats.yearly_stats.length > 0
-      ? new Date(koreaderStats.yearly_stats[0].date)
-      : new Date();
+    const mostRecentDate =
+      koreaderStats.yearly_stats.length > 0
+        ? new Date(koreaderStats.yearly_stats[0].date)
+        : new Date();
 
     const sixMonthsAgo = new Date(mostRecentDate);
     sixMonthsAgo.setMonth(mostRecentDate.getMonth() - 6);
@@ -145,7 +146,7 @@
 </script>
 
 <div class="contribution-graph">
-  <h3>reading activity (past 6 months)</h3>
+  <h3>reading activity - data from koreader</h3>
 
   <div class="graph-container">
     <div class="month-labels">
@@ -197,7 +198,10 @@
           class="day legend-day"
           style="background-color: color-mix(in srgb, var(--{maxColor}) 75%, var(--bg2) 25%);"
         ></div>
-        <div class="day legend-day" style="background-color: var(--{maxColor});"></div>
+        <div
+          class="day legend-day"
+          style="background-color: var(--{maxColor});"
+        ></div>
       </div>
       <span>More</span>
     </div>
