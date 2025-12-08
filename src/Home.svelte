@@ -29,10 +29,10 @@
     >
       <h3>bobby sills</h3>
       <span
-        >9th grade developer working out of vientiane, laos. just released an
-        app to learn to read lao. get it on <a
-          href="https://apps.apple.com/us/app/read-lao/id6749076081">ios</a
-        > and android (coming soon).
+        >9th grade developer working out of vientiane, laos. just released
+        language learning app for lao. get it on
+        <a href="https://apps.apple.com/us/app/read-lao/id6749076081">ios</a> and
+        android (coming soon).
       </span>
       <span> </span>
     </div>
