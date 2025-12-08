@@ -15,10 +15,12 @@
     "@tsconfig/svelte": "^5.0.6",
     "@types/node": "^24.10.1",
     "gh-pages": "^6.3.0",
+    "markdown-it": "^14.1.0",
     "svelte": "^5.43.8",
     "svelte-check": "^4.3.4",
     "typescript": "~5.9.3",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "vite-plugin-markdown": "^2.2.0"
   },
   "dependencies": {
     "svelte-spa-router": "^4.0.1"

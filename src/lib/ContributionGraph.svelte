@@ -50,9 +50,13 @@
 
   // Generate array of all days in the past 6 months
   const generateYearData = () => {
-    const today = new Date();
-    const sixMonthsAgo = new Date(today);
-    sixMonthsAgo.setMonth(today.getMonth() - 6);
+    // Find the most recent date in the data
+    const mostRecentDate = koreaderStats.yearly_stats.length > 0
+      ? new Date(koreaderStats.yearly_stats[0].date)
+      : new Date();
+
+    const sixMonthsAgo = new Date(mostRecentDate);
+    sixMonthsAgo.setMonth(mostRecentDate.getMonth() - 6);
 
     // Align to the start of the week (Sunday)
     const startDate = new Date(sixMonthsAgo);
@@ -62,7 +66,7 @@
     const days: Array<{ date: string; pages: number; hours: number }> = [];
     const current = new Date(startDate);
 
-    while (current <= today) {
+    while (current <= mostRecentDate) {
       const dateStr = current.toISOString().split("T")[0];
       const stat = statsMap.get(dateStr);
       days.push({
