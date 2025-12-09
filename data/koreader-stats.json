@@ -1,11 +1,29 @@
 {
-  "updated_at": "2025-12-09T01:00:51.770010",
+  "updated_at": "2025-12-09T07:42:36.881475",
   "yearly_stats": [
     {
+      "date": "2025-12-09",
+      "pages": 10,
+      "duration_seconds": 555,
+      "duration_hours": 0.15
+    },
+    {
+      "date": "2025-12-08",
+      "pages": 1,
+      "duration_seconds": 120,
+      "duration_hours": 0.03
+    },
+    {
+      "date": "2025-12-07",
+      "pages": 6,
+      "duration_seconds": 354,
+      "duration_hours": 0.1
+    },
+    {
       "date": "2025-12-06",
-      "pages": 5,
-      "duration_seconds": 855,
-      "duration_hours": 0.24
+      "pages": 10,
+      "duration_seconds": 1717,
+      "duration_hours": 0.48
     },
     {
       "date": "2025-12-05",
