@@ -285,7 +285,7 @@
 
   .day:not(.empty):not(.legend-day):hover {
     cursor: pointer;
-    filter: brightness(1.3);
+    filter: brightness(var(--hover-brightness));
   }
 
   .day.empty {

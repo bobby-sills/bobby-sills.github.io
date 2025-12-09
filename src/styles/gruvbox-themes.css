@@ -31,6 +31,8 @@
   --aqua-dim: #689d6a;
   --gray-dim: #a89984;
   --orange-dim: #d65d0e;
+
+  --hover-brightness: 1.3;
 }
 
 /* Light theme */
@@ -66,4 +68,6 @@
   --aqua-dim: #689d6a;
   --orange-dim: #d65d0e;
   --gray-dim: #7c6f64;
+
+  --hover-brightness: 0.7;
 }

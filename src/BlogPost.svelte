@@ -56,10 +56,6 @@
     margin-bottom: 2rem;
   }
 
-  .blog-post h1 {
-    margin: 0.5rem 0;
-  }
-
   .post-date {
     display: block;
     color: var(--fg2);
