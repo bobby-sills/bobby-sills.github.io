@@ -2,37 +2,25 @@ import os
 import json
 import sqlite3
 from datetime import datetime, timedelta
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
-from googleapiclient.http import MediaIoBaseDownload
-import io
+import requests
+from requests.auth import HTTPBasicAuth
 
-# Get credentials from environment
-credentials_json = os.environ['GOOGLE_CREDENTIALS']
-file_id = os.environ['FILE_ID']
+# Get WebDAV credentials from environment
+webdav_url = os.environ['WEBDAV_URL']
+webdav_username = os.environ['WEBDAV_USERNAME']
+webdav_password = os.environ['WEBDAV_PASSWORD']
 
-# Parse credentials
-credentials_info = json.loads(credentials_json)
-credentials = service_account.Credentials.from_service_account_info(
-    credentials_info,
-    scopes=['https://www.googleapis.com/auth/drive.readonly']
+# Download the file from WebDAV
+response = requests.get(
+    webdav_url,
+    auth=HTTPBasicAuth(webdav_username, webdav_password),
+    timeout=30
 )
-
-# Build Drive API client
-service = build('drive', 'v3', credentials=credentials)
-
-# Download the file
-request = service.files().get_media(fileId=file_id)
-file_handle = io.BytesIO()
-downloader = MediaIoBaseDownload(file_handle, request)
-
-done = False
-while not done:
-    status, done = downloader.next_chunk()
+response.raise_for_status()
 
 # Save to temporary file
 with open('koreader.db', 'wb') as f:
-    f.write(file_handle.getvalue())
+    f.write(response.content)
 
 # Connect to SQLite database
 conn = sqlite3.connect('koreader.db')

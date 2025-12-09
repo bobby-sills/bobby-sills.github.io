@@ -22,12 +22,13 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
-      
+          pip install requests
+
       - name: Download and parse KOReader file
         env:
-          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
-          FILE_ID: ${{ secrets.KOREADER_FILE_ID }}
+          WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
+          WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
+          WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
         run: python scripts/sync_koreader.py
       
       - name: Commit and push changes
