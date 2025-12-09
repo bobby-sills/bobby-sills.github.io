@@ -97,7 +97,7 @@ def get_yearly_reading_stats():
 yearly_stats = get_yearly_reading_stats()
 
 # List of books to track
-books_to_track = ["Middlemarch"]
+books_to_track = ["Middlemarch", "Project Hail Mary"]
 
 # Filter for specific books
 filtered_books = []
