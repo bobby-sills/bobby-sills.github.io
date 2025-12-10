@@ -35,6 +35,23 @@ main {
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1em;
+  background-color: var(--bg2);
+  border: 1px solid var(--fg);
+  color: var(--fg);
+}
+
+button:hover {
+  background-color: var(--bg2);
+}
+
+button:active {
+  background-color: var(--bg1);
+}
+
 
 h1 {
   font-weight: normal;
