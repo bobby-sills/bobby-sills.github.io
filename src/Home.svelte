@@ -31,8 +31,13 @@
       <span
         >9th grade developer working out of vientiane, laos. just released
         language learning app for lao. get it on
-        <a href="https://apps.apple.com/us/app/read-lao/id6749076081">ios</a> and
-        android (coming soon).
+        <a href="https://apps.apple.com/us/app/read-lao/id6749076081">ios</a>
+        and
+        <a
+          href="https://play.google.com/store/apps/details?id=com.readlao.app&pcampaignid=web_share"
+        >
+          android
+        </a>.
       </span>
       <span> </span>
     </div>
