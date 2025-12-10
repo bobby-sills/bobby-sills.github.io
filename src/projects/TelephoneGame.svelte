@@ -1,19 +1,24 @@
 <script lang="ts">
   import Nav from "../lib/Nav.svelte";
+  import { playDialTone } from "../lib/dtmf";
 
   $effect(() => {
     document.title = "telephone game | bobby sills";
   });
 
-  let typedNumbers = $state("");
+  let phoneInput = $state("");
   let gameStarted = $state(false);
 
-  function playSound(url: string) {
-    const audio = new Audio(url);
-    audio.play();
+  function handleKeyPress(key: string) {
+    playDialTone(key);
+    phoneInput += key;
   }
 
-  $effect(() => {});
+  $effect(() => {
+    if (phoneInput.length > 20) {
+      phoneInput = "";
+    }
+  });
 </script>
 
 <main>
@@ -33,11 +38,11 @@
 
     <p style="text-align: center; color: var(--fg2);">please enable sound</p>
   {:else}
-    <span>{typedNumbers}</span>
+    <span>{phoneInput}</span>
 
     <div class="keypad">
       {#each ["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"] as num}
-        <button class="key" onclick={() => (typedNumbers += num)}>{num}</button>
+        <button class="key" onclick={() => handleKeyPress(num)}>{num}</button>
       {/each}
     </div>
   {/if}
