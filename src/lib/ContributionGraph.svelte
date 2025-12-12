@@ -1,14 +1,26 @@
 <script lang="ts">
   import koreaderStats from "../../data/koreader-stats.json";
 
+  interface BookData {
+    title: string;
+    pages: number;
+    duration_seconds: number;
+    duration_hours: number;
+  }
+
   interface DayData {
     date: string;
     pages: number;
     duration_hours: number;
+    books?: BookData[];
   }
 
-  let hoveredDay: { date: string; pages: number; minutes: number } | null =
-    null;
+  let hoveredDay: {
+    date: string;
+    pages: number;
+    minutes: number;
+    books?: BookData[];
+  } | null = null;
   let tooltipX = 0;
   let tooltipY = 0;
 
@@ -16,7 +28,7 @@
 
   function handleMouseEnter(
     event: MouseEvent,
-    day: { date: string; pages: number; hours: number },
+    day: { date: string; pages: number; hours: number; books?: BookData[] },
   ) {
     const rect = (event.target as HTMLElement).getBoundingClientRect();
     tooltipX = rect.left + rect.width / 2;
@@ -25,6 +37,7 @@
       date: day.date,
       pages: day.pages,
       minutes: Math.round(day.hours * 60),
+      books: day.books,
     };
   }
 
@@ -64,7 +77,12 @@
     const dayOfWeek = startDate.getDay();
     startDate.setDate(startDate.getDate() - dayOfWeek);
 
-    const days: Array<{ date: string; pages: number; hours: number }> = [];
+    const days: Array<{
+      date: string;
+      pages: number;
+      hours: number;
+      books?: BookData[];
+    }> = [];
     const current = new Date(startDate);
 
     while (current <= mostRecentDate) {
@@ -74,6 +92,7 @@
         date: dateStr,
         pages: stat?.pages || 0,
         hours: stat?.duration_hours || 0,
+        books: stat?.books,
       });
       current.setDate(current.getDate() + 1);
     }
@@ -94,9 +113,20 @@
 
   // Organize days into weeks (Sunday start)
   const organizeIntoWeeks = () => {
-    const weeks: Array<Array<{ date: string; pages: number; hours: number }>> =
-      [];
-    let currentWeek: Array<{ date: string; pages: number; hours: number }> = [];
+    const weeks: Array<
+      Array<{
+        date: string;
+        pages: number;
+        hours: number;
+        books?: BookData[];
+      }>
+    > = [];
+    let currentWeek: Array<{
+      date: string;
+      pages: number;
+      hours: number;
+      books?: BookData[];
+    }> = [];
 
     yearData.forEach((day) => {
       currentWeek.push(day);
@@ -217,6 +247,18 @@
         <strong
           >{hoveredDay.minutes} minutes on {formatDate(hoveredDay.date)}</strong
         >
+        {#if hoveredDay.books && hoveredDay.books.length > 0}
+          <div class="book-breakdown">
+            {#each hoveredDay.books as book}
+              <div class="book-item">
+                <span class="book-title">{book.title}:</span>
+                <span class="book-time"
+                  >{Math.round(book.duration_hours * 60)} min</span
+                >
+              </div>
+            {/each}
+          </div>
+        {/if}
       {/if}
     </div>
   </div>
@@ -334,12 +376,28 @@
     padding: 8px 12px;
     border-radius: 4px;
     font-size: 0.85rem;
-    white-space: nowrap;
+    white-space: normal;
+    min-width: 200px;
   }
 
   .tooltip-content strong {
     display: block;
     font-weight: normal;
+    white-space: nowrap;
+  }
+
+  .book-breakdown {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--bg2);
+    font-size: 0.8rem;
+  }
+
+  .book-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 4px;
   }
 
   @media (max-width: 600px) {

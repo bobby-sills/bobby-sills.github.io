@@ -28,7 +28,14 @@
   const koreaderTitles = new Set(koreaderBooksWithPages.map((b) => b.title));
 
   // Add manual currently_reading books that aren't in KOReader data
-  const manualCurrentlyReading = manualData.currently_reading
+  const manualCurrentlyReading = (
+    manualData.currently_reading as Array<{
+      title: string;
+      authors: string;
+      pages_read: number;
+      total_pages: number;
+    }>
+  )
     .filter((book) => !koreaderTitles.has(book.title))
     .map((book) => ({
       title: book.title,
