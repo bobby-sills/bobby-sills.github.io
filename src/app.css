@@ -65,6 +65,12 @@ h2 {
 
 p {
   color: var(--fg);
+  line-height: 1.4;
+}
+
+li {
+  color: var(--fg);
+  line-height: 1.4;
 }
 
 a:link,

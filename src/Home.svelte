@@ -28,8 +28,8 @@
       style:min-width="300px"
     >
       <h3>bobby sills</h3>
-      <span
-        >9th grade developer working out of vientiane, laos. just released
+      <p>
+        9th grade developer working out of vientiane, laos. just released
         language learning app for lao. get it on
         <a href="https://apps.apple.com/us/app/read-lao/id6749076081">ios</a>
         and
@@ -38,8 +38,39 @@
         >
           android
         </a>.
-      </span>
-      <span> </span>
+      </p>
+    </div>
+  </div>
+
+  <div
+    style:display="grid"
+    style:grid-template-columns="repeat(auto-fit, minmax(300px, 1fr))"
+    style:margin="24px 0px"
+    style:gap="24px"
+  >
+    <div>
+      <h2>projects</h2>
+      <ul>
+        <li><a href="#/telephone-game">telephone game</a></li>
+        <li>read lao app (see above)</li>
+      </ul>
+    </div>
+    <div>
+      <h2>profiles</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/@itsmebobbysills">youtube</a></li>
+        <li>
+          <a href="https://monkeytype.com/profile/WriteThatDown">monkeytype</a>
+        </li>
+        <li>
+          <a href="https://scratch.mit.edu/users/WriteThatDown">scratch</a> (not
+          as active anymore)
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2>work experience</h2>
+      <p>I don't really have any</p>
     </div>
   </div>
 </main>
