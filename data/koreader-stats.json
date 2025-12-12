@@ -1,11 +1,23 @@
 {
-  "updated_at": "2025-12-10T01:02:40.368889",
+  "updated_at": "2025-12-12T01:03:00.590292",
   "yearly_stats": [
     {
+      "date": "2025-12-11",
+      "pages": 92,
+      "duration_seconds": 6012,
+      "duration_hours": 1.67
+    },
+    {
+      "date": "2025-12-10",
+      "pages": 7,
+      "duration_seconds": 467,
+      "duration_hours": 0.13
+    },
+    {
       "date": "2025-12-09",
-      "pages": 10,
-      "duration_seconds": 555,
-      "duration_hours": 0.15
+      "pages": 19,
+      "duration_seconds": 1558,
+      "duration_hours": 0.43
     },
     {
       "date": "2025-12-08",
