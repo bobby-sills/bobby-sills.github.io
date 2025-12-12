@@ -47,38 +47,64 @@ books = cursor.fetchall()
 
 # Query reading statistics for the past year
 def get_yearly_reading_stats():
-    """Get daily reading statistics for the past year."""
+    """Get daily reading statistics for the past year, split by book for tracked books only."""
     # Calculate timestamp for 1 year ago
     one_year_ago = datetime.now() - timedelta(days=365)
     start_timestamp = int(one_year_ago.timestamp())
 
-    sql_query = """
+    # First, get per-book daily stats for tracked books
+    book_stats_query = """
     SELECT dates,
+           b.title,
            count(*) AS pages,
            sum(sum_duration) AS durations
     FROM   (
-        SELECT strftime('%Y-%m-%d', start_time, 'unixepoch', 'localtime') AS dates,
+        SELECT id_book,
+               strftime('%Y-%m-%d', start_time, 'unixepoch', 'localtime') AS dates,
                sum(duration) AS sum_duration
         FROM   page_stat
         WHERE  start_time >= ?
         GROUP  BY id_book, page, dates
-    )
-    GROUP  BY dates
-    ORDER  BY dates DESC;
-    """
+    ) ps
+    JOIN book b ON b.id = ps.id_book
+    WHERE b.title IN ({})
+    GROUP  BY dates, b.title
+    ORDER  BY dates DESC, b.title;
+    """.format(','.join('?' * len(books_to_track)))
 
-    cursor.execute(sql_query, (start_timestamp,))
-    results = cursor.fetchall()
+    cursor.execute(book_stats_query, (start_timestamp, *books_to_track))
+    book_results = cursor.fetchall()
 
-    # Convert to list of dictionaries
-    daily_stats = []
-    for date, pages, duration_seconds in results:
-        daily_stats.append({
-            "date": date,
+    # Organize by date
+    daily_stats_map = {}
+    for date, title, pages, duration_seconds in book_results:
+        if date not in daily_stats_map:
+            daily_stats_map[date] = {
+                "date": date,
+                "total_pages": 0,
+                "total_duration_seconds": 0,
+                "books": []
+            }
+
+        daily_stats_map[date]["total_pages"] += pages
+        daily_stats_map[date]["total_duration_seconds"] += duration_seconds
+        daily_stats_map[date]["books"].append({
+            "title": title,
             "pages": pages,
             "duration_seconds": duration_seconds,
             "duration_hours": round(duration_seconds / 3600, 2)
         })
+
+    # Convert to list and add total_duration_hours
+    daily_stats = []
+    for date in sorted(daily_stats_map.keys(), reverse=True):
+        day_data = daily_stats_map[date]
+        day_data["total_duration_hours"] = round(day_data["total_duration_seconds"] / 3600, 2)
+        # Keep legacy fields for backward compatibility
+        day_data["pages"] = day_data["total_pages"]
+        day_data["duration_seconds"] = day_data["total_duration_seconds"]
+        day_data["duration_hours"] = day_data["total_duration_hours"]
+        daily_stats.append(day_data)
 
     return daily_stats
 
