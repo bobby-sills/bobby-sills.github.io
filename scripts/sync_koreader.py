@@ -46,7 +46,7 @@ cursor.execute("""
 books = cursor.fetchall()
 
 # Query reading statistics for the past year
-def get_yearly_reading_stats():
+def get_yearly_reading_stats(tracked_books):
     """Get daily reading statistics for the past year, split by book for tracked books only."""
     # Calculate timestamp for 1 year ago
     one_year_ago = datetime.now() - timedelta(days=365)
@@ -70,9 +70,9 @@ def get_yearly_reading_stats():
     WHERE b.title IN ({})
     GROUP  BY dates, b.title
     ORDER  BY dates DESC, b.title;
-    """.format(','.join('?' * len(books_to_track)))
+    """.format(','.join('?' * len(tracked_books)))
 
-    cursor.execute(book_stats_query, (start_timestamp, *books_to_track))
+    cursor.execute(book_stats_query, (start_timestamp, *tracked_books))
     book_results = cursor.fetchall()
 
     # Organize by date
@@ -108,10 +108,10 @@ def get_yearly_reading_stats():
 
     return daily_stats
 
-yearly_stats = get_yearly_reading_stats()
-
 # List of books to track
 books_to_track = ["Middlemarch", "Project Hail Mary"]
+
+yearly_stats = get_yearly_reading_stats(books_to_track)
 
 # Filter for specific books
 filtered_books = []
