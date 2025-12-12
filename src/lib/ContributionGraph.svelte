@@ -176,7 +176,10 @@
 </script>
 
 <div class="contribution-graph">
-  <h3>reading activity - data from koreader</h3>
+  <div class="header">
+    <h3>reading activity</h3>
+    <span style:color="var(--fg4)">data from koreader</span>
+  </div>
 
   <div class="graph-container">
     <div class="month-labels">
@@ -272,8 +275,15 @@
     border-radius: 6px;
   }
 
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
   h3 {
-    margin: 0 0 15px 0;
+    margin: 0;
     color: var(--fg);
     font-size: 1rem;
     font-weight: normal;
@@ -389,7 +399,7 @@
   .book-breakdown {
     margin-top: 8px;
     padding-top: 8px;
-    border-top: 1px solid var(--bg2);
+    border-top: 2px solid var(--bg2);
     font-size: 0.8rem;
   }
 
