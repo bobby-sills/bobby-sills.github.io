@@ -1,16 +1,39 @@
 {
-  "updated_at": "2025-12-12T06:45:17.398528",
+  "updated_at": "2025-12-12T23:46:16.993286",
   "yearly_stats": [
+    {
+      "date": "2025-12-12",
+      "total_pages": 5,
+      "total_duration_seconds": 741,
+      "books": [
+        {
+          "title": "Middlemarch",
+          "pages": 2,
+          "duration_seconds": 253,
+          "duration_hours": 0.07
+        },
+        {
+          "title": "Project Hail Mary",
+          "pages": 3,
+          "duration_seconds": 488,
+          "duration_hours": 0.14
+        }
+      ],
+      "total_duration_hours": 0.21,
+      "pages": 5,
+      "duration_seconds": 741,
+      "duration_hours": 0.21
+    },
     {
       "date": "2025-12-11",
       "total_pages": 92,
-      "total_duration_seconds": 6012,
+      "total_duration_seconds": 6132,
       "books": [
         {
           "title": "Middlemarch",
           "pages": 14,
-          "duration_seconds": 1006,
-          "duration_hours": 0.28
+          "duration_seconds": 1126,
+          "duration_hours": 0.31
         },
         {
           "title": "Project Hail Mary",
@@ -19,10 +42,10 @@
           "duration_hours": 1.39
         }
       ],
-      "total_duration_hours": 1.67,
+      "total_duration_hours": 1.7,
       "pages": 92,
-      "duration_seconds": 6012,
-      "duration_hours": 1.67
+      "duration_seconds": 6132,
+      "duration_hours": 1.7
     },
     {
       "date": "2025-12-10",
