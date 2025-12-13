@@ -3,7 +3,6 @@ export interface Post {
   title: string;
   date: string;
   tags: string[];
-  image?: string;
   html: string;
 }
 
@@ -22,7 +21,6 @@ export function getAllPosts(): Post[] {
       title: module.attributes?.title || 'Untitled',
       date: module.attributes?.date || '',
       tags: module.attributes?.tags || [],
-      image: module.attributes?.image,
       html: module.html || ''
     });
   }

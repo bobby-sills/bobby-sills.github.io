@@ -40,10 +40,6 @@
         <time class="post-date">{formatDate(post.date)}</time>
       </header>
 
-      {#if post.image}
-        <img src={post.image} alt={post.title} class="post-image" />
-      {/if}
-
       <div class="post-content">
         {@html post.html}
       </div>
@@ -60,14 +56,6 @@
     display: block;
     color: var(--fg2);
     font-size: 0.9rem;
-  }
-
-  .post-image {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    border-radius: 5px;
-    margin: 2rem 0;
   }
 
   .post-content {

@@ -36,11 +36,6 @@
             </h2>
             <time class="post-date">{formatDate(post.date)}</time>
           </div>
-          {#if post.image}
-            <a href="/blog/{post.slug}" use:link>
-              <img src={post.image} alt={post.title} class="post-thumbnail" />
-            </a>
-          {/if}
         </article>
       {/each}
     </div>
