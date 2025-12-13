@@ -130,4 +130,12 @@
     color: var(--fg2);
     font-style: italic;
   }
+
+  .post-content :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    display: block;
+  }
 </style>
