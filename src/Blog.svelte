@@ -53,15 +53,6 @@
     display: flex;
   }
 
-  .post-thumbnail {
-    width: 35%;
-    max-width: 200px;
-    min-width: 120px;
-    aspect-ratio: 4 / 3;
-    border-radius: 5px;
-    flex-shrink: 0;
-  }
-
   .post-info {
     flex: 1;
   }
