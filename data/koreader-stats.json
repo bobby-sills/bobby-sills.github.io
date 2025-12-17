@@ -1,26 +1,43 @@
 {
-  "updated_at": "2025-12-16T01:03:22.865759",
+  "updated_at": "2025-12-17T00:58:56.409406",
   "yearly_stats": [
     {
-      "date": "2025-12-15",
-      "total_pages": 62,
-      "total_duration_seconds": 7138,
+      "date": "2025-12-16",
+      "total_pages": 46,
+      "total_duration_seconds": 3873,
       "books": [
         {
           "title": "Project Hail Mary",
-          "pages": 62,
-          "duration_seconds": 7138,
-          "duration_hours": 1.98
+          "pages": 46,
+          "duration_seconds": 3873,
+          "duration_hours": 1.08
         }
       ],
-      "total_duration_hours": 1.98,
-      "pages": 62,
-      "duration_seconds": 7138,
-      "duration_hours": 1.98
+      "total_duration_hours": 1.08,
+      "pages": 46,
+      "duration_seconds": 3873,
+      "duration_hours": 1.08
+    },
+    {
+      "date": "2025-12-15",
+      "total_pages": 90,
+      "total_duration_seconds": 9637,
+      "books": [
+        {
+          "title": "Project Hail Mary",
+          "pages": 90,
+          "duration_seconds": 9637,
+          "duration_hours": 2.68
+        }
+      ],
+      "total_duration_hours": 2.68,
+      "pages": 90,
+      "duration_seconds": 9637,
+      "duration_hours": 2.68
     },
     {
       "date": "2025-12-14",
-      "total_pages": 20,
+      "total_pages": 19,
       "total_duration_seconds": 2401,
       "books": [
         {
@@ -31,19 +48,19 @@
         },
         {
           "title": "Project Hail Mary",
-          "pages": 16,
+          "pages": 15,
           "duration_seconds": 2092,
           "duration_hours": 0.58
         }
       ],
       "total_duration_hours": 0.67,
-      "pages": 20,
+      "pages": 19,
       "duration_seconds": 2401,
       "duration_hours": 0.67
     },
     {
       "date": "2025-12-13",
-      "total_pages": 62,
+      "total_pages": 55,
       "total_duration_seconds": 5424,
       "books": [
         {
@@ -54,19 +71,19 @@
         },
         {
           "title": "Project Hail Mary",
-          "pages": 61,
+          "pages": 54,
           "duration_seconds": 5304,
           "duration_hours": 1.47
         }
       ],
       "total_duration_hours": 1.51,
-      "pages": 62,
+      "pages": 55,
       "duration_seconds": 5424,
       "duration_hours": 1.51
     },
     {
       "date": "2025-12-12",
-      "total_pages": 5,
+      "total_pages": 4,
       "total_duration_seconds": 741,
       "books": [
         {
@@ -77,19 +94,19 @@
         },
         {
           "title": "Project Hail Mary",
-          "pages": 3,
+          "pages": 2,
           "duration_seconds": 488,
           "duration_hours": 0.14
         }
       ],
       "total_duration_hours": 0.21,
-      "pages": 5,
+      "pages": 4,
       "duration_seconds": 741,
       "duration_hours": 0.21
     },
     {
       "date": "2025-12-11",
-      "total_pages": 86,
+      "total_pages": 78,
       "total_duration_seconds": 6132,
       "books": [
         {
@@ -100,36 +117,36 @@
         },
         {
           "title": "Project Hail Mary",
-          "pages": 72,
+          "pages": 64,
           "duration_seconds": 5006,
           "duration_hours": 1.39
         }
       ],
       "total_duration_hours": 1.7,
-      "pages": 86,
+      "pages": 78,
       "duration_seconds": 6132,
       "duration_hours": 1.7
     },
     {
       "date": "2025-12-10",
-      "total_pages": 7,
+      "total_pages": 6,
       "total_duration_seconds": 467,
       "books": [
         {
           "title": "Project Hail Mary",
-          "pages": 7,
+          "pages": 6,
           "duration_seconds": 467,
           "duration_hours": 0.13
         }
       ],
       "total_duration_hours": 0.13,
-      "pages": 7,
+      "pages": 6,
       "duration_seconds": 467,
       "duration_hours": 0.13
     },
     {
       "date": "2025-12-09",
-      "total_pages": 18,
+      "total_pages": 16,
       "total_duration_seconds": 1558,
       "books": [
         {
@@ -140,13 +157,13 @@
         },
         {
           "title": "Project Hail Mary",
-          "pages": 17,
+          "pages": 15,
           "duration_seconds": 1546,
           "duration_hours": 0.43
         }
       ],
       "total_duration_hours": 0.43,
-      "pages": 18,
+      "pages": 16,
       "duration_seconds": 1558,
       "duration_hours": 0.43
     },
