@@ -1,43 +1,77 @@
 {
-  "updated_at": "2025-12-18T00:59:47.047965",
+  "updated_at": "2025-12-18T22:30:52.065551",
   "yearly_stats": [
     {
-      "date": "2025-12-16",
-      "total_pages": 46,
-      "total_duration_seconds": 3873,
+      "date": "2025-12-18",
+      "total_pages": 122,
+      "total_duration_seconds": 10596,
       "books": [
         {
           "title": "Project Hail Mary",
-          "pages": 46,
-          "duration_seconds": 3873,
-          "duration_hours": 1.08
+          "pages": 122,
+          "duration_seconds": 10596,
+          "duration_hours": 2.94
         }
       ],
-      "total_duration_hours": 1.08,
-      "pages": 46,
-      "duration_seconds": 3873,
-      "duration_hours": 1.08
+      "total_duration_hours": 2.94,
+      "pages": 122,
+      "duration_seconds": 10596,
+      "duration_hours": 2.94
+    },
+    {
+      "date": "2025-12-17",
+      "total_pages": 100,
+      "total_duration_seconds": 7336,
+      "books": [
+        {
+          "title": "Project Hail Mary",
+          "pages": 100,
+          "duration_seconds": 7336,
+          "duration_hours": 2.04
+        }
+      ],
+      "total_duration_hours": 2.04,
+      "pages": 100,
+      "duration_seconds": 7336,
+      "duration_hours": 2.04
+    },
+    {
+      "date": "2025-12-16",
+      "total_pages": 113,
+      "total_duration_seconds": 7988,
+      "books": [
+        {
+          "title": "Project Hail Mary",
+          "pages": 113,
+          "duration_seconds": 7988,
+          "duration_hours": 2.22
+        }
+      ],
+      "total_duration_hours": 2.22,
+      "pages": 113,
+      "duration_seconds": 7988,
+      "duration_hours": 2.22
     },
     {
       "date": "2025-12-15",
-      "total_pages": 90,
-      "total_duration_seconds": 9637,
+      "total_pages": 107,
+      "total_duration_seconds": 9632,
       "books": [
         {
           "title": "Project Hail Mary",
-          "pages": 90,
-          "duration_seconds": 9637,
+          "pages": 107,
+          "duration_seconds": 9632,
           "duration_hours": 2.68
         }
       ],
       "total_duration_hours": 2.68,
-      "pages": 90,
-      "duration_seconds": 9637,
+      "pages": 107,
+      "duration_seconds": 9632,
       "duration_hours": 2.68
     },
     {
       "date": "2025-12-14",
-      "total_pages": 19,
+      "total_pages": 22,
       "total_duration_seconds": 2401,
       "books": [
         {
@@ -48,19 +82,19 @@
         },
         {
           "title": "Project Hail Mary",
-          "pages": 15,
+          "pages": 18,
           "duration_seconds": 2092,
           "duration_hours": 0.58
         }
       ],
       "total_duration_hours": 0.67,
-      "pages": 19,
+      "pages": 22,
       "duration_seconds": 2401,
       "duration_hours": 0.67
     },
     {
       "date": "2025-12-13",
-      "total_pages": 55,
+      "total_pages": 66,
       "total_duration_seconds": 5424,
       "books": [
         {
@@ -71,19 +105,19 @@
         },
         {
           "title": "Project Hail Mary",
-          "pages": 54,
+          "pages": 65,
           "duration_seconds": 5304,
           "duration_hours": 1.47
         }
       ],
       "total_duration_hours": 1.51,
-      "pages": 55,
+      "pages": 66,
       "duration_seconds": 5424,
       "duration_hours": 1.51
     },
     {
       "date": "2025-12-12",
-      "total_pages": 4,
+      "total_pages": 5,
       "total_duration_seconds": 741,
       "books": [
         {
@@ -94,19 +128,19 @@
         },
         {
           "title": "Project Hail Mary",
-          "pages": 2,
+          "pages": 3,
           "duration_seconds": 488,
           "duration_hours": 0.14
         }
       ],
       "total_duration_hours": 0.21,
-      "pages": 4,
+      "pages": 5,
       "duration_seconds": 741,
       "duration_hours": 0.21
     },
     {
       "date": "2025-12-11",
-      "total_pages": 78,
+      "total_pages": 92,
       "total_duration_seconds": 6132,
       "books": [
         {
@@ -117,36 +151,36 @@
         },
         {
           "title": "Project Hail Mary",
-          "pages": 64,
+          "pages": 78,
           "duration_seconds": 5006,
           "duration_hours": 1.39
         }
       ],
       "total_duration_hours": 1.7,
-      "pages": 78,
+      "pages": 92,
       "duration_seconds": 6132,
       "duration_hours": 1.7
     },
     {
       "date": "2025-12-10",
-      "total_pages": 6,
+      "total_pages": 7,
       "total_duration_seconds": 467,
       "books": [
         {
           "title": "Project Hail Mary",
-          "pages": 6,
+          "pages": 7,
           "duration_seconds": 467,
           "duration_hours": 0.13
         }
       ],
       "total_duration_hours": 0.13,
-      "pages": 6,
+      "pages": 7,
       "duration_seconds": 467,
       "duration_hours": 0.13
     },
     {
       "date": "2025-12-09",
-      "total_pages": 16,
+      "total_pages": 19,
       "total_duration_seconds": 1558,
       "books": [
         {
@@ -157,13 +191,13 @@
         },
         {
           "title": "Project Hail Mary",
-          "pages": 15,
+          "pages": 18,
           "duration_seconds": 1546,
           "duration_hours": 0.43
         }
       ],
       "total_duration_hours": 0.43,
-      "pages": 16,
+      "pages": 19,
       "duration_seconds": 1558,
       "duration_hours": 0.43
     },
