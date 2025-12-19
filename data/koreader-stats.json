@@ -1,6 +1,23 @@
 {
-  "updated_at": "2025-12-18T22:30:52.065551",
+  "updated_at": "2025-12-19T01:02:48.292568",
   "yearly_stats": [
+    {
+      "date": "2025-12-19",
+      "total_pages": 6,
+      "total_duration_seconds": 546,
+      "books": [
+        {
+          "title": "Project Hail Mary",
+          "pages": 6,
+          "duration_seconds": 546,
+          "duration_hours": 0.15
+        }
+      ],
+      "total_duration_hours": 0.15,
+      "pages": 6,
+      "duration_seconds": 546,
+      "duration_hours": 0.15
+    },
     {
       "date": "2025-12-18",
       "total_pages": 122,
