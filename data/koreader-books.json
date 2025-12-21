@@ -1,10 +1,10 @@
 {
-  "updated_at": "2025-12-20T00:59:27.508229",
+  "updated_at": "2025-12-21T01:07:00.968588",
   "books": [
     {
       "title": "Middlemarch",
       "authors": "George Eliot",
-      "percentage_completed": 87.15
+      "percentage_completed": 89.12
     },
     {
       "title": "Project Hail Mary",
