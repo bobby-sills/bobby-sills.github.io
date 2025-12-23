@@ -1,16 +1,17 @@
 {
-  "updated_at": "2025-12-23T01:02:55.593754",
+  "updated_at": "2025-12-23T23:34:03.802454",
   "books": [
-    {
-      "title": "Middlemarch",
-      "authors": "George Eliot",
-      "percentage_completed": 96.77
-    },
     {
       "title": "Project Hail Mary",
       "authors": "Andy Weir",
       "percentage_completed": 100.0,
       "date_completed": "19 Dec 2025"
+    },
+    {
+      "title": "Middlemarch",
+      "authors": "George Eliot",
+      "percentage_completed": 100.0,
+      "date_completed": "23 Dec 2025"
     }
   ]
 }
