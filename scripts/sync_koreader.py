@@ -109,7 +109,7 @@ def get_yearly_reading_stats(tracked_books):
     return daily_stats
 
 # List of books to track
-books_to_track = ["Middlemarch", "Project Hail Mary"]
+books_to_track = ["Middlemarch", "Project Hail Mary", "Fight Club"]
 
 yearly_stats = get_yearly_reading_stats(books_to_track)
 
