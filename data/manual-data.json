@@ -22,7 +22,9 @@
     {
       "title": "Salem's Lot",
       "authors": "Stephen King",
-      "status": "currently_reading"
+      "status": "currently_reading",
+      "total_pages": 653,
+      "pages_read": 5
     },
     {
       "title": "All Quiet on the Western Front",
