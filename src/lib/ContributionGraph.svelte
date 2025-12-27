@@ -102,13 +102,13 @@
 
   const yearData = generateYearData();
 
-  // Calculate max hours for color intensity scaling
-  const maxHours = Math.max(...yearData.map((d) => d.hours));
+  // Fixed max hours threshold for color intensity scaling
+  const maxHours = 1.5;
 
   // Get color intensity based on time read (returns percentage for color-mix)
   const getIntensity = (hours: number): number => {
     if (hours === 0) return 0;
-    return hours / maxHours;
+    return Math.min(1, hours / maxHours); // Cap at 1.0 for hours >= 1.5
   };
 
   // Organize days into weeks (Sunday start)
