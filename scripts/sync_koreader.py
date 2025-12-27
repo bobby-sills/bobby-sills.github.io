@@ -108,8 +108,10 @@ def get_yearly_reading_stats(tracked_books):
 
     return daily_stats
 
-# List of books to track
-books_to_track = ["Middlemarch", "Project Hail Mary", "Fight Club"]
+# Load books to track from JSON file
+with open('data/books-to-track.json', 'r') as f:
+    books_config = json.load(f)
+    books_to_track = books_config['books']
 
 yearly_stats = get_yearly_reading_stats(books_to_track)
 
