@@ -17,54 +17,64 @@
     date_completed?: string;
   }
 
-  // Combine koreader books with manual books (prefer KOReader data)
-  const koreaderBooksWithPages = koreaderBooks.books.map((book) => ({
-    ...book,
+  // Convert KOReader books to common format
+  const koreaderBooksFormatted = koreaderBooks.books.map((book) => ({
+    title: book.title,
+    authors: book.authors,
+    percentage_completed: book.percentage_completed,
     total_pages:
       manualData.page_counts[book.title as keyof typeof manualData.page_counts],
+    date_completed: book.date_completed,
   }));
 
-  // Get titles from KOReader to avoid duplicates
-  const koreaderTitles = new Set(koreaderBooksWithPages.map((b) => b.title));
-
-  // Add manual currently_reading books that aren't in KOReader data
-  const manualCurrentlyReading = (
+  // Convert manual currently_reading to common format
+  const manualCurrentlyReadingFormatted = (
     manualData.currently_reading as Array<{
       title: string;
       authors: string;
       pages_read: number;
       total_pages: number;
     }>
-  )
-    .filter((book) => !koreaderTitles.has(book.title))
-    .map((book) => ({
-      title: book.title,
-      authors: book.authors,
-      percentage_completed: (book.pages_read / book.total_pages) * 100,
-      total_pages: book.total_pages,
-    }));
+  ).map((book) => ({
+    title: book.title,
+    authors: book.authors,
+    percentage_completed: (book.pages_read / book.total_pages) * 100,
+    total_pages: book.total_pages,
+  }));
 
-  // Add completed books from manual data
-  const manualCompleted = manualData.completed
-    .filter((book) => !koreaderTitles.has(book.title))
-    .map((book) => ({
-      title: book.title,
-      authors: book.authors,
-      percentage_completed: 100,
-      date_completed: book.date_completed,
-    }));
+  // Convert manual completed to common format
+  const manualCompletedFormatted = manualData.completed.map((book) => ({
+    title: book.title,
+    authors: book.authors,
+    percentage_completed: 100,
+    date_completed: book.date_completed,
+    total_pages:
+      manualData.page_counts[book.title as keyof typeof manualData.page_counts],
+  }));
+
+  // Combine all books and deduplicate by preferring higher progress
+  const allBooksBeforeDedup = [
+    ...koreaderBooksFormatted,
+    ...manualCurrentlyReadingFormatted,
+    ...manualCompletedFormatted,
+  ];
+
+  // Group by title and keep the one with highest progress
+  const booksByTitle = new Map<string, Book>();
+  for (const book of allBooksBeforeDedup) {
+    const existing = booksByTitle.get(book.title);
+    if (!existing || book.percentage_completed > existing.percentage_completed) {
+      booksByTitle.set(book.title, book);
+    }
+  }
+
+  const allBooks: Book[] = Array.from(booksByTitle.values());
 
   // Add want to read books from manual data
   const wantToRead = manualData.want_to_read.map((book) => ({
     title: book.title,
     authors: book.authors,
   }));
-
-  const allBooks: Book[] = [
-    ...koreaderBooksWithPages,
-    ...manualCurrentlyReading,
-    ...manualCompleted,
-  ];
 
   // Separate books into currently reading and completed
   const currentlyReading = allBooks.filter(
