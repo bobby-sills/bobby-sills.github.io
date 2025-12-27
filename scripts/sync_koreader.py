@@ -108,10 +108,11 @@ def get_yearly_reading_stats(tracked_books):
 
     return daily_stats
 
-# Load books to track from JSON file
-with open('data/books-to-track.json', 'r') as f:
-    books_config = json.load(f)
-    books_to_track = books_config['books']
+# Load books to track from manual data JSON file
+with open('data/manual-data.json', 'r') as f:
+    manual_data = json.load(f)
+    # Extract just the book titles from the manual data
+    books_to_track = [book['title'] for book in manual_data['books']]
 
 yearly_stats = get_yearly_reading_stats(books_to_track)
 

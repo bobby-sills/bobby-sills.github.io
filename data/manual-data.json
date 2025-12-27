@@ -1,32 +1,46 @@
 {
-  "currently_reading": [],
-  "completed": [
+  "books": [
     {
       "title": "Purple Hibiscus",
       "authors": "Chimamanda Ngozi Adichie",
+      "status": "completed",
+      "total_pages": 307,
       "date_completed": "11 Oct 2025"
-    }
-  ],
-  "want_to_read": [
+    },
+    {
+      "title": "Middlemarch",
+      "authors": "George Eliot",
+      "status": "currently_reading",
+      "total_pages": 713
+    },
+    {
+      "title": "Project Hail Mary",
+      "authors": "Andy Weir",
+      "status": "currently_reading",
+      "total_pages": 496
+    },
+    {
+      "title": "Salem's Lot",
+      "authors": "Stephen King",
+      "status": "currently_reading"
+    },
     {
       "title": "All Quiet on the Western Front",
-      "authors": "Erich Maria Remarque"
+      "authors": "Erich Maria Remarque",
+      "status": "want_to_read",
+      "total_pages": 296
     },
     {
       "title": "Fight Club",
-      "authors": "Chuck Palahniuk"
+      "authors": "Chuck Palahniuk",
+      "status": "want_to_read",
+      "total_pages": 224
     },
     {
       "title": "The Stand",
-      "authors": "Stephen King"
+      "authors": "Stephen King",
+      "status": "want_to_read",
+      "total_pages": 651
     }
-  ],
-  "page_counts": {
-    "Middlemarch": 713,
-    "Purple Hibiscus": 307,
-    "All Quiet on the Western Front": 296,
-    "Project Hail Mary": 496,
-    "Fight Club": 224,
-    "The Stand": 651
-  }
+  ]
 }

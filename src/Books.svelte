@@ -17,40 +17,51 @@
     date_completed?: string;
   }
 
+  interface ManualBook {
+    title: string;
+    authors: string;
+    status: "currently_reading" | "completed" | "want_to_read";
+    total_pages?: number;
+    pages_read?: number;
+    date_completed?: string;
+  }
+
   // Convert KOReader books to common format
-  const koreaderBooksFormatted = koreaderBooks.books.map((book) => ({
-    title: book.title,
-    authors: book.authors,
-    percentage_completed: book.percentage_completed,
-    total_pages:
-      manualData.page_counts[book.title as keyof typeof manualData.page_counts],
-    date_completed: book.date_completed,
-  }));
+  const koreaderBooksFormatted = koreaderBooks.books.map((book) => {
+    // Try to get total_pages from manual data for this book
+    const manualBook = (manualData.books as ManualBook[]).find(
+      (b) => b.title === book.title
+    );
+    return {
+      title: book.title,
+      authors: book.authors,
+      percentage_completed: book.percentage_completed,
+      total_pages: manualBook?.total_pages,
+      date_completed: book.date_completed,
+    };
+  });
 
-  // Convert manual currently_reading to common format
-  const manualCurrentlyReadingFormatted = (
-    manualData.currently_reading as Array<{
-      title: string;
-      authors: string;
-      pages_read: number;
-      total_pages: number;
-    }>
-  ).map((book) => ({
-    title: book.title,
-    authors: book.authors,
-    percentage_completed: (book.pages_read / book.total_pages) * 100,
-    total_pages: book.total_pages,
-  }));
+  // Convert manual books to common format based on status
+  const manualCurrentlyReadingFormatted = (manualData.books as ManualBook[])
+    .filter((book) => book.status === "currently_reading")
+    .map((book) => ({
+      title: book.title,
+      authors: book.authors,
+      percentage_completed: book.pages_read && book.total_pages
+        ? (book.pages_read / book.total_pages) * 100
+        : 0,
+      total_pages: book.total_pages,
+    }));
 
-  // Convert manual completed to common format
-  const manualCompletedFormatted = manualData.completed.map((book) => ({
-    title: book.title,
-    authors: book.authors,
-    percentage_completed: 100,
-    date_completed: book.date_completed,
-    total_pages:
-      manualData.page_counts[book.title as keyof typeof manualData.page_counts],
-  }));
+  const manualCompletedFormatted = (manualData.books as ManualBook[])
+    .filter((book) => book.status === "completed")
+    .map((book) => ({
+      title: book.title,
+      authors: book.authors,
+      percentage_completed: 100,
+      date_completed: book.date_completed,
+      total_pages: book.total_pages,
+    }));
 
   // Combine all books and deduplicate by preferring higher progress
   const allBooksBeforeDedup = [
@@ -71,10 +82,12 @@
   const allBooks: Book[] = Array.from(booksByTitle.values());
 
   // Add want to read books from manual data
-  const wantToRead = manualData.want_to_read.map((book) => ({
-    title: book.title,
-    authors: book.authors,
-  }));
+  const wantToRead = (manualData.books as ManualBook[])
+    .filter((book) => book.status === "want_to_read")
+    .map((book) => ({
+      title: book.title,
+      authors: book.authors,
+    }));
 
   // Separate books into currently reading and completed
   const currentlyReading = allBooks.filter(
