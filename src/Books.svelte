@@ -126,7 +126,7 @@
     />
   {/each}
 
-  <h2>want to read</h2>
+  <h2>up next</h2>
   {#each wantToRead as book (book.title)}
     <div
       style="display: flex; flex-direction: column; gap: 5px; margin-bottom: 20px;"
