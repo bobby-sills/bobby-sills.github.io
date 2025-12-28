@@ -26,8 +26,7 @@
       "total_pages": 653,
       "pages_read": 5
     },
-    {
-      "title": "All Quiet on the Western Front",
+     Quiet on the Western Front",
       "authors": "Erich Maria Remarque",
       "status": "want_to_read",
       "total_pages": 296
@@ -43,6 +42,8 @@
       "authors": "Stephen King",
       "status": "want_to_read",
       "total_pages": 651
-    }
+    },
+{"title": "The Wind-Up Bird Chronicle",
+"authors": "Haruki Murakami", "status": "currently_reading"}
   ]
 }
