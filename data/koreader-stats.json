@@ -1,6 +1,120 @@
 {
-  "updated_at": "2026-01-01T01:10:40.446048",
+  "updated_at": "2026-01-01T08:31:31.604134",
   "yearly_stats": [
+    {
+      "date": "2026-01-01",
+      "total_pages": 2,
+      "total_duration_seconds": 126,
+      "books": [
+        {
+          "title": "The Wind-Up Bird Chronicle",
+          "pages": 2,
+          "duration_seconds": 126,
+          "duration_hours": 0.04
+        }
+      ],
+      "total_duration_hours": 0.04,
+      "pages": 2,
+      "duration_seconds": 126,
+      "duration_hours": 0.04
+    },
+    {
+      "date": "2025-12-31",
+      "total_pages": 38,
+      "total_duration_seconds": 2228,
+      "books": [
+        {
+          "title": "The Wind-Up Bird Chronicle",
+          "pages": 38,
+          "duration_seconds": 2228,
+          "duration_hours": 0.62
+        }
+      ],
+      "total_duration_hours": 0.62,
+      "pages": 38,
+      "duration_seconds": 2228,
+      "duration_hours": 0.62
+    },
+    {
+      "date": "2025-12-30",
+      "total_pages": 27,
+      "total_duration_seconds": 1674,
+      "books": [
+        {
+          "title": "The Wind-Up Bird Chronicle",
+          "pages": 27,
+          "duration_seconds": 1674,
+          "duration_hours": 0.47
+        }
+      ],
+      "total_duration_hours": 0.47,
+      "pages": 27,
+      "duration_seconds": 1674,
+      "duration_hours": 0.47
+    },
+    {
+      "date": "2025-12-27",
+      "total_pages": 5,
+      "total_duration_seconds": 388,
+      "books": [
+        {
+          "title": "All Quiet on the Western Front",
+          "pages": 4,
+          "duration_seconds": 268,
+          "duration_hours": 0.07
+        },
+        {
+          "title": "Fight Club",
+          "pages": 1,
+          "duration_seconds": 120,
+          "duration_hours": 0.03
+        }
+      ],
+      "total_duration_hours": 0.11,
+      "pages": 5,
+      "duration_seconds": 388,
+      "duration_hours": 0.11
+    },
+    {
+      "date": "2025-12-26",
+      "total_pages": 14,
+      "total_duration_seconds": 810,
+      "books": [
+        {
+          "title": "All Quiet on the Western Front",
+          "pages": 2,
+          "duration_seconds": 75,
+          "duration_hours": 0.02
+        },
+        {
+          "title": "Fight Club",
+          "pages": 12,
+          "duration_seconds": 735,
+          "duration_hours": 0.2
+        }
+      ],
+      "total_duration_hours": 0.23,
+      "pages": 14,
+      "duration_seconds": 810,
+      "duration_hours": 0.23
+    },
+    {
+      "date": "2025-12-24",
+      "total_pages": 2,
+      "total_duration_seconds": 37,
+      "books": [
+        {
+          "title": "All Quiet on the Western Front",
+          "pages": 2,
+          "duration_seconds": 37,
+          "duration_hours": 0.01
+        }
+      ],
+      "total_duration_hours": 0.01,
+      "pages": 2,
+      "duration_seconds": 37,
+      "duration_hours": 0.01
+    },
     {
       "date": "2025-12-23",
       "total_pages": 10,

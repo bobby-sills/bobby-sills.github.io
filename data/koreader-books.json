@@ -1,6 +1,31 @@
 {
-  "updated_at": "2026-01-01T01:10:40.446043",
+  "updated_at": "2026-01-01T08:31:31.604129",
   "books": [
+    {
+      "title": "All Quiet on the Western Front",
+      "authors": "Erich Maria Remarque",
+      "percentage_completed": 1.63
+    },
+    {
+      "title": "All Quiet on the Western Front",
+      "authors": "Erich Maria Remarque",
+      "percentage_completed": 2.55
+    },
+    {
+      "title": "All Quiet on the Western Front",
+      "authors": "Erich Maria Remarque",
+      "percentage_completed": 3.38
+    },
+    {
+      "title": "Fight Club",
+      "authors": "Chuck Palahniuk",
+      "percentage_completed": 6.72
+    },
+    {
+      "title": "The Wind-Up Bird Chronicle",
+      "authors": "Haruki Murakami",
+      "percentage_completed": 55.19
+    },
     {
       "title": "Project Hail Mary",
       "authors": "Andy Weir",
