@@ -5,7 +5,7 @@
 :root,
 [data-theme="light"] {
   /* Background Colors */
-  --bg: #fbf1c7;           /* bg (light cream) */
+  --bg: #f9f5d7;           /* bg (light cream) */
   --bg0: #f9f5d7;          /* bg0 (lighter cream) */
   --bg0-hard: #f9f5d7;     /* bg0_h (same as bg0 in light) */
   --bg0-soft: #f2e5bc;     /* bg0_s (soft background) */
