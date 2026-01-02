@@ -27,7 +27,8 @@
   }
 
   // Manual data is the source of truth for status
-  // KOReader provides progress updates but doesn't override manual status
+  // Progress percentage uses the higher value from manual or KOReader
+  // KOReader completion (100%) overrides manual status
   const allBooks: Book[] = (manualData.books as ManualBook[])
     .filter((book) => book.status === "currently_reading" || book.status === "completed")
     .map((manualBook) => {
@@ -36,36 +37,30 @@
         (kb) => kb.title === manualBook.title
       );
 
-      // If manual status is "completed", keep it completed regardless of KOReader
-      if (manualBook.status === "completed") {
-        return {
-          title: manualBook.title,
-          authors: manualBook.authors,
-          percentage_completed: 100,
-          date_completed: manualBook.date_completed,
-          total_pages: manualBook.total_pages,
-        };
-      }
+      // Calculate manual progress percentage
+      const manualPercentage = manualBook.pages_read && manualBook.total_pages
+        ? (manualBook.pages_read / manualBook.total_pages) * 100
+        : 0;
 
-      // For "currently_reading", prefer KOReader progress if available
-      if (koreaderBook) {
-        return {
-          title: manualBook.title,
-          authors: manualBook.authors,
-          percentage_completed: koreaderBook.percentage_completed,
-          total_pages: manualBook.total_pages,
-          date_completed: koreaderBook.date_completed,
-        };
-      }
+      // Get KOReader percentage (if available)
+      const koreaderPercentage = koreaderBook?.percentage_completed ?? 0;
 
-      // Fall back to manual data calculation
+      // Use the higher of the two percentages
+      const percentage_completed = Math.max(manualPercentage, koreaderPercentage);
+
+      // Determine if book is completed:
+      // - KOReader says 100%, OR
+      // - Manual status is "completed"
+      const isCompleted = koreaderPercentage >= 100 || manualBook.status === "completed";
+
       return {
         title: manualBook.title,
         authors: manualBook.authors,
-        percentage_completed: manualBook.pages_read && manualBook.total_pages
-          ? (manualBook.pages_read / manualBook.total_pages) * 100
-          : 0,
+        percentage_completed: isCompleted ? 100 : percentage_completed,
         total_pages: manualBook.total_pages,
+        date_completed: isCompleted
+          ? (koreaderBook?.date_completed || manualBook.date_completed)
+          : undefined,
       };
     });
 
