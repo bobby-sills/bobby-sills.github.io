@@ -172,7 +172,24 @@
     return labels;
   };
 
+  // Filter labels to prevent overlap on mobile (minimum 3 weeks apart)
+  const getFilteredMonthLabels = (minSpacing: number) => {
+    const allLabels = getMonthLabels();
+    const filtered: Array<{ label: string; weekIndex: number }> = [];
+    let lastIncludedIndex = -999;
+
+    allLabels.forEach((label) => {
+      if (label.weekIndex - lastIncludedIndex >= minSpacing) {
+        filtered.push(label);
+        lastIncludedIndex = label.weekIndex;
+      }
+    });
+
+    return filtered;
+  };
+
   const monthLabels = getMonthLabels();
+  const monthLabelsMobile = getFilteredMonthLabels(3);
 </script>
 
 <div class="contribution-graph">
@@ -182,8 +199,13 @@
   </div>
 
   <div class="graph-container">
-    <div class="month-labels">
+    <div class="month-labels month-labels-desktop">
       {#each monthLabels as { label, weekIndex }}
+        <span style="grid-column: {weekIndex + 1};">{label}</span>
+      {/each}
+    </div>
+    <div class="month-labels month-labels-mobile">
+      {#each monthLabelsMobile as { label, weekIndex }}
         <span style="grid-column: {weekIndex + 1};">{label}</span>
       {/each}
     </div>
@@ -306,6 +328,10 @@
     color: var(--fg4);
   }
 
+  .month-labels-mobile {
+    display: none;
+  }
+
   .day-labels {
     position: absolute;
     top: 30px;
@@ -420,6 +446,14 @@
       min-width: 550px;
       position: relative;
       padding-bottom: 50px;
+    }
+
+    .month-labels-desktop {
+      display: none;
+    }
+
+    .month-labels-mobile {
+      display: grid;
     }
 
     .legend {
