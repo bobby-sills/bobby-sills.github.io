@@ -1,0 +1,79 @@
+/* Gruvbox Theme Switcher CSS */
+/* Toggle between light and dark mode by changing data-theme="light" or data-theme="dark" on html or body element */
+
+/* Light Mode Colors */
+:root,
+[data-theme="light"] {
+  /* Background Colors */
+  --bg: #f9f5d7;           /* bg (light cream) */
+  --bg0: #f9f5d7;          /* bg0 (lighter cream) */
+  --bg0-hard: #f9f5d7;     /* bg0_h (same as bg0 in light) */
+  --bg0-soft: #f2e5bc;     /* bg0_s (soft background) */
+  --bg1: #ebdbb2;          /* bg1 (light beige) */
+  --bg2: #d5c4a1;          /* bg2 (medium beige) */
+  --bg3: #bdae93;          /* bg3 (darker beige) */
+  --bg4: #a89984;          /* bg4 (brown-beige) */
+  
+  /* Foreground Colors */
+  --fg: #3c3836;           /* fg (dark brown) */
+  --fg0: #282828;          /* fg0 (darkest) */
+  --fg1: #3c3836;          /* fg1 (dark brown) */
+  --fg2: #504945;          /* fg2 (medium brown) */
+  --fg3: #665c54;          /* fg3 (lighter brown) */
+  --fg4: #7c6f64;          /* fg4 (lightest brown) */
+  
+  /* Accent Colors - Standard versions for light theme */
+  --red: #cc241d;
+  --green: #98971a;
+  --yellow: #d79921;
+  --blue: #458588;
+  --purple: #b16286;
+  --aqua: #689d6a;
+  --orange: #d65d0e;
+  --gray: #928374;
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+  /* Background Colors */
+  --bg: #282828;           /* bg (dark gray) */
+  --bg0: #282828;          /* bg0 (dark gray) */
+  --bg0-hard: #1d2021;     /* bg0_h (harder dark) */
+  --bg0-soft: #32302f;     /* bg0_s (softer dark) */
+  --bg1: #3c3836;          /* bg1 (lighter dark) */
+  --bg2: #504945;          /* bg2 (medium gray) */
+  --bg3: #665c54;          /* bg3 (lighter gray) */
+  --bg4: #7c6f64;          /* bg4 (lightest gray) */
+  
+  /* Foreground Colors */
+  --fg: #ebdbb2;           /* fg (cream) */
+  --fg0: #fbf1c7;          /* fg0 (lightest cream) */
+  --fg1: #ebdbb2;          /* fg1 (cream) */
+  --fg2: #d5c4a1;          /* fg2 (medium beige) */
+  --fg3: #bdae93;          /* fg3 (darker beige) */
+  --fg4: #a89984;          /* fg4 (darkest beige) */
+  
+  /* Accent Colors - Bright versions for dark theme */
+  --red: #fb4934;          /* red bright */
+  --green: #b8bb26;        /* green bright */
+  --yellow: #fabd2f;       /* yellow bright */
+  --blue: #83a598;         /* blue bright */
+  --purple: #d3869b;       /* purple bright */
+  --aqua: #8ec07c;         /* aqua bright */
+  --orange: #fe8019;       /* orange bright */
+  --gray: #928374;         /* gray */
+  
+  /* Shadow and selection colors for dark mode */
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-color-md: rgba(0, 0, 0, 0.4);
+  --shadow-color-lg: rgba(0, 0, 0, 0.5);
+  --selection-bg: #665c54;
+  --selection-color: #fbf1c7;
+  
+  /* Scrollbar colors */
+  --scrollbar-track: #3c3836;
+  --scrollbar-thumb: #665c54;
+  --scrollbar-thumb-hover: #7c6f64;
+}
+
+
