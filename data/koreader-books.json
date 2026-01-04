@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-01-03T07:36:07.944058",
+  "updated_at": "2026-01-04T01:11:14.994083",
   "books": [
     {
       "title": "All Quiet on the Western Front",
@@ -24,7 +24,7 @@
     {
       "title": "The Wind-Up Bird Chronicle",
       "authors": "Haruki Murakami",
-      "percentage_completed": 55.19
+      "percentage_completed": 70.96
     },
     {
       "title": "Project Hail Mary",
