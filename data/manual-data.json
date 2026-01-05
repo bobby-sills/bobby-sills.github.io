@@ -10,13 +10,13 @@
     {
       "title": "Middlemarch",
       "authors": "George Eliot",
-      "status": "currently_reading",
+      "status": "completed",
       "total_pages": 713
     },
     {
       "title": "Project Hail Mary",
       "authors": "Andy Weir",
-      "status": "currently_reading",
+      "status": "completed",
       "total_pages": 496
     },
     {
@@ -47,9 +47,8 @@
     {
       "title": "The Wind-Up Bird Chronicle",
       "authors": "Haruki Murakami",
-      "status": "currently_reading",
-      "total_pages": 609,
-      "pages_read": 505
+      "status": "completed",
+      "total_pages": 609
     },
     {
       "title": "Amusing Ourselves to Death",
