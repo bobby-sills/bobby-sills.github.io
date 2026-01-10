@@ -23,7 +23,7 @@
       <span style="color: var(--fg4);">by {author}</span>
     </div>
     {#if isCompleted()}
-      <span style="color: var(--fg4);">completed {dateCompleted}</span>
+      <span class="date-completed">completed {dateCompleted}</span>
     {:else}
       <span style="color: var(--fg); font-size: larger;"
         >{Math.ceil((percent / 100) * totalPages)}/{totalPages} pages</span
@@ -63,5 +63,15 @@
     height: 100%;
     background-color: var(--green);
     border-radius: 999px;
+  }
+
+  .date-completed {
+    color: var(--fg4);
+  }
+
+  @media (max-width: 700px) {
+    .date-completed {
+      flex-basis: 100%;
+    }
   }
 </style>
