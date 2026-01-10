@@ -1,22 +1,73 @@
 {
-  "updated_at": "2026-01-09T01:05:14.363828",
+  "updated_at": "2026-01-10T01:02:55.595832",
   "yearly_stats": [
     {
-      "date": "2026-01-03",
-      "total_pages": 1,
-      "total_duration_seconds": 120,
+      "date": "2026-01-09",
+      "total_pages": 17,
+      "total_duration_seconds": 2002,
+      "books": [
+        {
+          "title": "Amusing Ourselves to Death",
+          "pages": 17,
+          "duration_seconds": 2002,
+          "duration_hours": 0.56
+        }
+      ],
+      "total_duration_hours": 0.56,
+      "pages": 17,
+      "duration_seconds": 2002,
+      "duration_hours": 0.56
+    },
+    {
+      "date": "2026-01-05",
+      "total_pages": 33,
+      "total_duration_seconds": 2392,
       "books": [
         {
           "title": "The Wind-Up Bird Chronicle",
-          "pages": 1,
-          "duration_seconds": 120,
-          "duration_hours": 0.03
+          "pages": 33,
+          "duration_seconds": 2392,
+          "duration_hours": 0.66
         }
       ],
-      "total_duration_hours": 0.03,
-      "pages": 1,
-      "duration_seconds": 120,
-      "duration_hours": 0.03
+      "total_duration_hours": 0.66,
+      "pages": 33,
+      "duration_seconds": 2392,
+      "duration_hours": 0.66
+    },
+    {
+      "date": "2026-01-04",
+      "total_pages": 70,
+      "total_duration_seconds": 4953,
+      "books": [
+        {
+          "title": "The Wind-Up Bird Chronicle",
+          "pages": 70,
+          "duration_seconds": 4953,
+          "duration_hours": 1.38
+        }
+      ],
+      "total_duration_hours": 1.38,
+      "pages": 70,
+      "duration_seconds": 4953,
+      "duration_hours": 1.38
+    },
+    {
+      "date": "2026-01-03",
+      "total_pages": 32,
+      "total_duration_seconds": 2482,
+      "books": [
+        {
+          "title": "The Wind-Up Bird Chronicle",
+          "pages": 32,
+          "duration_seconds": 2482,
+          "duration_hours": 0.69
+        }
+      ],
+      "total_duration_hours": 0.69,
+      "pages": 32,
+      "duration_seconds": 2482,
+      "duration_hours": 0.69
     },
     {
       "date": "2026-01-02",

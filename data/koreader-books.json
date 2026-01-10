@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-01-09T01:05:14.363824",
+  "updated_at": "2026-01-10T01:02:55.595827",
   "books": [
     {
       "title": "All Quiet on the Western Front",
@@ -22,9 +22,9 @@
       "percentage_completed": 6.72
     },
     {
-      "title": "The Wind-Up Bird Chronicle",
-      "authors": "Haruki Murakami",
-      "percentage_completed": 70.96
+      "title": "Amusing Ourselves to Death",
+      "authors": "Neil Postman",
+      "percentage_completed": 55.7
     },
     {
       "title": "Project Hail Mary",
@@ -37,6 +37,12 @@
       "authors": "George Eliot",
       "percentage_completed": 100.0,
       "date_completed": "23 Dec 2025"
+    },
+    {
+      "title": "The Wind-Up Bird Chronicle",
+      "authors": "Haruki Murakami",
+      "percentage_completed": 100.0,
+      "date_completed": "05 Jan 2026"
     }
   ]
 }
