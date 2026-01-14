@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-01-13T01:01:16.177600",
+  "updated_at": "2026-01-14T01:07:01.659757",
   "books": [
     {
       "title": "All Quiet on the Western Front",
@@ -24,7 +24,7 @@
     {
       "title": "Amusing Ourselves to Death",
       "authors": "Neil Postman",
-      "percentage_completed": 68.25
+      "percentage_completed": 75.55
     },
     {
       "title": "Project Hail Mary",

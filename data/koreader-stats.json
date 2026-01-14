@@ -1,6 +1,57 @@
 {
-  "updated_at": "2026-01-13T01:01:16.177604",
+  "updated_at": "2026-01-14T01:07:01.659762",
   "yearly_stats": [
+    {
+      "date": "2026-01-13",
+      "total_pages": 3,
+      "total_duration_seconds": 388,
+      "books": [
+        {
+          "title": "Amusing Ourselves to Death",
+          "pages": 3,
+          "duration_seconds": 388,
+          "duration_hours": 0.11
+        }
+      ],
+      "total_duration_hours": 0.11,
+      "pages": 3,
+      "duration_seconds": 388,
+      "duration_hours": 0.11
+    },
+    {
+      "date": "2026-01-12",
+      "total_pages": 7,
+      "total_duration_seconds": 640,
+      "books": [
+        {
+          "title": "Amusing Ourselves to Death",
+          "pages": 7,
+          "duration_seconds": 640,
+          "duration_hours": 0.18
+        }
+      ],
+      "total_duration_hours": 0.18,
+      "pages": 7,
+      "duration_seconds": 640,
+      "duration_hours": 0.18
+    },
+    {
+      "date": "2026-01-11",
+      "total_pages": 7,
+      "total_duration_seconds": 838,
+      "books": [
+        {
+          "title": "Amusing Ourselves to Death",
+          "pages": 7,
+          "duration_seconds": 838,
+          "duration_hours": 0.23
+        }
+      ],
+      "total_duration_hours": 0.23,
+      "pages": 7,
+      "duration_seconds": 838,
+      "duration_hours": 0.23
+    },
     {
       "date": "2026-01-10",
       "total_pages": 37,
