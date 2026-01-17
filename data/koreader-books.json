@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-01-16T01:05:25.656700",
+  "updated_at": "2026-01-17T01:02:15.484795",
   "books": [
     {
       "title": "All Quiet on the Western Front",
@@ -22,11 +22,6 @@
       "percentage_completed": 6.72
     },
     {
-      "title": "Amusing Ourselves to Death",
-      "authors": "Neil Postman",
-      "percentage_completed": 75.55
-    },
-    {
       "title": "Project Hail Mary",
       "authors": "Andy Weir",
       "percentage_completed": 100.0,
@@ -43,6 +38,12 @@
       "authors": "Haruki Murakami",
       "percentage_completed": 100.0,
       "date_completed": "05 Jan 2026"
+    },
+    {
+      "title": "Amusing Ourselves to Death",
+      "authors": "Neil Postman",
+      "percentage_completed": 100.0,
+      "date_completed": "16 Jan 2026"
     }
   ]
 }
