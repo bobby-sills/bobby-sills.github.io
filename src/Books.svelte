@@ -76,9 +76,16 @@
   const currentlyReading = allBooks.filter(
     (book) => book.percentage_completed < 100,
   );
-  const completedBooks = allBooks.filter(
-    (book) => book.percentage_completed >= 100,
-  );
+  const completedBooks = allBooks
+    .filter((book) => book.percentage_completed >= 100)
+    .sort((a, b) => {
+      // Sort by date_completed descending (most recent first)
+      // Books without dates go to the end
+      if (!a.date_completed && !b.date_completed) return 0;
+      if (!a.date_completed) return 1;
+      if (!b.date_completed) return -1;
+      return b.date_completed.localeCompare(a.date_completed);
+    });
 </script>
 
 <main>
