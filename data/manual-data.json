@@ -1,23 +1,10 @@
 {
   "books": [
     {
-      "title": "Purple Hibiscus",
-      "authors": "Chimamanda Ngozi Adichie",
-      "status": "completed",
-      "total_pages": 307,
-      "date_completed": "11 Oct 2025"
-    },
-    {
-      "title": "Middlemarch",
-      "authors": "George Eliot",
-      "status": "completed",
-      "total_pages": 713
-    },
-    {
-      "title": "Project Hail Mary",
-      "authors": "Andy Weir",
-      "status": "completed",
-      "total_pages": 496
+      "title": "Warbreaker",
+      "authors": "Brandon Sanderson",
+      "status": "currently_reading",
+      "total_pages": 676
     },
     {
       "title": "Salem's Lot",
@@ -45,6 +32,25 @@
       "total_pages": 651
     },
     {
+      "title": "Purple Hibiscus",
+      "authors": "Chimamanda Ngozi Adichie",
+      "status": "completed",
+      "total_pages": 307,
+      "date_completed": "11 Oct 2025"
+    },
+    {
+      "title": "Middlemarch",
+      "authors": "George Eliot",
+      "status": "completed",
+      "total_pages": 713
+    },
+    {
+      "title": "Project Hail Mary",
+      "authors": "Andy Weir",
+      "status": "completed",
+      "total_pages": 496
+    },
+    {
       "title": "The Wind-Up Bird Chronicle",
       "authors": "Haruki Murakami",
       "status": "completed",
@@ -53,33 +59,8 @@
     {
       "title": "Amusing Ourselves to Death",
       "authors": "Niel Postman",
-      "status": "currently_reading",
+      "status": "completed",
       "total_pages": 180
-    },
-    {
-      "title": "The Way of Kings",
-      "authors": "Brandon Sanderson",
-      "status": "currently_reading",
-      "total_pages": 1256,
-      "pages_read": 0
-    },
-    {
-      "title": "Words of Radiance",
-      "authors": "Brandon Sanderson",
-      "status": "want_to_read",
-      "total_pages": 1087
-    },
-    {
-      "title": "Oathbringer",
-      "authors": "Brandon Sanderson",
-      "status": "want_to_read",
-      "total_pages": 1233
-    },
-    {
-      "title": "Rhythm of War",
-      "authors": "Brandon Sanderson",
-      "status": "want_to_read",
-      "total_pages": 1232
     }
   ]
 }
