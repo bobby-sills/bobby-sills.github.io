@@ -52,7 +52,6 @@
 			<h2>currently working on</h2>
 			<ul>
 				<li>learning opengl and c++</li>
-				<li>building a functional lego desk lamp</li>
 			</ul>
 		</div>
 		<div>
