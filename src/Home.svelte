@@ -28,6 +28,9 @@
 			style:min-width="300px"
 		>
 			<h3>bobby sills</h3>
+			<a href="mailto:bobbysills@bobbysills.dev" style="color:var(--blue);"
+				>[contact]</a
+			>
 			<p>
 				9th grade developer working out of vientiane, laos. just released
 				language learning app for lao. get it on
@@ -172,7 +175,6 @@
 	}
 	h3 {
 		font-weight: normal;
-		font-style: italic;
 		color: var(--red);
 	}
 </style>
