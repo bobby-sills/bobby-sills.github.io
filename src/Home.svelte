@@ -4,6 +4,11 @@
 	$effect(() => {
 		document.title = "bobby sills";
 	});
+
+	const firstName = "bobby";
+	const lastName = "sills";
+	const tld = "dev";
+	const typaLink = "mailto";
 </script>
 
 <main>
@@ -28,9 +33,13 @@
 			style:min-width="300px"
 		>
 			<h3>bobby sills</h3>
-			<a href="mailto:bobbysills@bobbysills.dev" style="color:var(--blue);"
-				>[contact]</a
+			<button
+				onclick={() =>
+					(window.location.href = `${typaLink}:${firstName}${lastName}@${firstName}${lastName}.${tld}`)}
+				style="color:var(--blue); background: none; border: none; padding: 0; display: block; text-align: left;"
 			>
+				[contact]
+			</button>
 			<p>
 				9th grade developer working out of vientiane, laos. just released
 				language learning app for lao. get it on
