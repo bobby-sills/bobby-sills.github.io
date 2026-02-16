@@ -1,9 +1,15 @@
 {
   "books": [
     {
+      "title": "Brave New World",
+      "authors": "Aldous Huxley",
+      "status": "currently_reading",
+      "total_pages": 288
+    },
+    {
       "title": "Warbreaker",
       "authors": "Brandon Sanderson",
-      "status": "currently_reading",
+      "status": "want_to_read",
       "total_pages": 676
     },
     {
