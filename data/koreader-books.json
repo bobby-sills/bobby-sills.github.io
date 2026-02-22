@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-21T01:14:08.942094",
+  "updated_at": "2026-02-22T01:19:51.556474",
   "books": [
     {
       "title": "All Quiet on the Western Front",
@@ -20,6 +20,11 @@
       "title": "Fight Club",
       "authors": "Chuck Palahniuk",
       "percentage_completed": 6.72
+    },
+    {
+      "title": "Brave New World",
+      "authors": "Aldous Huxley",
+      "percentage_completed": 23.29
     },
     {
       "title": "Project Hail Mary",

@@ -1,6 +1,91 @@
 {
-  "updated_at": "2026-02-21T01:14:08.942099",
+  "updated_at": "2026-02-22T01:19:51.556480",
   "yearly_stats": [
+    {
+      "date": "2026-02-21",
+      "total_pages": 1,
+      "total_duration_seconds": 120,
+      "books": [
+        {
+          "title": "Brave New World",
+          "pages": 1,
+          "duration_seconds": 120,
+          "duration_hours": 0.03
+        }
+      ],
+      "total_duration_hours": 0.03,
+      "pages": 1,
+      "duration_seconds": 120,
+      "duration_hours": 0.03
+    },
+    {
+      "date": "2026-02-19",
+      "total_pages": 6,
+      "total_duration_seconds": 518,
+      "books": [
+        {
+          "title": "Brave New World",
+          "pages": 6,
+          "duration_seconds": 518,
+          "duration_hours": 0.14
+        }
+      ],
+      "total_duration_hours": 0.14,
+      "pages": 6,
+      "duration_seconds": 518,
+      "duration_hours": 0.14
+    },
+    {
+      "date": "2026-02-18",
+      "total_pages": 31,
+      "total_duration_seconds": 2795,
+      "books": [
+        {
+          "title": "Brave New World",
+          "pages": 31,
+          "duration_seconds": 2795,
+          "duration_hours": 0.78
+        }
+      ],
+      "total_duration_hours": 0.78,
+      "pages": 31,
+      "duration_seconds": 2795,
+      "duration_hours": 0.78
+    },
+    {
+      "date": "2026-02-17",
+      "total_pages": 31,
+      "total_duration_seconds": 2805,
+      "books": [
+        {
+          "title": "Brave New World",
+          "pages": 31,
+          "duration_seconds": 2805,
+          "duration_hours": 0.78
+        }
+      ],
+      "total_duration_hours": 0.78,
+      "pages": 31,
+      "duration_seconds": 2805,
+      "duration_hours": 0.78
+    },
+    {
+      "date": "2026-02-16",
+      "total_pages": 4,
+      "total_duration_seconds": 459,
+      "books": [
+        {
+          "title": "Brave New World",
+          "pages": 4,
+          "duration_seconds": 459,
+          "duration_hours": 0.13
+        }
+      ],
+      "total_duration_hours": 0.13,
+      "pages": 4,
+      "duration_seconds": 459,
+      "duration_hours": 0.13
+    },
     {
       "date": "2026-01-16",
       "total_pages": 15,
