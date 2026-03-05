@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-04T01:15:28.087613",
+  "updated_at": "2026-03-05T01:17:57.025242",
   "books": [
     {
       "title": "All Quiet on the Western Front",
@@ -24,7 +24,7 @@
     {
       "title": "Brave New World",
       "authors": "Aldous Huxley",
-      "percentage_completed": 23.29
+      "percentage_completed": 49.38
     },
     {
       "title": "Project Hail Mary",

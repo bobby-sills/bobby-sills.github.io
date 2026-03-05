@@ -1,6 +1,74 @@
 {
-  "updated_at": "2026-03-04T01:15:28.087618",
+  "updated_at": "2026-03-05T01:17:57.025246",
   "yearly_stats": [
+    {
+      "date": "2026-03-04",
+      "total_pages": 81,
+      "total_duration_seconds": 6476,
+      "books": [
+        {
+          "title": "Brave New World",
+          "pages": 81,
+          "duration_seconds": 6476,
+          "duration_hours": 1.8
+        }
+      ],
+      "total_duration_hours": 1.8,
+      "pages": 81,
+      "duration_seconds": 6476,
+      "duration_hours": 1.8
+    },
+    {
+      "date": "2026-03-01",
+      "total_pages": 4,
+      "total_duration_seconds": 383,
+      "books": [
+        {
+          "title": "Brave New World",
+          "pages": 4,
+          "duration_seconds": 383,
+          "duration_hours": 0.11
+        }
+      ],
+      "total_duration_hours": 0.11,
+      "pages": 4,
+      "duration_seconds": 383,
+      "duration_hours": 0.11
+    },
+    {
+      "date": "2026-02-24",
+      "total_pages": 2,
+      "total_duration_seconds": 314,
+      "books": [
+        {
+          "title": "Brave New World",
+          "pages": 2,
+          "duration_seconds": 314,
+          "duration_hours": 0.09
+        }
+      ],
+      "total_duration_hours": 0.09,
+      "pages": 2,
+      "duration_seconds": 314,
+      "duration_hours": 0.09
+    },
+    {
+      "date": "2026-02-23",
+      "total_pages": 1,
+      "total_duration_seconds": 120,
+      "books": [
+        {
+          "title": "Brave New World",
+          "pages": 1,
+          "duration_seconds": 120,
+          "duration_hours": 0.03
+        }
+      ],
+      "total_duration_hours": 0.03,
+      "pages": 1,
+      "duration_seconds": 120,
+      "duration_hours": 0.03
+    },
     {
       "date": "2026-02-21",
       "total_pages": 1,
