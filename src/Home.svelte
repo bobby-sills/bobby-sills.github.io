@@ -71,6 +71,11 @@
 			<ul>
 				<li><a href="#/telephone-game">telephone game</a></li>
 				<li>read lao app (see above)</li>
+				<li>
+					<a href="https://bobbysills.dev/p5js-black-hole-simulation/"
+						>black hole simulation</a
+					>
+				</li>
 			</ul>
 		</div>
 		<div>
