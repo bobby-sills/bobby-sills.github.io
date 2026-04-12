@@ -11,19 +11,11 @@ export function initTheme() {
 }
 
 export function toggleTheme() {
-  // Add transitioning class
-  document.documentElement.classList.add('transitioning');
-
   const isLight = document.documentElement.classList.toggle('light');
   const theme = isLight ? 'light' : 'dark';
   localStorage.setItem('theme', theme);
   updateBackgroundColor(theme);
   updateFavicon(theme);
-
-  // Remove transitioning class after transition completes
-  setTimeout(() => {
-    document.documentElement.classList.remove('transitioning');
-  }, 300); // Match the transition duration
 }
 
 function updateBackgroundColor(theme: string) {
