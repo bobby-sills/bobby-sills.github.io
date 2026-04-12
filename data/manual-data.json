@@ -1,9 +1,15 @@
 {
   "books": [
     {
+      "title": "Wuthering Heights",
+      "authors": "Emily Brontë",
+      "status": "currently_reading",
+      "total_pages": 485
+    },
+    {
       "title": "Brave New World",
       "authors": "Aldous Huxley",
-      "status": "currently_reading",
+      "status": "completed",
       "total_pages": 288
     },
     {
