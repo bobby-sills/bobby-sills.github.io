@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12T01:48:14.084960",
+  "updated_at": "2026-04-13T01:52:46.334046",
   "yearly_stats": [
     {
       "date": "2026-03-11",
@@ -238,6 +238,40 @@
       "pages": 5,
       "duration_seconds": 458,
       "duration_hours": 0.13
+    },
+    {
+      "date": "2026-02-15",
+      "total_pages": 2,
+      "total_duration_seconds": 925,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 2,
+          "duration_seconds": 925,
+          "duration_hours": 0.26
+        }
+      ],
+      "total_duration_hours": 0.26,
+      "pages": 2,
+      "duration_seconds": 925,
+      "duration_hours": 0.26
+    },
+    {
+      "date": "2026-02-08",
+      "total_pages": 1,
+      "total_duration_seconds": 144,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 1,
+          "duration_seconds": 144,
+          "duration_hours": 0.04
+        }
+      ],
+      "total_duration_hours": 0.04,
+      "pages": 1,
+      "duration_seconds": 144,
+      "duration_hours": 0.04
     },
     {
       "date": "2026-01-16",
