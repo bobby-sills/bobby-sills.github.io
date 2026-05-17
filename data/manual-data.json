@@ -1,5 +1,17 @@
 {
   "books": [
+     {
+      "title": "Romeo and Juliet",
+      "authors": "William Shakespear",
+      "status": "currently_reading",
+      "total_pages": 368
+    },
+     {
+      "title": "About Behaviorism",
+      "authors": "B.F. Skinner",
+      "status": "currently_reading",
+      "total_pages": 304
+    },
     {
       "title": "Wuthering Heights",
       "authors": "Emily Brontë",
