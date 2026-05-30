@@ -76,6 +76,9 @@
 						>black hole simulation</a
 					>
 				</li>
+				<li>
+					<a href="https://github.com/bobby-sills/nixos-config">nixos config</a>
+				</li>
 			</ul>
 		</div>
 		<div>

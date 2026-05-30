@@ -2,7 +2,7 @@
   "books": [
      {
       "title": "Romeo and Juliet",
-      "authors": "William Shakespear",
+      "authors": "William Shakespeare",
       "status": "currently_reading",
       "total_pages": 368
     },
