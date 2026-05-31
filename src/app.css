@@ -1,19 +1,5 @@
-@font-face {
-  font-family: 'Crimson Pro';
-  src: url('/fonts/CrimsonPro-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Crimson Pro';
-  src: url('/fonts/CrimsonPro-Italic-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: italic;
-}
-
 :root {
-  font-family: 'Crimson Pro', Georgia, serif;
+  font-family: Georgia, serif;
   font-size: 1.125rem;
   background-color: var(--bg);
 }
@@ -43,7 +29,7 @@ main {
 
 button {
   cursor: pointer;
-  font-family: 'Crimson Pro', Georgia, serif;
+  font-family: Georgia, serif;
   font-size: 1em;
   background-color: var(--bg2);
   border: 1px solid var(--fg);
