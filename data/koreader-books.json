@@ -1,10 +1,15 @@
 {
-  "updated_at": "2026-05-31T02:38:14.874940",
+  "updated_at": "2026-06-01T02:48:00.765337",
   "books": [
     {
       "title": "All Quiet on the Western Front",
       "authors": "Erich Maria Remarque",
       "percentage_completed": 1.63
+    },
+    {
+      "title": "Dungeon Crawler Carl: A LitRPG/Gamelit Adventure",
+      "authors": "Matt Dinniman",
+      "percentage_completed": 2.11
     },
     {
       "title": "Romeo and Juliet",
@@ -34,12 +39,12 @@
     {
       "title": "About Behaviorism",
       "authors": "B.F. Skinner",
-      "percentage_completed": 21.0
+      "percentage_completed": 19.34
     },
     {
       "title": "Wuthering Heights",
       "authors": "Emily Bront\u00eb",
-      "percentage_completed": 31.86
+      "percentage_completed": 32.13
     },
     {
       "title": "Project Hail Mary",
@@ -70,6 +75,12 @@
       "authors": "Aldous Huxley",
       "percentage_completed": 100.0,
       "date_completed": "11 Mar 2026"
+    },
+    {
+      "title": "About Behaviorism",
+      "authors": "N/A",
+      "percentage_completed": 100.0,
+      "date_completed": "24 May 2026"
     }
   ]
 }
