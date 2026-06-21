@@ -54,7 +54,11 @@
     <div>
       <h2>currently working on</h2>
       <ul>
-        <li>learning opengl and c++</li>
+        <li>
+          ai research for <a href="https://algoverseairesearch.org/"
+            >algoverse</a
+          >
+        </li>
       </ul>
     </div>
     <div>
