@@ -1,15 +1,243 @@
 {
-  "updated_at": "2026-05-31T02:38:14.874946",
+  "updated_at": "2026-06-21T02:50:07.477143",
   "yearly_stats": [
     {
-      "date": "2026-05-17",
-      "total_pages": 2,
-      "total_duration_seconds": 151,
+      "date": "2026-05-31",
+      "total_pages": 12,
+      "total_duration_seconds": 1181,
+      "books": [
+        {
+          "title": "About Behaviorism",
+          "pages": 6,
+          "duration_seconds": 707,
+          "duration_hours": 0.2
+        },
+        {
+          "title": "Dungeon Crawler Carl: A LitRPG/Gamelit Adventure",
+          "pages": 6,
+          "duration_seconds": 474,
+          "duration_hours": 0.13
+        }
+      ],
+      "total_duration_hours": 0.33,
+      "pages": 12,
+      "duration_seconds": 1181,
+      "duration_hours": 0.33
+    },
+    {
+      "date": "2026-05-30",
+      "total_pages": 5,
+      "total_duration_seconds": 350,
+      "books": [
+        {
+          "title": "About Behaviorism",
+          "pages": 5,
+          "duration_seconds": 350,
+          "duration_hours": 0.1
+        }
+      ],
+      "total_duration_hours": 0.1,
+      "pages": 5,
+      "duration_seconds": 350,
+      "duration_hours": 0.1
+    },
+    {
+      "date": "2026-05-29",
+      "total_pages": 3,
+      "total_duration_seconds": 143,
+      "books": [
+        {
+          "title": "About Behaviorism",
+          "pages": 3,
+          "duration_seconds": 143,
+          "duration_hours": 0.04
+        }
+      ],
+      "total_duration_hours": 0.04,
+      "pages": 3,
+      "duration_seconds": 143,
+      "duration_hours": 0.04
+    },
+    {
+      "date": "2026-05-28",
+      "total_pages": 7,
+      "total_duration_seconds": 775,
+      "books": [
+        {
+          "title": "About Behaviorism",
+          "pages": 7,
+          "duration_seconds": 775,
+          "duration_hours": 0.22
+        }
+      ],
+      "total_duration_hours": 0.22,
+      "pages": 7,
+      "duration_seconds": 775,
+      "duration_hours": 0.22
+    },
+    {
+      "date": "2026-05-27",
+      "total_pages": 5,
+      "total_duration_seconds": 474,
+      "books": [
+        {
+          "title": "About Behaviorism",
+          "pages": 5,
+          "duration_seconds": 474,
+          "duration_hours": 0.13
+        }
+      ],
+      "total_duration_hours": 0.13,
+      "pages": 5,
+      "duration_seconds": 474,
+      "duration_hours": 0.13
+    },
+    {
+      "date": "2026-05-26",
+      "total_pages": 1,
+      "total_duration_seconds": 120,
       "books": [
         {
           "title": "About Behaviorism",
           "pages": 1,
-          "duration_seconds": 31,
+          "duration_seconds": 120,
+          "duration_hours": 0.03
+        }
+      ],
+      "total_duration_hours": 0.03,
+      "pages": 1,
+      "duration_seconds": 120,
+      "duration_hours": 0.03
+    },
+    {
+      "date": "2026-05-25",
+      "total_pages": 4,
+      "total_duration_seconds": 224,
+      "books": [
+        {
+          "title": "About Behaviorism",
+          "pages": 2,
+          "duration_seconds": 104,
+          "duration_hours": 0.03
+        },
+        {
+          "title": "Wuthering Heights",
+          "pages": 2,
+          "duration_seconds": 120,
+          "duration_hours": 0.03
+        }
+      ],
+      "total_duration_hours": 0.06,
+      "pages": 4,
+      "duration_seconds": 224,
+      "duration_hours": 0.06
+    },
+    {
+      "date": "2026-05-24",
+      "total_pages": 3,
+      "total_duration_seconds": 366,
+      "books": [
+        {
+          "title": "About Behaviorism",
+          "pages": 3,
+          "duration_seconds": 366,
+          "duration_hours": 0.1
+        }
+      ],
+      "total_duration_hours": 0.1,
+      "pages": 3,
+      "duration_seconds": 366,
+      "duration_hours": 0.1
+    },
+    {
+      "date": "2026-05-23",
+      "total_pages": 11,
+      "total_duration_seconds": 838,
+      "books": [
+        {
+          "title": "About Behaviorism",
+          "pages": 9,
+          "duration_seconds": 594,
+          "duration_hours": 0.17
+        },
+        {
+          "title": "Wuthering Heights",
+          "pages": 2,
+          "duration_seconds": 244,
+          "duration_hours": 0.07
+        }
+      ],
+      "total_duration_hours": 0.23,
+      "pages": 11,
+      "duration_seconds": 838,
+      "duration_hours": 0.23
+    },
+    {
+      "date": "2026-05-22",
+      "total_pages": 5,
+      "total_duration_seconds": 270,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 5,
+          "duration_seconds": 270,
+          "duration_hours": 0.07
+        }
+      ],
+      "total_duration_hours": 0.07,
+      "pages": 5,
+      "duration_seconds": 270,
+      "duration_hours": 0.07
+    },
+    {
+      "date": "2026-05-21",
+      "total_pages": 1,
+      "total_duration_seconds": 240,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 1,
+          "duration_seconds": 240,
+          "duration_hours": 0.07
+        }
+      ],
+      "total_duration_hours": 0.07,
+      "pages": 1,
+      "duration_seconds": 240,
+      "duration_hours": 0.07
+    },
+    {
+      "date": "2026-05-20",
+      "total_pages": 6,
+      "total_duration_seconds": 165,
+      "books": [
+        {
+          "title": "About Behaviorism",
+          "pages": 3,
+          "duration_seconds": 120,
+          "duration_hours": 0.03
+        },
+        {
+          "title": "Wuthering Heights",
+          "pages": 3,
+          "duration_seconds": 45,
+          "duration_hours": 0.01
+        }
+      ],
+      "total_duration_hours": 0.05,
+      "pages": 6,
+      "duration_seconds": 165,
+      "duration_hours": 0.05
+    },
+    {
+      "date": "2026-05-17",
+      "total_pages": 4,
+      "total_duration_seconds": 150,
+      "books": [
+        {
+          "title": "About Behaviorism",
+          "pages": 3,
+          "duration_seconds": 30,
           "duration_hours": 0.01
         },
         {
@@ -20,13 +248,13 @@
         }
       ],
       "total_duration_hours": 0.04,
-      "pages": 2,
-      "duration_seconds": 151,
+      "pages": 4,
+      "duration_seconds": 150,
       "duration_hours": 0.04
     },
     {
       "date": "2026-05-16",
-      "total_pages": 16,
+      "total_pages": 18,
       "total_duration_seconds": 1126,
       "books": [
         {
@@ -37,54 +265,54 @@
         },
         {
           "title": "Wuthering Heights",
-          "pages": 1,
+          "pages": 3,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.31,
-      "pages": 16,
+      "pages": 18,
       "duration_seconds": 1126,
       "duration_hours": 0.31
     },
     {
       "date": "2026-05-15",
-      "total_pages": 3,
-      "total_duration_seconds": 441,
+      "total_pages": 9,
+      "total_duration_seconds": 438,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 3,
-          "duration_seconds": 441,
+          "pages": 9,
+          "duration_seconds": 438,
           "duration_hours": 0.12
         }
       ],
       "total_duration_hours": 0.12,
-      "pages": 3,
-      "duration_seconds": 441,
+      "pages": 9,
+      "duration_seconds": 438,
       "duration_hours": 0.12
     },
     {
       "date": "2026-05-14",
-      "total_pages": 4,
-      "total_duration_seconds": 696,
+      "total_pages": 9,
+      "total_duration_seconds": 692,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 4,
-          "duration_seconds": 696,
+          "pages": 9,
+          "duration_seconds": 692,
           "duration_hours": 0.19
         }
       ],
       "total_duration_hours": 0.19,
-      "pages": 4,
-      "duration_seconds": 696,
+      "pages": 9,
+      "duration_seconds": 692,
       "duration_hours": 0.19
     },
     {
       "date": "2026-05-13",
-      "total_pages": 13,
-      "total_duration_seconds": 1723,
+      "total_pages": 34,
+      "total_duration_seconds": 1716,
       "books": [
         {
           "title": "Romeo and Juliet",
@@ -94,19 +322,19 @@
         },
         {
           "title": "Wuthering Heights",
-          "pages": 12,
-          "duration_seconds": 1603,
-          "duration_hours": 0.45
+          "pages": 33,
+          "duration_seconds": 1596,
+          "duration_hours": 0.44
         }
       ],
       "total_duration_hours": 0.48,
-      "pages": 13,
-      "duration_seconds": 1723,
+      "pages": 34,
+      "duration_seconds": 1716,
       "duration_hours": 0.48
     },
     {
       "date": "2026-05-12",
-      "total_pages": 4,
+      "total_pages": 6,
       "total_duration_seconds": 195,
       "books": [
         {
@@ -117,458 +345,458 @@
         },
         {
           "title": "Wuthering Heights",
-          "pages": 1,
+          "pages": 3,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.05,
-      "pages": 4,
+      "pages": 6,
       "duration_seconds": 195,
       "duration_hours": 0.05
     },
     {
       "date": "2026-05-10",
-      "total_pages": 3,
-      "total_duration_seconds": 323,
+      "total_pages": 8,
+      "total_duration_seconds": 321,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 3,
-          "duration_seconds": 323,
+          "pages": 8,
+          "duration_seconds": 321,
           "duration_hours": 0.09
         }
       ],
       "total_duration_hours": 0.09,
-      "pages": 3,
-      "duration_seconds": 323,
+      "pages": 8,
+      "duration_seconds": 321,
       "duration_hours": 0.09
     },
     {
       "date": "2026-05-03",
-      "total_pages": 1,
+      "total_pages": 3,
       "total_duration_seconds": 120,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 1,
+          "pages": 3,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 1,
+      "pages": 3,
       "duration_seconds": 120,
       "duration_hours": 0.03
     },
     {
       "date": "2026-05-01",
-      "total_pages": 3,
-      "total_duration_seconds": 500,
+      "total_pages": 9,
+      "total_duration_seconds": 498,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 3,
-          "duration_seconds": 500,
+          "pages": 9,
+          "duration_seconds": 498,
           "duration_hours": 0.14
         }
       ],
       "total_duration_hours": 0.14,
-      "pages": 3,
-      "duration_seconds": 500,
+      "pages": 9,
+      "duration_seconds": 498,
       "duration_hours": 0.14
     },
     {
       "date": "2026-04-30",
-      "total_pages": 2,
-      "total_duration_seconds": 371,
+      "total_pages": 6,
+      "total_duration_seconds": 369,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 2,
-          "duration_seconds": 371,
+          "pages": 6,
+          "duration_seconds": 369,
           "duration_hours": 0.1
         }
       ],
       "total_duration_hours": 0.1,
-      "pages": 2,
-      "duration_seconds": 371,
+      "pages": 6,
+      "duration_seconds": 369,
       "duration_hours": 0.1
     },
     {
       "date": "2026-04-29",
-      "total_pages": 3,
-      "total_duration_seconds": 289,
+      "total_pages": 8,
+      "total_duration_seconds": 288,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 2,
-          "duration_seconds": 169,
+          "pages": 6,
+          "duration_seconds": 168,
           "duration_hours": 0.05
         },
         {
           "title": "Wuthering Heights",
-          "pages": 1,
+          "pages": 2,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.08,
-      "pages": 3,
-      "duration_seconds": 289,
+      "pages": 8,
+      "duration_seconds": 288,
       "duration_hours": 0.08
     },
     {
       "date": "2026-04-28",
-      "total_pages": 1,
+      "total_pages": 2,
       "total_duration_seconds": 120,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 1,
+          "pages": 2,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 1,
+      "pages": 2,
       "duration_seconds": 120,
       "duration_hours": 0.03
     },
     {
       "date": "2026-04-27",
-      "total_pages": 2,
+      "total_pages": 6,
       "total_duration_seconds": 240,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
+          "pages": 6,
           "duration_seconds": 240,
           "duration_hours": 0.07
         }
       ],
       "total_duration_hours": 0.07,
-      "pages": 2,
+      "pages": 6,
       "duration_seconds": 240,
       "duration_hours": 0.07
     },
     {
       "date": "2026-04-26",
-      "total_pages": 2,
-      "total_duration_seconds": 184,
+      "total_pages": 5,
+      "total_duration_seconds": 183,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
-          "duration_seconds": 184,
+          "pages": 5,
+          "duration_seconds": 183,
           "duration_hours": 0.05
         }
       ],
       "total_duration_hours": 0.05,
-      "pages": 2,
-      "duration_seconds": 184,
+      "pages": 5,
+      "duration_seconds": 183,
       "duration_hours": 0.05
     },
     {
       "date": "2026-04-25",
-      "total_pages": 6,
-      "total_duration_seconds": 475,
+      "total_pages": 16,
+      "total_duration_seconds": 474,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 4,
-          "duration_seconds": 343,
+          "pages": 11,
+          "duration_seconds": 342,
           "duration_hours": 0.1
         },
         {
           "title": "Wuthering Heights",
-          "pages": 2,
+          "pages": 5,
           "duration_seconds": 132,
           "duration_hours": 0.04
         }
       ],
       "total_duration_hours": 0.13,
-      "pages": 6,
-      "duration_seconds": 475,
+      "pages": 16,
+      "duration_seconds": 474,
       "duration_hours": 0.13
     },
     {
       "date": "2026-04-24",
-      "total_pages": 5,
-      "total_duration_seconds": 797,
+      "total_pages": 13,
+      "total_duration_seconds": 795,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 4,
-          "duration_seconds": 677,
+          "pages": 11,
+          "duration_seconds": 675,
           "duration_hours": 0.19
         },
         {
           "title": "Wuthering Heights",
-          "pages": 1,
+          "pages": 2,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.22,
-      "pages": 5,
-      "duration_seconds": 797,
+      "pages": 13,
+      "duration_seconds": 795,
       "duration_hours": 0.22
     },
     {
       "date": "2026-04-23",
-      "total_pages": 1,
+      "total_pages": 2,
       "total_duration_seconds": 120,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 1,
+          "pages": 2,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 1,
+      "pages": 2,
       "duration_seconds": 120,
       "duration_hours": 0.03
     },
     {
       "date": "2026-04-22",
-      "total_pages": 2,
+      "total_pages": 6,
       "total_duration_seconds": 240,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
+          "pages": 6,
           "duration_seconds": 240,
           "duration_hours": 0.07
         }
       ],
       "total_duration_hours": 0.07,
-      "pages": 2,
+      "pages": 6,
       "duration_seconds": 240,
       "duration_hours": 0.07
     },
     {
       "date": "2026-04-21",
-      "total_pages": 2,
-      "total_duration_seconds": 115,
+      "total_pages": 5,
+      "total_duration_seconds": 114,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
-          "duration_seconds": 115,
+          "pages": 5,
+          "duration_seconds": 114,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 2,
-      "duration_seconds": 115,
+      "pages": 5,
+      "duration_seconds": 114,
       "duration_hours": 0.03
     },
     {
       "date": "2026-04-19",
-      "total_pages": 20,
-      "total_duration_seconds": 3057,
+      "total_pages": 56,
+      "total_duration_seconds": 3044,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 20,
-          "duration_seconds": 3057,
+          "pages": 56,
+          "duration_seconds": 3044,
           "duration_hours": 0.85
         }
       ],
       "total_duration_hours": 0.85,
-      "pages": 20,
-      "duration_seconds": 3057,
+      "pages": 56,
+      "duration_seconds": 3044,
       "duration_hours": 0.85
     },
     {
       "date": "2026-04-18",
-      "total_pages": 14,
-      "total_duration_seconds": 2605,
+      "total_pages": 41,
+      "total_duration_seconds": 2577,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 14,
-          "duration_seconds": 2605,
+          "pages": 41,
+          "duration_seconds": 2577,
           "duration_hours": 0.72
         }
       ],
       "total_duration_hours": 0.72,
-      "pages": 14,
-      "duration_seconds": 2605,
+      "pages": 41,
+      "duration_seconds": 2577,
       "duration_hours": 0.72
     },
     {
       "date": "2026-04-17",
-      "total_pages": 16,
-      "total_duration_seconds": 3583,
+      "total_pages": 44,
+      "total_duration_seconds": 3546,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 14,
-          "duration_seconds": 3330,
-          "duration_hours": 0.93
+          "pages": 39,
+          "duration_seconds": 3294,
+          "duration_hours": 0.92
         },
         {
           "title": "Wuthering Heights",
-          "pages": 2,
-          "duration_seconds": 253,
+          "pages": 5,
+          "duration_seconds": 252,
           "duration_hours": 0.07
         }
       ],
-      "total_duration_hours": 1.0,
-      "pages": 16,
-      "duration_seconds": 3583,
-      "duration_hours": 1.0
+      "total_duration_hours": 0.98,
+      "pages": 44,
+      "duration_seconds": 3546,
+      "duration_hours": 0.98
     },
     {
       "date": "2026-04-16",
-      "total_pages": 7,
-      "total_duration_seconds": 2162,
+      "total_pages": 21,
+      "total_duration_seconds": 2151,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 5,
-          "duration_seconds": 1594,
+          "pages": 15,
+          "duration_seconds": 1584,
           "duration_hours": 0.44
         },
         {
           "title": "Wuthering Heights",
-          "pages": 2,
-          "duration_seconds": 568,
+          "pages": 6,
+          "duration_seconds": 567,
           "duration_hours": 0.16
         }
       ],
       "total_duration_hours": 0.6,
-      "pages": 7,
-      "duration_seconds": 2162,
+      "pages": 21,
+      "duration_seconds": 2151,
       "duration_hours": 0.6
     },
     {
       "date": "2026-04-15",
-      "total_pages": 18,
-      "total_duration_seconds": 3586,
+      "total_pages": 51,
+      "total_duration_seconds": 3568,
       "books": [
         {
           "title": "About Behaviorism",
-          "pages": 7,
-          "duration_seconds": 1895,
-          "duration_hours": 0.53
+          "pages": 21,
+          "duration_seconds": 1887,
+          "duration_hours": 0.52
         },
         {
           "title": "Wuthering Heights",
-          "pages": 11,
-          "duration_seconds": 1691,
+          "pages": 30,
+          "duration_seconds": 1681,
           "duration_hours": 0.47
         }
       ],
-      "total_duration_hours": 1.0,
-      "pages": 18,
-      "duration_seconds": 3586,
-      "duration_hours": 1.0
+      "total_duration_hours": 0.99,
+      "pages": 51,
+      "duration_seconds": 3568,
+      "duration_hours": 0.99
     },
     {
       "date": "2026-04-14",
-      "total_pages": 9,
-      "total_duration_seconds": 897,
+      "total_pages": 25,
+      "total_duration_seconds": 889,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 9,
-          "duration_seconds": 897,
+          "pages": 25,
+          "duration_seconds": 889,
           "duration_hours": 0.25
         }
       ],
       "total_duration_hours": 0.25,
-      "pages": 9,
-      "duration_seconds": 897,
+      "pages": 25,
+      "duration_seconds": 889,
       "duration_hours": 0.25
     },
     {
       "date": "2026-04-13",
-      "total_pages": 10,
-      "total_duration_seconds": 825,
+      "total_pages": 28,
+      "total_duration_seconds": 809,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 10,
-          "duration_seconds": 825,
-          "duration_hours": 0.23
+          "pages": 28,
+          "duration_seconds": 809,
+          "duration_hours": 0.22
         }
       ],
-      "total_duration_hours": 0.23,
-      "pages": 10,
-      "duration_seconds": 825,
-      "duration_hours": 0.23
+      "total_duration_hours": 0.22,
+      "pages": 28,
+      "duration_seconds": 809,
+      "duration_hours": 0.22
     },
     {
       "date": "2026-04-11",
-      "total_pages": 2,
-      "total_duration_seconds": 128,
+      "total_pages": 5,
+      "total_duration_seconds": 126,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
-          "duration_seconds": 128,
+          "pages": 5,
+          "duration_seconds": 126,
           "duration_hours": 0.04
         }
       ],
       "total_duration_hours": 0.04,
-      "pages": 2,
-      "duration_seconds": 128,
+      "pages": 5,
+      "duration_seconds": 126,
       "duration_hours": 0.04
     },
     {
       "date": "2026-04-10",
-      "total_pages": 12,
-      "total_duration_seconds": 1412,
+      "total_pages": 32,
+      "total_duration_seconds": 1400,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 12,
-          "duration_seconds": 1412,
+          "pages": 32,
+          "duration_seconds": 1400,
           "duration_hours": 0.39
         }
       ],
       "total_duration_hours": 0.39,
-      "pages": 12,
-      "duration_seconds": 1412,
+      "pages": 32,
+      "duration_seconds": 1400,
       "duration_hours": 0.39
     },
     {
       "date": "2026-04-05",
-      "total_pages": 2,
-      "total_duration_seconds": 155,
+      "total_pages": 6,
+      "total_duration_seconds": 153,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
-          "duration_seconds": 155,
+          "pages": 6,
+          "duration_seconds": 153,
           "duration_hours": 0.04
         }
       ],
       "total_duration_hours": 0.04,
-      "pages": 2,
-      "duration_seconds": 155,
+      "pages": 6,
+      "duration_seconds": 153,
       "duration_hours": 0.04
     },
     {
       "date": "2026-04-04",
-      "total_pages": 1,
-      "total_duration_seconds": 7,
+      "total_pages": 3,
+      "total_duration_seconds": 6,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 1,
-          "duration_seconds": 7,
+          "pages": 3,
+          "duration_seconds": 6,
           "duration_hours": 0.0
         }
       ],
       "total_duration_hours": 0.0,
-      "pages": 1,
-      "duration_seconds": 7,
+      "pages": 3,
+      "duration_seconds": 6,
       "duration_hours": 0.0
     },
     {
@@ -811,35 +1039,35 @@
     },
     {
       "date": "2026-02-15",
-      "total_pages": 2,
-      "total_duration_seconds": 925,
+      "total_pages": 6,
+      "total_duration_seconds": 912,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
-          "duration_seconds": 925,
-          "duration_hours": 0.26
+          "pages": 6,
+          "duration_seconds": 912,
+          "duration_hours": 0.25
         }
       ],
-      "total_duration_hours": 0.26,
-      "pages": 2,
-      "duration_seconds": 925,
-      "duration_hours": 0.26
+      "total_duration_hours": 0.25,
+      "pages": 6,
+      "duration_seconds": 912,
+      "duration_hours": 0.25
     },
     {
       "date": "2026-02-08",
-      "total_pages": 1,
+      "total_pages": 3,
       "total_duration_seconds": 144,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 1,
+          "pages": 3,
           "duration_seconds": 144,
           "duration_hours": 0.04
         }
       ],
       "total_duration_hours": 0.04,
-      "pages": 1,
+      "pages": 3,
       "duration_seconds": 144,
       "duration_hours": 0.04
     },
