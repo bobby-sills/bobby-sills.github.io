@@ -1,24 +1,6 @@
 {
   "books": [
     {
-      "title": "Dungeon Crawler Carl: A LitRPG/Gamelit Adventure",
-      "authors": "Matt Dinniman",
-      "status": "currently_reading",
-      "total_pages": 464
-    },
-    {
-      "title": "Romeo and Juliet",
-      "authors": "William Shakespeare",
-      "status": "currently_reading",
-      "total_pages": 368
-    },
-    {
-      "title": "About Behaviorism",
-      "authors": "B.F. Skinner",
-      "status": "currently_reading",
-      "total_pages": 304
-    },
-    {
       "title": "Wuthering Heights",
       "authors": "Emily Brontë",
       "status": "currently_reading",
