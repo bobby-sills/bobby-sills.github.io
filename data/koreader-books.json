@@ -1,20 +1,10 @@
 {
-  "updated_at": "2026-06-24T02:29:13.307309",
+  "updated_at": "2026-06-25T02:30:57.790868",
   "books": [
     {
       "title": "All Quiet on the Western Front",
       "authors": "Erich Maria Remarque",
       "percentage_completed": 1.63
-    },
-    {
-      "title": "Dungeon Crawler Carl: A LitRPG/Gamelit Adventure",
-      "authors": "Matt Dinniman",
-      "percentage_completed": 2.11
-    },
-    {
-      "title": "Romeo and Juliet",
-      "authors": "William Shakespeare",
-      "percentage_completed": 2.14
     },
     {
       "title": "All Quiet on the Western Front",
@@ -27,19 +17,9 @@
       "percentage_completed": 3.38
     },
     {
-      "title": "Romeo and Juliet",
-      "authors": "William Shakespeare",
-      "percentage_completed": 6.17
-    },
-    {
       "title": "Fight Club",
       "authors": "Chuck Palahniuk",
       "percentage_completed": 6.72
-    },
-    {
-      "title": "About Behaviorism",
-      "authors": "B.F. Skinner",
-      "percentage_completed": 19.34
     },
     {
       "title": "Wuthering Heights",
@@ -75,12 +55,6 @@
       "authors": "Aldous Huxley",
       "percentage_completed": 100.0,
       "date_completed": "11 Mar 2026"
-    },
-    {
-      "title": "About Behaviorism",
-      "authors": "N/A",
-      "percentage_completed": 100.0,
-      "date_completed": "24 May 2026"
     }
   ]
 }
