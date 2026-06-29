@@ -7,6 +7,16 @@
       "total_pages": 297
     },
     {
+      "title": "Pride and Prejudice",
+      "authors": "Jane Auste",
+      "status": "want_to_read"
+    },
+    {
+      "title": "The Master and Margarita",
+      "authors": "Mikhail Bulgakov",
+      "status": "want_to_read"
+    },
+    {
       "title": "Wuthering Heights",
       "authors": "Emily Brontë",
       "status": "completed",
@@ -17,37 +27,6 @@
       "authors": "Aldous Huxley",
       "status": "completed",
       "total_pages": 288
-    },
-    {
-      "title": "Warbreaker",
-      "authors": "Brandon Sanderson",
-      "status": "want_to_read",
-      "total_pages": 676
-    },
-    {
-      "title": "Salem's Lot",
-      "authors": "Stephen King",
-      "status": "want_to_read",
-      "total_pages": 653,
-      "pages_read": 5
-    },
-    {
-      "title": "All Quiet on the Western Front",
-      "authors": "Erich Maria Remarque",
-      "status": "want_to_read",
-      "total_pages": 296
-    },
-    {
-      "title": "Fight Club",
-      "authors": "Chuck Palahniuk",
-      "status": "want_to_read",
-      "total_pages": 224
-    },
-    {
-      "title": "The Stand",
-      "authors": "Stephen King",
-      "status": "want_to_read",
-      "total_pages": 651
     },
     {
       "title": "Purple Hibiscus",
