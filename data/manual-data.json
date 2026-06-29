@@ -1,9 +1,15 @@
 {
   "books": [
     {
+      "title": "Neuromancer",
+      "authors": "William Gibson",
+      "status": "currently_reading",
+      "total_pages": 297
+    },
+    {
       "title": "Wuthering Heights",
       "authors": "Emily Brontë",
-      "status": "currently_reading",
+      "status": "completed",
       "total_pages": 485
     },
     {
