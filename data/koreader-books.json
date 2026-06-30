@@ -1,26 +1,6 @@
 {
-  "updated_at": "2026-06-29T02:39:07.951652",
+  "updated_at": "2026-06-30T02:33:28.266311",
   "books": [
-    {
-      "title": "All Quiet on the Western Front",
-      "authors": "Erich Maria Remarque",
-      "percentage_completed": 1.63
-    },
-    {
-      "title": "All Quiet on the Western Front",
-      "authors": "Erich Maria Remarque",
-      "percentage_completed": 2.55
-    },
-    {
-      "title": "All Quiet on the Western Front",
-      "authors": "Erich Maria Remarque",
-      "percentage_completed": 3.38
-    },
-    {
-      "title": "Fight Club",
-      "authors": "Chuck Palahniuk",
-      "percentage_completed": 6.72
-    },
     {
       "title": "Wuthering Heights",
       "authors": "Emily Bront\u00eb",
