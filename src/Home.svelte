@@ -17,7 +17,7 @@
   >
     <img
       src="/profile-photo.jpg"
-      alt="Portrait of a 9th grader"
+      alt="Portrait of a 15 y/o grader"
       width="200"
       height="200"
     />
@@ -32,8 +32,8 @@
         bobbysills [at] bobbysills [dot] dev
       </p>
       <p>
-        9th grade developer working out of vientiane, laos. just released
-        language learning app for lao. get it on
+        15 y/o working out of vientiane, laos. just released language learning
+        app for lao. get it on
         <a href="https://apps.apple.com/us/app/read-lao/id6749076081">ios</a>
         and
         <a
