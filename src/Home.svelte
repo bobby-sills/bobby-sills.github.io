@@ -77,6 +77,11 @@
           <a href="https://github.com/bobby-sills/nixos-config">nixos config</a>
         </li>
         <li>
+          <a href="https://github.com/bobby-sills/danger-write"
+            >terminal writing game</a
+          >
+        </li>
+        <li>
           <a href="https://bobbysills.dev/p5js-black-hole-simulation/"
             >black hole simulation</a
           >
