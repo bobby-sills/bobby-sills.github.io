@@ -1,56 +1,742 @@
 {
-  "updated_at": "2026-07-23T01:56:31.833986",
+  "updated_at": "2026-07-24T01:52:54.245523",
   "yearly_stats": [
     {
-      "date": "2026-05-25",
-      "total_pages": 2,
+      "date": "2026-07-23",
+      "total_pages": 54,
+      "total_duration_seconds": 6722,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 54,
+          "duration_seconds": 6722,
+          "duration_hours": 1.87
+        }
+      ],
+      "total_duration_hours": 1.87,
+      "pages": 54,
+      "duration_seconds": 6722,
+      "duration_hours": 1.87
+    },
+    {
+      "date": "2026-07-22",
+      "total_pages": 19,
+      "total_duration_seconds": 2095,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 19,
+          "duration_seconds": 2095,
+          "duration_hours": 0.58
+        }
+      ],
+      "total_duration_hours": 0.58,
+      "pages": 19,
+      "duration_seconds": 2095,
+      "duration_hours": 0.58
+    },
+    {
+      "date": "2026-07-21",
+      "total_pages": 4,
+      "total_duration_seconds": 379,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 4,
+          "duration_seconds": 379,
+          "duration_hours": 0.11
+        }
+      ],
+      "total_duration_hours": 0.11,
+      "pages": 4,
+      "duration_seconds": 379,
+      "duration_hours": 0.11
+    },
+    {
+      "date": "2026-07-20",
+      "total_pages": 6,
+      "total_duration_seconds": 640,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 6,
+          "duration_seconds": 640,
+          "duration_hours": 0.18
+        }
+      ],
+      "total_duration_hours": 0.18,
+      "pages": 6,
+      "duration_seconds": 640,
+      "duration_hours": 0.18
+    },
+    {
+      "date": "2026-07-19",
+      "total_pages": 7,
+      "total_duration_seconds": 1007,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 7,
+          "duration_seconds": 1007,
+          "duration_hours": 0.28
+        }
+      ],
+      "total_duration_hours": 0.28,
+      "pages": 7,
+      "duration_seconds": 1007,
+      "duration_hours": 0.28
+    },
+    {
+      "date": "2026-07-18",
+      "total_pages": 3,
+      "total_duration_seconds": 284,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 3,
+          "duration_seconds": 284,
+          "duration_hours": 0.08
+        }
+      ],
+      "total_duration_hours": 0.08,
+      "pages": 3,
+      "duration_seconds": 284,
+      "duration_hours": 0.08
+    },
+    {
+      "date": "2026-07-17",
+      "total_pages": 8,
+      "total_duration_seconds": 625,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 8,
+          "duration_seconds": 625,
+          "duration_hours": 0.17
+        }
+      ],
+      "total_duration_hours": 0.17,
+      "pages": 8,
+      "duration_seconds": 625,
+      "duration_hours": 0.17
+    },
+    {
+      "date": "2026-07-16",
+      "total_pages": 3,
+      "total_duration_seconds": 269,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 3,
+          "duration_seconds": 269,
+          "duration_hours": 0.07
+        }
+      ],
+      "total_duration_hours": 0.07,
+      "pages": 3,
+      "duration_seconds": 269,
+      "duration_hours": 0.07
+    },
+    {
+      "date": "2026-07-15",
+      "total_pages": 3,
+      "total_duration_seconds": 384,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 3,
+          "duration_seconds": 384,
+          "duration_hours": 0.11
+        }
+      ],
+      "total_duration_hours": 0.11,
+      "pages": 3,
+      "duration_seconds": 384,
+      "duration_hours": 0.11
+    },
+    {
+      "date": "2026-07-14",
+      "total_pages": 8,
+      "total_duration_seconds": 1116,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 8,
+          "duration_seconds": 1116,
+          "duration_hours": 0.31
+        }
+      ],
+      "total_duration_hours": 0.31,
+      "pages": 8,
+      "duration_seconds": 1116,
+      "duration_hours": 0.31
+    },
+    {
+      "date": "2026-07-13",
+      "total_pages": 13,
+      "total_duration_seconds": 1739,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 13,
+          "duration_seconds": 1739,
+          "duration_hours": 0.48
+        }
+      ],
+      "total_duration_hours": 0.48,
+      "pages": 13,
+      "duration_seconds": 1739,
+      "duration_hours": 0.48
+    },
+    {
+      "date": "2026-07-12",
+      "total_pages": 29,
+      "total_duration_seconds": 3244,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 29,
+          "duration_seconds": 3244,
+          "duration_hours": 0.9
+        }
+      ],
+      "total_duration_hours": 0.9,
+      "pages": 29,
+      "duration_seconds": 3244,
+      "duration_hours": 0.9
+    },
+    {
+      "date": "2026-07-11",
+      "total_pages": 12,
+      "total_duration_seconds": 1590,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 12,
+          "duration_seconds": 1590,
+          "duration_hours": 0.44
+        }
+      ],
+      "total_duration_hours": 0.44,
+      "pages": 12,
+      "duration_seconds": 1590,
+      "duration_hours": 0.44
+    },
+    {
+      "date": "2026-07-09",
+      "total_pages": 5,
+      "total_duration_seconds": 449,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 5,
+          "duration_seconds": 449,
+          "duration_hours": 0.12
+        }
+      ],
+      "total_duration_hours": 0.12,
+      "pages": 5,
+      "duration_seconds": 449,
+      "duration_hours": 0.12
+    },
+    {
+      "date": "2026-07-07",
+      "total_pages": 3,
+      "total_duration_seconds": 472,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 3,
+          "duration_seconds": 472,
+          "duration_hours": 0.13
+        }
+      ],
+      "total_duration_hours": 0.13,
+      "pages": 3,
+      "duration_seconds": 472,
+      "duration_hours": 0.13
+    },
+    {
+      "date": "2026-07-05",
+      "total_pages": 1,
       "total_duration_seconds": 120,
       "books": [
         {
-          "title": "Wuthering Heights",
-          "pages": 2,
+          "title": "Neuromancer",
+          "pages": 1,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
+      "pages": 1,
+      "duration_seconds": 120,
+      "duration_hours": 0.03
+    },
+    {
+      "date": "2026-07-04",
+      "total_pages": 2,
+      "total_duration_seconds": 156,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 2,
+          "duration_seconds": 156,
+          "duration_hours": 0.04
+        }
+      ],
+      "total_duration_hours": 0.04,
       "pages": 2,
+      "duration_seconds": 156,
+      "duration_hours": 0.04
+    },
+    {
+      "date": "2026-07-03",
+      "total_pages": 4,
+      "total_duration_seconds": 338,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 4,
+          "duration_seconds": 338,
+          "duration_hours": 0.09
+        }
+      ],
+      "total_duration_hours": 0.09,
+      "pages": 4,
+      "duration_seconds": 338,
+      "duration_hours": 0.09
+    },
+    {
+      "date": "2026-07-01",
+      "total_pages": 3,
+      "total_duration_seconds": 360,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 3,
+          "duration_seconds": 360,
+          "duration_hours": 0.1
+        }
+      ],
+      "total_duration_hours": 0.1,
+      "pages": 3,
+      "duration_seconds": 360,
+      "duration_hours": 0.1
+    },
+    {
+      "date": "2026-06-29",
+      "total_pages": 20,
+      "total_duration_seconds": 1772,
+      "books": [
+        {
+          "title": "Neuromancer",
+          "pages": 1,
+          "duration_seconds": 7,
+          "duration_hours": 0.0
+        },
+        {
+          "title": "Wuthering Heights",
+          "pages": 19,
+          "duration_seconds": 1765,
+          "duration_hours": 0.49
+        }
+      ],
+      "total_duration_hours": 0.49,
+      "pages": 20,
+      "duration_seconds": 1772,
+      "duration_hours": 0.49
+    },
+    {
+      "date": "2026-06-28",
+      "total_pages": 78,
+      "total_duration_seconds": 7603,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 78,
+          "duration_seconds": 7603,
+          "duration_hours": 2.11
+        }
+      ],
+      "total_duration_hours": 2.11,
+      "pages": 78,
+      "duration_seconds": 7603,
+      "duration_hours": 2.11
+    },
+    {
+      "date": "2026-06-27",
+      "total_pages": 94,
+      "total_duration_seconds": 8599,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 94,
+          "duration_seconds": 8599,
+          "duration_hours": 2.39
+        }
+      ],
+      "total_duration_hours": 2.39,
+      "pages": 94,
+      "duration_seconds": 8599,
+      "duration_hours": 2.39
+    },
+    {
+      "date": "2026-06-26",
+      "total_pages": 45,
+      "total_duration_seconds": 4620,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 45,
+          "duration_seconds": 4620,
+          "duration_hours": 1.28
+        }
+      ],
+      "total_duration_hours": 1.28,
+      "pages": 45,
+      "duration_seconds": 4620,
+      "duration_hours": 1.28
+    },
+    {
+      "date": "2026-06-25",
+      "total_pages": 9,
+      "total_duration_seconds": 2521,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 9,
+          "duration_seconds": 2521,
+          "duration_hours": 0.7
+        }
+      ],
+      "total_duration_hours": 0.7,
+      "pages": 9,
+      "duration_seconds": 2521,
+      "duration_hours": 0.7
+    },
+    {
+      "date": "2026-06-24",
+      "total_pages": 13,
+      "total_duration_seconds": 1720,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 13,
+          "duration_seconds": 1720,
+          "duration_hours": 0.48
+        }
+      ],
+      "total_duration_hours": 0.48,
+      "pages": 13,
+      "duration_seconds": 1720,
+      "duration_hours": 0.48
+    },
+    {
+      "date": "2026-06-23",
+      "total_pages": 7,
+      "total_duration_seconds": 951,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 7,
+          "duration_seconds": 951,
+          "duration_hours": 0.26
+        }
+      ],
+      "total_duration_hours": 0.26,
+      "pages": 7,
+      "duration_seconds": 951,
+      "duration_hours": 0.26
+    },
+    {
+      "date": "2026-06-22",
+      "total_pages": 4,
+      "total_duration_seconds": 281,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 4,
+          "duration_seconds": 281,
+          "duration_hours": 0.08
+        }
+      ],
+      "total_duration_hours": 0.08,
+      "pages": 4,
+      "duration_seconds": 281,
+      "duration_hours": 0.08
+    },
+    {
+      "date": "2026-06-20",
+      "total_pages": 8,
+      "total_duration_seconds": 1519,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 8,
+          "duration_seconds": 1519,
+          "duration_hours": 0.42
+        }
+      ],
+      "total_duration_hours": 0.42,
+      "pages": 8,
+      "duration_seconds": 1519,
+      "duration_hours": 0.42
+    },
+    {
+      "date": "2026-06-17",
+      "total_pages": 2,
+      "total_duration_seconds": 216,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 2,
+          "duration_seconds": 216,
+          "duration_hours": 0.06
+        }
+      ],
+      "total_duration_hours": 0.06,
+      "pages": 2,
+      "duration_seconds": 216,
+      "duration_hours": 0.06
+    },
+    {
+      "date": "2026-06-16",
+      "total_pages": 16,
+      "total_duration_seconds": 1980,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 16,
+          "duration_seconds": 1980,
+          "duration_hours": 0.55
+        }
+      ],
+      "total_duration_hours": 0.55,
+      "pages": 16,
+      "duration_seconds": 1980,
+      "duration_hours": 0.55
+    },
+    {
+      "date": "2026-06-15",
+      "total_pages": 11,
+      "total_duration_seconds": 1729,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 11,
+          "duration_seconds": 1729,
+          "duration_hours": 0.48
+        }
+      ],
+      "total_duration_hours": 0.48,
+      "pages": 11,
+      "duration_seconds": 1729,
+      "duration_hours": 0.48
+    },
+    {
+      "date": "2026-06-14",
+      "total_pages": 23,
+      "total_duration_seconds": 3775,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 23,
+          "duration_seconds": 3775,
+          "duration_hours": 1.05
+        }
+      ],
+      "total_duration_hours": 1.05,
+      "pages": 23,
+      "duration_seconds": 3775,
+      "duration_hours": 1.05
+    },
+    {
+      "date": "2026-06-13",
+      "total_pages": 6,
+      "total_duration_seconds": 875,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 6,
+          "duration_seconds": 875,
+          "duration_hours": 0.24
+        }
+      ],
+      "total_duration_hours": 0.24,
+      "pages": 6,
+      "duration_seconds": 875,
+      "duration_hours": 0.24
+    },
+    {
+      "date": "2026-06-12",
+      "total_pages": 5,
+      "total_duration_seconds": 572,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 5,
+          "duration_seconds": 572,
+          "duration_hours": 0.16
+        }
+      ],
+      "total_duration_hours": 0.16,
+      "pages": 5,
+      "duration_seconds": 572,
+      "duration_hours": 0.16
+    },
+    {
+      "date": "2026-06-11",
+      "total_pages": 2,
+      "total_duration_seconds": 235,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 2,
+          "duration_seconds": 235,
+          "duration_hours": 0.07
+        }
+      ],
+      "total_duration_hours": 0.07,
+      "pages": 2,
+      "duration_seconds": 235,
+      "duration_hours": 0.07
+    },
+    {
+      "date": "2026-06-10",
+      "total_pages": 7,
+      "total_duration_seconds": 892,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 7,
+          "duration_seconds": 892,
+          "duration_hours": 0.25
+        }
+      ],
+      "total_duration_hours": 0.25,
+      "pages": 7,
+      "duration_seconds": 892,
+      "duration_hours": 0.25
+    },
+    {
+      "date": "2026-06-09",
+      "total_pages": 7,
+      "total_duration_seconds": 609,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 7,
+          "duration_seconds": 609,
+          "duration_hours": 0.17
+        }
+      ],
+      "total_duration_hours": 0.17,
+      "pages": 7,
+      "duration_seconds": 609,
+      "duration_hours": 0.17
+    },
+    {
+      "date": "2026-06-08",
+      "total_pages": 4,
+      "total_duration_seconds": 395,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 4,
+          "duration_seconds": 395,
+          "duration_hours": 0.11
+        }
+      ],
+      "total_duration_hours": 0.11,
+      "pages": 4,
+      "duration_seconds": 395,
+      "duration_hours": 0.11
+    },
+    {
+      "date": "2026-06-05",
+      "total_pages": 3,
+      "total_duration_seconds": 401,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 3,
+          "duration_seconds": 401,
+          "duration_hours": 0.11
+        }
+      ],
+      "total_duration_hours": 0.11,
+      "pages": 3,
+      "duration_seconds": 401,
+      "duration_hours": 0.11
+    },
+    {
+      "date": "2026-06-01",
+      "total_pages": 1,
+      "total_duration_seconds": 93,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 1,
+          "duration_seconds": 93,
+          "duration_hours": 0.03
+        }
+      ],
+      "total_duration_hours": 0.03,
+      "pages": 1,
+      "duration_seconds": 93,
+      "duration_hours": 0.03
+    },
+    {
+      "date": "2026-05-25",
+      "total_pages": 1,
+      "total_duration_seconds": 120,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 1,
+          "duration_seconds": 120,
+          "duration_hours": 0.03
+        }
+      ],
+      "total_duration_hours": 0.03,
+      "pages": 1,
       "duration_seconds": 120,
       "duration_hours": 0.03
     },
     {
       "date": "2026-05-23",
-      "total_pages": 2,
-      "total_duration_seconds": 244,
+      "total_pages": 1,
+      "total_duration_seconds": 245,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
-          "duration_seconds": 244,
+          "pages": 1,
+          "duration_seconds": 245,
           "duration_hours": 0.07
         }
       ],
       "total_duration_hours": 0.07,
-      "pages": 2,
-      "duration_seconds": 244,
+      "pages": 1,
+      "duration_seconds": 245,
       "duration_hours": 0.07
     },
     {
       "date": "2026-05-22",
-      "total_pages": 5,
-      "total_duration_seconds": 270,
+      "total_pages": 2,
+      "total_duration_seconds": 271,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 5,
-          "duration_seconds": 270,
-          "duration_hours": 0.07
+          "pages": 2,
+          "duration_seconds": 271,
+          "duration_hours": 0.08
         }
       ],
-      "total_duration_hours": 0.07,
-      "pages": 5,
-      "duration_seconds": 270,
-      "duration_hours": 0.07
+      "total_duration_hours": 0.08,
+      "pages": 2,
+      "duration_seconds": 271,
+      "duration_hours": 0.08
     },
     {
       "date": "2026-05-21",
@@ -71,427 +757,427 @@
     },
     {
       "date": "2026-05-20",
-      "total_pages": 3,
-      "total_duration_seconds": 45,
+      "total_pages": 1,
+      "total_duration_seconds": 47,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 3,
-          "duration_seconds": 45,
+          "pages": 1,
+          "duration_seconds": 47,
           "duration_hours": 0.01
         }
       ],
       "total_duration_hours": 0.01,
-      "pages": 3,
-      "duration_seconds": 45,
+      "pages": 1,
+      "duration_seconds": 47,
       "duration_hours": 0.01
     },
     {
       "date": "2026-05-16",
-      "total_pages": 3,
+      "total_pages": 1,
       "total_duration_seconds": 120,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 3,
+          "pages": 1,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 3,
+      "pages": 1,
       "duration_seconds": 120,
       "duration_hours": 0.03
     },
     {
       "date": "2026-05-15",
-      "total_pages": 9,
-      "total_duration_seconds": 438,
-      "books": [
-        {
-          "title": "Wuthering Heights",
-          "pages": 9,
-          "duration_seconds": 438,
-          "duration_hours": 0.12
-        }
-      ],
-      "total_duration_hours": 0.12,
-      "pages": 9,
-      "duration_seconds": 438,
-      "duration_hours": 0.12
-    },
-    {
-      "date": "2026-05-14",
-      "total_pages": 9,
-      "total_duration_seconds": 692,
-      "books": [
-        {
-          "title": "Wuthering Heights",
-          "pages": 9,
-          "duration_seconds": 692,
-          "duration_hours": 0.19
-        }
-      ],
-      "total_duration_hours": 0.19,
-      "pages": 9,
-      "duration_seconds": 692,
-      "duration_hours": 0.19
-    },
-    {
-      "date": "2026-05-13",
-      "total_pages": 33,
-      "total_duration_seconds": 1596,
-      "books": [
-        {
-          "title": "Wuthering Heights",
-          "pages": 33,
-          "duration_seconds": 1596,
-          "duration_hours": 0.44
-        }
-      ],
-      "total_duration_hours": 0.44,
-      "pages": 33,
-      "duration_seconds": 1596,
-      "duration_hours": 0.44
-    },
-    {
-      "date": "2026-05-12",
       "total_pages": 3,
-      "total_duration_seconds": 120,
+      "total_duration_seconds": 441,
       "books": [
         {
           "title": "Wuthering Heights",
           "pages": 3,
+          "duration_seconds": 441,
+          "duration_hours": 0.12
+        }
+      ],
+      "total_duration_hours": 0.12,
+      "pages": 3,
+      "duration_seconds": 441,
+      "duration_hours": 0.12
+    },
+    {
+      "date": "2026-05-14",
+      "total_pages": 4,
+      "total_duration_seconds": 696,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 4,
+          "duration_seconds": 696,
+          "duration_hours": 0.19
+        }
+      ],
+      "total_duration_hours": 0.19,
+      "pages": 4,
+      "duration_seconds": 696,
+      "duration_hours": 0.19
+    },
+    {
+      "date": "2026-05-13",
+      "total_pages": 12,
+      "total_duration_seconds": 1603,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 12,
+          "duration_seconds": 1603,
+          "duration_hours": 0.45
+        }
+      ],
+      "total_duration_hours": 0.45,
+      "pages": 12,
+      "duration_seconds": 1603,
+      "duration_hours": 0.45
+    },
+    {
+      "date": "2026-05-12",
+      "total_pages": 1,
+      "total_duration_seconds": 120,
+      "books": [
+        {
+          "title": "Wuthering Heights",
+          "pages": 1,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 3,
+      "pages": 1,
       "duration_seconds": 120,
       "duration_hours": 0.03
     },
     {
       "date": "2026-05-10",
-      "total_pages": 8,
-      "total_duration_seconds": 321,
+      "total_pages": 3,
+      "total_duration_seconds": 323,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 8,
-          "duration_seconds": 321,
+          "pages": 3,
+          "duration_seconds": 323,
           "duration_hours": 0.09
         }
       ],
       "total_duration_hours": 0.09,
-      "pages": 8,
-      "duration_seconds": 321,
+      "pages": 3,
+      "duration_seconds": 323,
       "duration_hours": 0.09
     },
     {
       "date": "2026-04-29",
-      "total_pages": 2,
+      "total_pages": 1,
       "total_duration_seconds": 120,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
+          "pages": 1,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 2,
+      "pages": 1,
       "duration_seconds": 120,
       "duration_hours": 0.03
     },
     {
       "date": "2026-04-28",
-      "total_pages": 2,
+      "total_pages": 1,
       "total_duration_seconds": 120,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
+          "pages": 1,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 2,
+      "pages": 1,
       "duration_seconds": 120,
       "duration_hours": 0.03
     },
     {
       "date": "2026-04-27",
-      "total_pages": 6,
+      "total_pages": 2,
       "total_duration_seconds": 240,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 6,
+          "pages": 2,
           "duration_seconds": 240,
           "duration_hours": 0.07
         }
       ],
       "total_duration_hours": 0.07,
-      "pages": 6,
+      "pages": 2,
       "duration_seconds": 240,
       "duration_hours": 0.07
     },
     {
       "date": "2026-04-26",
-      "total_pages": 5,
-      "total_duration_seconds": 183,
+      "total_pages": 2,
+      "total_duration_seconds": 184,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 5,
-          "duration_seconds": 183,
+          "pages": 2,
+          "duration_seconds": 184,
           "duration_hours": 0.05
         }
       ],
       "total_duration_hours": 0.05,
-      "pages": 5,
-      "duration_seconds": 183,
+      "pages": 2,
+      "duration_seconds": 184,
       "duration_hours": 0.05
     },
     {
       "date": "2026-04-25",
-      "total_pages": 5,
+      "total_pages": 2,
       "total_duration_seconds": 132,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 5,
+          "pages": 2,
           "duration_seconds": 132,
           "duration_hours": 0.04
         }
       ],
       "total_duration_hours": 0.04,
-      "pages": 5,
+      "pages": 2,
       "duration_seconds": 132,
       "duration_hours": 0.04
     },
     {
       "date": "2026-04-24",
-      "total_pages": 2,
+      "total_pages": 1,
       "total_duration_seconds": 120,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
+          "pages": 1,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 2,
+      "pages": 1,
       "duration_seconds": 120,
       "duration_hours": 0.03
     },
     {
       "date": "2026-04-23",
-      "total_pages": 2,
+      "total_pages": 1,
       "total_duration_seconds": 120,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 2,
+          "pages": 1,
           "duration_seconds": 120,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 2,
+      "pages": 1,
       "duration_seconds": 120,
       "duration_hours": 0.03
     },
     {
       "date": "2026-04-22",
-      "total_pages": 6,
+      "total_pages": 2,
       "total_duration_seconds": 240,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 6,
+          "pages": 2,
           "duration_seconds": 240,
           "duration_hours": 0.07
         }
       ],
       "total_duration_hours": 0.07,
-      "pages": 6,
+      "pages": 2,
       "duration_seconds": 240,
       "duration_hours": 0.07
     },
     {
       "date": "2026-04-21",
-      "total_pages": 5,
-      "total_duration_seconds": 114,
+      "total_pages": 2,
+      "total_duration_seconds": 115,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 5,
-          "duration_seconds": 114,
+          "pages": 2,
+          "duration_seconds": 115,
           "duration_hours": 0.03
         }
       ],
       "total_duration_hours": 0.03,
-      "pages": 5,
-      "duration_seconds": 114,
+      "pages": 2,
+      "duration_seconds": 115,
       "duration_hours": 0.03
     },
     {
       "date": "2026-04-17",
-      "total_pages": 5,
-      "total_duration_seconds": 252,
+      "total_pages": 2,
+      "total_duration_seconds": 253,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 5,
-          "duration_seconds": 252,
+          "pages": 2,
+          "duration_seconds": 253,
           "duration_hours": 0.07
         }
       ],
       "total_duration_hours": 0.07,
-      "pages": 5,
-      "duration_seconds": 252,
+      "pages": 2,
+      "duration_seconds": 253,
       "duration_hours": 0.07
     },
     {
       "date": "2026-04-16",
-      "total_pages": 6,
-      "total_duration_seconds": 567,
+      "total_pages": 2,
+      "total_duration_seconds": 568,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 6,
-          "duration_seconds": 567,
+          "pages": 2,
+          "duration_seconds": 568,
           "duration_hours": 0.16
         }
       ],
       "total_duration_hours": 0.16,
-      "pages": 6,
-      "duration_seconds": 567,
+      "pages": 2,
+      "duration_seconds": 568,
       "duration_hours": 0.16
     },
     {
       "date": "2026-04-15",
-      "total_pages": 30,
-      "total_duration_seconds": 1681,
+      "total_pages": 11,
+      "total_duration_seconds": 1691,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 30,
-          "duration_seconds": 1681,
+          "pages": 11,
+          "duration_seconds": 1691,
           "duration_hours": 0.47
         }
       ],
       "total_duration_hours": 0.47,
-      "pages": 30,
-      "duration_seconds": 1681,
+      "pages": 11,
+      "duration_seconds": 1691,
       "duration_hours": 0.47
     },
     {
       "date": "2026-04-14",
-      "total_pages": 25,
-      "total_duration_seconds": 889,
+      "total_pages": 9,
+      "total_duration_seconds": 897,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 25,
-          "duration_seconds": 889,
+          "pages": 9,
+          "duration_seconds": 897,
           "duration_hours": 0.25
         }
       ],
       "total_duration_hours": 0.25,
-      "pages": 25,
-      "duration_seconds": 889,
+      "pages": 9,
+      "duration_seconds": 897,
       "duration_hours": 0.25
     },
     {
       "date": "2026-04-13",
-      "total_pages": 28,
-      "total_duration_seconds": 809,
+      "total_pages": 10,
+      "total_duration_seconds": 825,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 28,
-          "duration_seconds": 809,
-          "duration_hours": 0.22
+          "pages": 10,
+          "duration_seconds": 825,
+          "duration_hours": 0.23
         }
       ],
-      "total_duration_hours": 0.22,
-      "pages": 28,
-      "duration_seconds": 809,
-      "duration_hours": 0.22
+      "total_duration_hours": 0.23,
+      "pages": 10,
+      "duration_seconds": 825,
+      "duration_hours": 0.23
     },
     {
       "date": "2026-04-11",
-      "total_pages": 5,
-      "total_duration_seconds": 126,
+      "total_pages": 2,
+      "total_duration_seconds": 128,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 5,
-          "duration_seconds": 126,
+          "pages": 2,
+          "duration_seconds": 128,
           "duration_hours": 0.04
         }
       ],
       "total_duration_hours": 0.04,
-      "pages": 5,
-      "duration_seconds": 126,
+      "pages": 2,
+      "duration_seconds": 128,
       "duration_hours": 0.04
     },
     {
       "date": "2026-04-10",
-      "total_pages": 32,
-      "total_duration_seconds": 1400,
+      "total_pages": 12,
+      "total_duration_seconds": 1412,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 32,
-          "duration_seconds": 1400,
+          "pages": 12,
+          "duration_seconds": 1412,
           "duration_hours": 0.39
         }
       ],
       "total_duration_hours": 0.39,
-      "pages": 32,
-      "duration_seconds": 1400,
+      "pages": 12,
+      "duration_seconds": 1412,
       "duration_hours": 0.39
     },
     {
       "date": "2026-04-05",
-      "total_pages": 6,
-      "total_duration_seconds": 153,
+      "total_pages": 2,
+      "total_duration_seconds": 155,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 6,
-          "duration_seconds": 153,
+          "pages": 2,
+          "duration_seconds": 155,
           "duration_hours": 0.04
         }
       ],
       "total_duration_hours": 0.04,
-      "pages": 6,
-      "duration_seconds": 153,
+      "pages": 2,
+      "duration_seconds": 155,
       "duration_hours": 0.04
     },
     {
       "date": "2026-04-04",
-      "total_pages": 3,
-      "total_duration_seconds": 6,
+      "total_pages": 1,
+      "total_duration_seconds": 7,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 3,
-          "duration_seconds": 6,
+          "pages": 1,
+          "duration_seconds": 7,
           "duration_hours": 0.0
         }
       ],
       "total_duration_hours": 0.0,
-      "pages": 3,
-      "duration_seconds": 6,
+      "pages": 1,
+      "duration_seconds": 7,
       "duration_hours": 0.0
     },
     {
@@ -734,35 +1420,35 @@
     },
     {
       "date": "2026-02-15",
-      "total_pages": 6,
-      "total_duration_seconds": 912,
+      "total_pages": 2,
+      "total_duration_seconds": 925,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 6,
-          "duration_seconds": 912,
-          "duration_hours": 0.25
+          "pages": 2,
+          "duration_seconds": 925,
+          "duration_hours": 0.26
         }
       ],
-      "total_duration_hours": 0.25,
-      "pages": 6,
-      "duration_seconds": 912,
-      "duration_hours": 0.25
+      "total_duration_hours": 0.26,
+      "pages": 2,
+      "duration_seconds": 925,
+      "duration_hours": 0.26
     },
     {
       "date": "2026-02-08",
-      "total_pages": 3,
+      "total_pages": 1,
       "total_duration_seconds": 144,
       "books": [
         {
           "title": "Wuthering Heights",
-          "pages": 3,
+          "pages": 1,
           "duration_seconds": 144,
           "duration_hours": 0.04
         }
       ],
       "total_duration_hours": 0.04,
-      "pages": 3,
+      "pages": 1,
       "duration_seconds": 144,
       "duration_hours": 0.04
     },

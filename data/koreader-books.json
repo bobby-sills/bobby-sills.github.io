@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-23T01:56:31.833980",
+  "updated_at": "2026-07-24T01:52:54.245518",
   "books": [
     {
-      "title": "Wuthering Heights",
-      "authors": "Emily Bront\u00eb",
-      "percentage_completed": 32.13
+      "title": "Neuromancer",
+      "authors": "William Gibson",
+      "percentage_completed": 61.06
     },
     {
       "title": "Project Hail Mary",
@@ -35,6 +35,12 @@
       "authors": "Aldous Huxley",
       "percentage_completed": 100.0,
       "date_completed": "11 Mar 2026"
+    },
+    {
+      "title": "Wuthering Heights",
+      "authors": "Emily Bront\u00eb",
+      "percentage_completed": 100.0,
+      "date_completed": "29 Jun 2026"
     }
   ]
 }
