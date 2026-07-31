@@ -1,0 +1,308 @@
+@font-face {
+  font-family: "Crimson Text";
+  src: url("fonts/CrimsonText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Crimson Text";
+  src: url("fonts/CrimsonText-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Crimson Text";
+  src: url("fonts/CrimsonText-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Crimson Text";
+  src: url("fonts/CrimsonText-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+:root {
+  font-size: 1.2rem;
+}
+
+body {
+  background-image: url("images/forest.jpg");
+  color: antiquewhite;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Crimson Text", "Georgia", serif;
+  line-height: 1.5;
+  display: flex;
+  margin: 0;
+  padding: 0 12px;
+  box-sizing: border-box;
+  justify-content: center;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+  padding: 24px 20px 40px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.65);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.sound-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px 18px;
+  margin-bottom: -8px;
+}
+
+.sound-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.sound-toggle[aria-pressed="false"] {
+  opacity: 0.75;
+}
+
+.sound-toggle:hover {
+  opacity: 1;
+}
+
+/* The icon's two states are driven straight off aria-pressed, so the button's
+   accessible state and its appearance can't drift apart. */
+.sound-toggle[aria-pressed="true"] .mute,
+.sound-toggle[aria-pressed="false"] .waves {
+  display: none;
+}
+
+.snail {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 55px;
+  cursor: pointer;
+  animation: crawl 150s linear infinite;
+}
+
+.snail img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The flip lives on the inner image because the wrapper's transform belongs to
+   the crawl — scaling the same element would mirror its x position too. */
+.snail.facing-left img {
+  transform: scaleX(-1);
+}
+
+/* The art faces right, so it travels left-to-right. */
+@keyframes crawl {
+  from {
+    transform: translateX(-55px);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snail {
+    display: none;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.intro img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 260px;
+}
+
+.intro-text h1 {
+  margin: 0 0 8px;
+}
+
+.intro-text p {
+  margin: 0;
+}
+
+.intro-text .email {
+  margin-bottom: 8px;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+h2::before,
+h2::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.8;
+}
+
+.carousel {
+  container-type: inline-size;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Card width, and so the 4:3 image height, is knowable in CSS — which is what
+   lets the arrows line up with the image instead of the whole card. */
+.carousel > * {
+  --card-width: min(320px, 100cqw - 80px);
+}
+
+.carousel-arrow {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: calc(var(--card-width) * 3 / 4);
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 3.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.projects {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: var(--card-width);
+}
+
+.projects img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: rgba(250, 235, 215, 0.08);
+}
+
+/* The count rides on the title's own line box, so it can't drift out of
+   alignment the way an absolutely positioned element would. */
+.projects h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin: 10px 0 2px;
+  font-size: 1rem;
+}
+
+.projects h3::after {
+  content: var(--project-count, "");
+  flex: none;
+  font-size: 0.9rem;
+  font-weight: normal;
+  opacity: 0.85;
+}
+
+.projects p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Every card lists its destinations as links rather than wrapping the whole
+   card in one, so cards with several links look the same as cards with one. */
+.project-links {
+  margin: 4px 0 8px;
+}
+
+.project-links a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Two columns of six items, so the six profiles land as 3 rows by 2 columns.
+   The columns are max-content so each one's icons align down the left edge. */
+.profiles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  gap: 10px 32px;
+}
+
+/* max-content columns don't wrap, they overflow — so on the narrowest phones
+   the pair has to become a single column. */
+@media (max-width: 380px) {
+  .profiles {
+    grid-template-columns: max-content;
+  }
+}
+
+/* The snail crawls along the bottom of the viewport, so the footer keeps
+   enough clearance that the two never overlap. */
+footer {
+  margin-top: 48px;
+  padding-bottom: 36px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+.profiles li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.profiles a {
+  color: inherit;
+  text-decoration: underline;
+}

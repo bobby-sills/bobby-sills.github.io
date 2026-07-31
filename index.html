@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>bobby sills</title>
+  </head>
+  <body>
+    <main>
+      <div class="sound-controls">
+        <button
+          class="sound-toggle sfx-toggle"
+          type="button"
+          aria-pressed="true"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M11 5 6 9H2v6h4l5 4z" fill="currentColor" />
+            <g
+              class="waves"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            >
+              <path d="M15 9.5a4 4 0 0 1 0 5" />
+              <path d="M17.8 7a8 8 0 0 1 0 10" />
+            </g>
+            <path
+              class="mute"
+              d="M15 9.5l5 5m0-5l-5 5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span>effects</span>
+        </button>
+        <button
+          class="sound-toggle ambience-toggle"
+          type="button"
+          aria-pressed="false"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M11 5 6 9H2v6h4l5 4z" fill="currentColor" />
+            <g
+              class="waves"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            >
+              <path d="M15 9.5a4 4 0 0 1 0 5" />
+              <path d="M17.8 7a8 8 0 0 1 0 10" />
+            </g>
+            <path
+              class="mute"
+              d="M15 9.5l5 5m0-5l-5 5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span>background</span>
+        </button>
+      </div>
+      <div class="intro">
+        <img
+          src="images/profile-photo.jpg"
+          alt="Portrait of bobby sills"
+          width="200"
+          height="200"
+        />
+        <div class="intro-text">
+          <h1>bobby sills</h1>
+          <p class="email">contact: bobbysills [at] bobbysills [dot] dev</p>
+          <p>
+            15 y/o working out of vientiane, laos. currently working on ai
+            research for algoverse.
+          </p>
+        </div>
+      </div>
+      <h2>projects</h2>
+      <div class="carousel">
+        <button
+          class="carousel-arrow prev"
+          type="button"
+          aria-label="Previous project"
+        >
+          &lsaquo;
+        </button>
+        <ul class="projects">
+          <li>
+            <img
+              src="images/read-lao.png"
+              alt="Three screens from the read lao app showing letter lessons"
+            />
+            <h3>read lao</h3>
+            <p class="project-links">
+              <a
+                href="https://apps.apple.com/us/app/read-lao/id6749076081"
+                target="_blank"
+                rel="noopener"
+                >ios</a
+              >
+              ·
+              <a
+                href="https://play.google.com/store/apps/details?id=com.readlao.app"
+                target="_blank"
+                rel="noopener"
+                >android</a
+              >
+              ·
+              <a
+                href="https://github.com/bobby-sills/read-lao-app"
+                target="_blank"
+                rel="noopener"
+                >github</a
+              >
+            </p>
+            <p>
+              a language learning app for the lao language. uses spaced
+              repeition with lessons and exercise to get you reading in lao.
+            </p>
+          </li>
+          <li>
+            <img
+              src="images/nixos-config.jpg"
+              alt="Hyprland desktop running the config, with waybar and fastfetch"
+            />
+            <h3>nixos config</h3>
+            <p class="project-links">
+              <a
+                href="https://github.com/bobby-sills/nixos-config"
+                target="_blank"
+                rel="noopener"
+                >github</a
+              >
+            </p>
+            <p>
+              my custom built nixos configuation. it uses a minimal hyprland
+              base styled with gruvbox.
+            </p>
+          </li>
+          <li>
+            <img
+              src="images/danger-write.png"
+              alt="The danger-write editor with a countdown and word count"
+            />
+            <h3>danger-write</h3>
+            <p class="project-links">
+              <a
+                href="https://bobbysills.dev/danger-write/"
+                target="_blank"
+                rel="noopener"
+                >website</a
+              >
+              ·
+              <a
+                href="https://crates.io/crates/danger-write"
+                target="_blank"
+                rel="noopener"
+                >cargo</a
+              >
+              ·
+              <a
+                href="https://github.com/bobby-sills/danger-write"
+                target="_blank"
+                rel="noopener"
+                >github</a
+              >
+            </p>
+            <p>
+              a writing app that erases your words if you stop typing. hit the
+              time limit or word count to survive and keep your text.
+            </p>
+          </li>
+          <li>
+            <img
+              src="images/texturez.jpg"
+              alt="A search page with a paper texture applied over it"
+            />
+            <h3>texturez</h3>
+            <p class="project-links">
+              <a
+                href="https://addons.mozilla.org/en-US/firefox/addon/texturez/"
+                target="_blank"
+                rel="noopener"
+                >firefox</a
+              >
+              ·
+              <a
+                href="https://chromewebstore.google.com/detail/texturez/gjlnpfdahclcpddnjpmlobcjmfaigadj"
+                target="_blank"
+                rel="noopener"
+                >chrome</a
+              >
+            </p>
+            <p>
+              a browser extension that lays a texture over any website. it has
+              paper, water, sand, and more.
+            </p>
+          </li>
+          <li>
+            <img
+              src="images/black-hole.jpg"
+              alt="Light rays bending around a black hole in the simulation"
+            />
+            <h3>black hole simulation</h3>
+            <p class="project-links">
+              <a
+                href="https://bobbysills.dev/p5js-black-hole-simulation/"
+                target="_blank"
+                rel="noopener"
+                >website</a
+              >
+              ·
+              <a
+                href="https://github.com/bobby-sills/p5js-black-hole-simulation"
+                target="_blank"
+                rel="noopener"
+                >github</a
+              >
+            </p>
+            <p>
+              a realistic physics simulation of a black hole built with p5js.
+              you can adjust the variables to understand how the light travels.
+            </p>
+          </li>
+        </ul>
+        <button
+          class="carousel-arrow next"
+          type="button"
+          aria-label="Next project"
+        >
+          &rsaquo;
+        </button>
+      </div>
+      <h2>where to find me</h2>
+      <ul class="profiles">
+        <li>
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+            />
+            <path d="M9 18c-4.51 2-5-2-7-2" />
+          </svg>
+          <a
+            href="https://github.com/bobby-sills"
+            target="_blank"
+            rel="noopener"
+            >github</a
+          >
+        </li>
+        <li>
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+            />
+            <path d="m10 15 5-3-5-3z" />
+          </svg>
+          <a
+            href="https://www.youtube.com/@itsmebobbysills"
+            target="_blank"
+            rel="noopener"
+            >youtube</a
+          >
+        </li>
+        <li>
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+            <path d="M12 11h.01" />
+            <path d="M16 11h.01" />
+            <path d="M8 11h.01" />
+          </svg>
+          <a
+            href="https://discord.com/users/1091870234044018809"
+            target="_blank"
+            rel="noopener"
+            >discord</a
+          >
+        </li>
+        <li>
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 14.4a.8.8 0 1 1 0 1.6a.8.8 0 0 1 0-1.6Zm-11.2 0h4.8a.8.8 0 1 1 0 1.6H8.8a.8.8 0 1 1 0-1.6ZM7.2 9.6a.8.8 0 0 1 .8.8V12a.8.8 0 1 1-1.6 0v-1.6a.8.8 0 0 1 .8-.8Zm-3.999.759A2.4 2.4 0 0 1 7.2 8.612a2.4 2.4 0 0 1 4 1.788V12a.8.8 0 1 1-1.6 0v-1.6a.8.8 0 1 0-1.6 0V12a.8.8 0 1 1-1.6 0v-1.6a.8.8 0 1 0-1.6 0V12a.8.8 0 1 1-1.6 0v-1.6l.001-.041ZM17.6 12.8v2.4a.8.8 0 1 1-1.6 0v-2.4h-2.306c-.493 0-.894-.358-.894-.8c0-.442.401-.8.894-.8h6.212c.493 0 .894.358.894.8c0 .442-.401.8-.894.8H17.6ZM16.8 8H20a.8.8 0 1 1 0 1.6h-3.2a.8.8 0 1 1 0-1.6ZM4 14.4h1.6a.8.8 0 1 1 0 1.6H4a.8.8 0 1 1 0-1.6ZM13.2 8h.4a.8.8 0 1 1 0 1.6h-.4a.8.8 0 1 1 0-1.6ZM1.6 14.4H0V8.8c0-2.208 1.792-4 4-4h16c2.208 0 4 1.792 4 4v6.4c0 2.208-1.792 4-4 4H4c-2.208 0-4-1.792-4-4v-1.6h1.6v1.6A2.4 2.4 0 0 0 4 17.6h16a2.4 2.4 0 0 0 2.4-2.4V8.8A2.4 2.4 0 0 0 20 6.4H4a2.4 2.4 0 0 0-2.4 2.4v5.6Z"
+            />
+          </svg>
+          <a
+            href="https://monkeytype.com/profile/WriteThatDown"
+            target="_blank"
+            rel="noopener"
+            >monkeytype</a
+          >
+        </li>
+        <li>
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m5 8 6 6" />
+            <path d="m4 14 6-6 2-3" />
+            <path d="M2 5h12" />
+            <path d="M7 2h1" />
+            <path d="m22 22-5-10-5 10" />
+            <path d="M14 18h6" />
+          </svg>
+          <a
+            href="https://www.duolingo.com/profile/backsideofdawn"
+            target="_blank"
+            rel="noopener"
+            >duolingo</a
+          >
+        </li>
+        <li>
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z"
+            />
+            <path d="M8 14v.5" />
+            <path d="M16 14v.5" />
+            <path d="M11.25 16.25h1.5L12 17l-.75-.75Z" />
+          </svg>
+          <a
+            href="https://scratch.mit.edu/users/WriteThatDown"
+            target="_blank"
+            rel="noopener"
+            >scratch</a
+          >
+        </li>
+      </ul>
+      <footer>
+        <p>made with ♥︎ by bobby sills using html, css, and js</p>
+      </footer>
+    </main>
+    <div class="snail" aria-hidden="true">
+      <img src="images/snail.png" alt="" />
+    </div>
+    <script>
+      const items = document.querySelectorAll(".projects li");
+      const click = new Audio("sounds/click.mp3");
+      click.volume = 0.35;
+      const boing = new Audio("sounds/boing.mp3");
+      boing.volume = 0.5;
+      const sfxToggle = document.querySelector(".sfx-toggle");
+      const ambienceToggle = document.querySelector(".ambience-toggle");
+      let index = 0;
+
+      // localStorage throws on file:// in some browsers; a lost preference
+      // shouldn't take the carousel down with it.
+      function readPref(key, fallback) {
+        try {
+          const stored = localStorage.getItem(key);
+          if (stored === "on") return true;
+          if (stored === "off") return false;
+        } catch {}
+        return fallback;
+      }
+
+      function writePref(key, on) {
+        try {
+          localStorage.setItem(key, on ? "on" : "off");
+        } catch {}
+      }
+
+      let sfxOn = readPref("sfx", true);
+      let ambienceOn = readPref("ambience", false);
+
+      // The ambient loop is far heavier than the click, so it is only fetched
+      // once someone actually asks for it.
+      let ambience = null;
+
+      function updateAmbience() {
+        if (!ambienceOn) {
+          if (ambience) ambience.pause();
+          return;
+        }
+        if (!ambience) {
+          ambience = new Audio("sounds/ambience.mp3");
+          ambience.loop = true;
+          ambience.volume = 0.28;
+        }
+        ambience.play().catch(() => {});
+      }
+
+      function render() {
+        sfxToggle.setAttribute("aria-pressed", String(sfxOn));
+        ambienceToggle.setAttribute("aria-pressed", String(ambienceOn));
+      }
+
+      function play(sound) {
+        if (!sfxOn) return;
+        sound.currentTime = 0;
+        sound.play().catch(() => {});
+      }
+
+      function playClick() {
+        play(click);
+      }
+
+      sfxToggle.addEventListener("click", () => {
+        sfxOn = !sfxOn;
+        render();
+        playClick();
+        writePref("sfx", sfxOn);
+      });
+
+      ambienceToggle.addEventListener("click", () => {
+        ambienceOn = !ambienceOn;
+        render();
+        playClick();
+        updateAmbience();
+        writePref("ambience", ambienceOn);
+      });
+
+      const snail = document.querySelector(".snail");
+      // Grab the crawl by name: the hop below adds a second animation.
+      const crawl = snail
+        .getAnimations()
+        .find((a) => a.animationName === "crawl");
+      let hop = null;
+
+      snail.addEventListener("click", () => {
+        // Flipping playbackRate reverses in place, so there's no jump in x.
+        if (crawl) crawl.playbackRate *= -1;
+        snail.classList.toggle("facing-left");
+        play(boing);
+        if (hop) hop.cancel();
+        hop = snail.animate(
+          [
+            { translate: "0 0" },
+            { translate: "0 -10px" },
+            { translate: "0 0" },
+          ],
+          { duration: 450, easing: "ease-out" },
+        );
+      });
+
+      // A returning visitor arrives with the preference set but no gesture yet,
+      // so autoplay is still blocked — retry once they interact.
+      if (ambienceOn) {
+        updateAmbience();
+        document.addEventListener("click", updateAmbience, { once: true });
+      }
+
+      function show(i, withSound) {
+        index = (i + items.length) % items.length;
+        items.forEach((item, n) => {
+          item.hidden = n !== index;
+        });
+        document.documentElement.style.setProperty(
+          "--project-count",
+          '"' + (index + 1) + "/" + items.length + '"',
+        );
+        if (withSound) playClick();
+      }
+
+      render();
+
+      document
+        .querySelector(".prev")
+        .addEventListener("click", () => show(index - 1, true));
+      document
+        .querySelector(".next")
+        .addEventListener("click", () => show(index + 1, true));
+      show(0);
+    </script>
+  </body>
+</html>
