@@ -31,12 +31,10 @@
 }
 
 body {
-  background-image: url("images/forest.jpg");
+  /* Roughly the average color of forest.jpg, so a slow or failed download
+     leaves the page dark instead of flashing white behind pale text. */
+  background-color: #3a413b;
   color: antiquewhite;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   font-family: "Crimson Text", "Georgia", serif;
   line-height: 1.5;
   display: flex;
@@ -45,6 +43,41 @@ body {
   box-sizing: border-box;
   justify-content: center;
   width: 100%;
+}
+
+/* The background is its own fixed layer, locked to the large viewport height
+   rather than the current one. A `cover` background on the body gets re-fitted
+   every time Chrome for Android hides or shows its URL bar, which makes the
+   image jump around as you scroll; lvh is the height with the bar hidden, so it
+   never changes.
+
+   The layer runs a quarter-viewport past the bottom of the screen and the image
+   is bottom-aligned inside it, so that bottom quarter is cropped away. The
+   overhang does the cropping rather than a negative background-position because
+   on a phone `cover` leaves no vertical slack — the image is portrait, so it
+   fits the viewport exactly on height and merely shifting it would open a gap
+   at the top. */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 125vh;
+  height: 125lvh;
+  background-image: url("images/forest.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Below the panel's max width those gutters are nothing but exposed background,
+   so phones drop them and let the panel run edge to edge. */
+@media (max-width: 700px) {
+  body {
+    padding: 0;
+  }
 }
 
 main {
