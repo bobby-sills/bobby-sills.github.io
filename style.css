@@ -30,6 +30,12 @@
   font-size: 1.2rem;
 }
 
+button {
+  /* Mobile browsers paint a blue/gray tap-highlight rect on active elements;
+     the buttons already show their own pressed state, so suppress it. */
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   /* Roughly the average color of forest.jpg, so a slow or failed download
      leaves the page dark instead of flashing white behind pale text. */
