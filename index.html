@@ -478,6 +478,29 @@
         .find((a) => a.animationName === "crawl");
       let hop = null;
 
+      // The keyframes travel (viewport width + 55px); a flat duration made
+      // wider screens crawl faster in absolute terms. Rescale the duration
+      // to the viewport instead, so px/s stays constant everywhere.
+      const SNAIL_SPEED = 10.45; // px per second
+      function crawlDuration() {
+        return ((window.innerWidth + 55) / SNAIL_SPEED) * 1000;
+      }
+
+      if (crawl) {
+        crawl.effect.updateTiming({ duration: crawlDuration() });
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            const oldDuration = crawl.effect.getTiming().duration;
+            const progress = (crawl.currentTime ?? 0) / oldDuration;
+            const newDuration = crawlDuration();
+            crawl.effect.updateTiming({ duration: newDuration });
+            crawl.currentTime = progress * newDuration;
+          }, 150);
+        });
+      }
+
       snail.addEventListener("click", () => {
         // Flipping playbackRate reverses in place, so there's no jump in x.
         if (crawl) crawl.playbackRate *= -1;
