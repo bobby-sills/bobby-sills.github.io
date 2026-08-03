@@ -426,19 +426,66 @@
 
       // The ambient loop is far heavier than the click, so it is only fetched
       // once someone actually asks for it.
+      const ambienceVolume = 0.28;
       let ambience = null;
+      let ambienceCtx = null;
 
-      function updateAmbience() {
-        if (!ambienceOn) {
-          if (ambience) ambience.pause();
-          return;
-        }
+      function playAmbienceElement() {
         if (!ambience) {
           ambience = new Audio("sounds/ambience.mp3");
           ambience.loop = true;
-          ambience.volume = 0.28;
+          ambience.volume = ambienceVolume;
         }
         ambience.play().catch(() => {});
+      }
+
+      // MP3 primes the decoder with ~1100 samples of silence and pads the last
+      // frame out to 1152, so <audio loop> replays ~40ms of padding on every
+      // pass — an audible gap. Web Audio loops the decoded buffer sample-
+      // accurately instead, but decoding needs fetch, which file:// refuses;
+      // the element above stays as the fallback for that case.
+      function startAmbience() {
+        const Ctx = window.AudioContext || window.webkitAudioContext;
+        if (!Ctx || location.protocol === "file:") {
+          playAmbienceElement();
+          return;
+        }
+        ambienceCtx = new Ctx();
+        fetch("sounds/ambience.mp3")
+          .then((res) => res.arrayBuffer())
+          .then((bytes) => ambienceCtx.decodeAudioData(bytes))
+          .then((buffer) => {
+            const gain = ambienceCtx.createGain();
+            gain.gain.value = ambienceVolume;
+            gain.connect(ambienceCtx.destination);
+            const source = ambienceCtx.createBufferSource();
+            source.buffer = buffer;
+            source.loop = true;
+            source.connect(gain);
+            source.start();
+            // Decoding outlives a quick toggle back off, and a context built
+            // without a gesture starts suspended either way.
+            if (ambienceOn) ambienceCtx.resume().catch(() => {});
+          })
+          .catch(() => {
+            ambienceCtx = null;
+            playAmbienceElement();
+          });
+      }
+
+      function updateAmbience() {
+        if (!ambienceOn) {
+          if (ambienceCtx) ambienceCtx.suspend().catch(() => {});
+          if (ambience) ambience.pause();
+          return;
+        }
+        if (ambienceCtx) {
+          ambienceCtx.resume().catch(() => {});
+        } else if (ambience) {
+          playAmbienceElement();
+        } else {
+          startAmbience();
+        }
       }
 
       function render() {
