@@ -30,7 +30,8 @@
   font-size: 1.2rem;
 }
 
-button {
+button,
+.snail {
   /* Mobile browsers paint a blue/gray tap-highlight rect on active elements;
      the buttons already show their own pressed state, so suppress it. */
   -webkit-tap-highlight-color: transparent;
