@@ -239,6 +239,9 @@
           &rsaquo;
         </button>
       </div>
+      <!-- Filled in by the script from the cards above, so a new project only
+           ever has to be added in one place. -->
+      <ul class="project-nav"></ul>
       <h2>where to find me</h2>
       <ul class="profiles">
         <li>
@@ -529,12 +532,22 @@
       // wider screens crawl faster in absolute terms. Rescale the duration
       // to the viewport instead, so px/s stays constant everywhere.
       const SNAIL_SPEED = 10.45; // px per second
+      const SNAIL_START = 1 / 3; // viewport fraction it sits at on arrival
       function crawlDuration() {
         return ((window.innerWidth + 55) / SNAIL_SPEED) * 1000;
       }
 
+      // Seeking by time rather than rewriting the keyframes keeps one source of
+      // truth for the path: at this offset the -55px start has advanced exactly
+      // SNAIL_START of the viewport. Only the first pass is skipped into — the
+      // loop runs whole from the left edge after that.
+      function crawlStart() {
+        return ((window.innerWidth * SNAIL_START + 55) / SNAIL_SPEED) * 1000;
+      }
+
       if (crawl) {
         crawl.effect.updateTiming({ duration: crawlDuration() });
+        crawl.currentTime = crawlStart();
         let resizeTimer;
         window.addEventListener("resize", () => {
           clearTimeout(resizeTimer);
@@ -580,10 +593,29 @@
           "--project-count",
           '"' + (index + 1) + "/" + items.length + '"',
         );
+        // The highlight is driven off aria-current, so the styling and what a
+        // screen reader is told can't drift apart.
+        navButtons.forEach((button, n) => {
+          if (n === index) button.setAttribute("aria-current", "true");
+          else button.removeAttribute("aria-current");
+        });
         if (withSound) playClick();
       }
 
       render();
+
+      const nav = document.querySelector(".project-nav");
+      const navButtons = [...items].map((item, n) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        // The h3's card counter is a ::after, so this is just the title.
+        button.textContent = item.querySelector("h3").textContent;
+        button.addEventListener("click", () => show(n, true));
+        const li = document.createElement("li");
+        li.append(button);
+        nav.append(li);
+        return button;
+      });
 
       document
         .querySelector(".prev")
