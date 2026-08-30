@@ -532,12 +532,22 @@
       // wider screens crawl faster in absolute terms. Rescale the duration
       // to the viewport instead, so px/s stays constant everywhere.
       const SNAIL_SPEED = 10.45; // px per second
+      const SNAIL_START = 1 / 3; // viewport fraction it sits at on arrival
       function crawlDuration() {
         return ((window.innerWidth + 55) / SNAIL_SPEED) * 1000;
       }
 
+      // Seeking by time rather than rewriting the keyframes keeps one source of
+      // truth for the path: at this offset the -55px start has advanced exactly
+      // SNAIL_START of the viewport. Only the first pass is skipped into — the
+      // loop runs whole from the left edge after that.
+      function crawlStart() {
+        return ((window.innerWidth * SNAIL_START + 55) / SNAIL_SPEED) * 1000;
+      }
+
       if (crawl) {
         crawl.effect.updateTiming({ duration: crawlDuration() });
+        crawl.currentTime = crawlStart();
         let resizeTimer;
         window.addEventListener("resize", () => {
           clearTimeout(resizeTimer);
