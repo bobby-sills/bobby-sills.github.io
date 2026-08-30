@@ -229,145 +229,65 @@ h2::after {
   opacity: 0.8;
 }
 
-.carousel {
-  container-type: inline-size;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 12px;
-}
-
-/* Card width, and so the 4:3 image height, is knowable in CSS — which is what
-   lets the arrows line up with the image instead of the whole card. */
-.carousel > * {
-  --card-width: min(320px, 100cqw - 80px);
-}
-
-.carousel-arrow {
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: calc(var(--card-width) * 3 / 4);
-  background: none;
-  border: none;
-  padding: 0;
-  color: inherit;
-  font-family: inherit;
-  font-size: 3.5rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-/* Every card sits in the same grid cell, so the list always stands as tall as
-   the tallest one. Letting `hidden` collapse the list instead made it shrink by
-   a line whenever a shorter description came up, which slid the index below out
-   from under the pointer that had just clicked it. */
-.projects {
+/* Cards — the projects here and the games on /nspire/. Both size themselves off
+   the panel: as many columns as fit, dropping to one below about 560px, with no
+   breakpoint of their own to keep in step with the panel's. */
+.projects,
+.games {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: var(--card-width);
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px 20px;
 }
 
-.projects li {
-  grid-area: 1 / 1;
-}
-
-/* `hidden` stays the one switch the script flips and the accessibility tree
-   reads. Overriding its display keeps the card in the cell so it still counts
-   toward the height; visibility is what takes it off screen, and takes its
-   links out of the tab order with it. */
-.projects li[hidden] {
-  display: block;
-  visibility: hidden;
-}
-
-.projects img {
+.projects img,
+.games img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   border-radius: 4px;
   background-color: rgba(250, 235, 215, 0.08);
 }
 
-/* The count rides on the title's own line box, so it can't drift out of
-   alignment the way an absolutely positioned element would. */
-.projects h3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
+/* The project shots come from six unrelated sources, so they are cropped to one
+   shape. The game shots are all the handheld's own 318x212 screen, so they are
+   fitted whole instead and nothing is cut away. */
+.projects img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* A card whose art is a different shape from the other five — the handheld's
+   3:2 screen. Cropping it to 4:3 ate the labels down both edges, so it is
+   fitted whole and the tint behind it shows as the letterbox. */
+.projects img.fit {
+  object-fit: contain;
+}
+
+.games img {
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+}
+
+.projects h3,
+.games h3 {
   margin: 10px 0 2px;
   font-size: 1rem;
 }
 
-.projects h3::after {
-  content: var(--project-count, "");
-  flex: none;
-  font-size: 0.9rem;
-  font-weight: normal;
-  opacity: 0.85;
-}
-
-.projects p {
+.projects p,
+.games p {
   margin: 0;
   font-size: 0.9rem;
 }
 
 /* Every card lists its destinations as links rather than wrapping the whole
    card in one, so cards with several links look the same as cards with one. */
-.project-links {
+.project-links,
+.game-links {
   margin: 4px 0 8px;
-}
-
-.project-links a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-/* An index of the carousel, so every project is one click away and the card on
-   screen is named rather than only counted. */
-.project-nav {
-  list-style: none;
-  margin: 14px 0 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4px 24px;
-}
-
-.project-nav button {
-  background: none;
-  border: none;
-  padding: 0;
-  color: inherit;
-  font-family: inherit;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  cursor: pointer;
-  opacity: 0.6;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.project-nav button:hover,
-.project-nav button:focus-visible {
-  opacity: 1;
-}
-
-/* Weight and borders both re-measure the row every time the selection moves,
-   so the current item is marked by thickening a decoration that costs no
-   layout instead. Listed after :hover, which it ties with on specificity, so
-   hovering the current item can't reset the shorthand back to a thin rule. */
-.project-nav button[aria-current="true"] {
-  opacity: 1;
-  text-decoration-thickness: 2px;
 }
 
 /* Two columns of six items, so the six profiles land as 3 rows by 2 columns.
@@ -407,43 +327,6 @@ code {
   padding: 0 4px;
   border-radius: 3px;
   background-color: rgba(250, 235, 215, 0.12);
-}
-
-/* Cards size themselves off the panel: two columns while they fit, one below
-   about 560px, with no breakpoint to keep in step with the panel's own. */
-.games {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 30px 20px;
-}
-
-/* 3:2 is the handheld's own 318x212 screen, so the shots sit in the cards at
-   their true shape and nothing is cropped away. */
-.games img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: contain;
-  border-radius: 4px;
-  background-color: rgba(250, 235, 215, 0.08);
-}
-
-.games h3 {
-  margin: 10px 0 2px;
-  font-size: 1rem;
-}
-
-.games p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.game-links {
-  margin: 4px 0 8px;
 }
 
 .install {
