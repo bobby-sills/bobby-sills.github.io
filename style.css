@@ -97,6 +97,14 @@ main {
   min-height: 100dvh;
 }
 
+/* Links took their colour from a rule per component, so a link in ordinary
+   prose — the kind a text-heavy subpage is full of — fell through to the
+   browser's blue. Set the base here and let components override. */
+main a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .sound-controls {
   display: flex;
   flex-wrap: wrap;
@@ -380,6 +388,76 @@ h2::after {
   .profiles {
     grid-template-columns: max-content;
   }
+}
+
+/* --- the ti-nspire games subpage --- */
+
+.back {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+}
+
+/* Key names and file names are the page's nouns — it names a lot of them — so
+   they get a quiet tint of the panel rather than a boxed-in code style, which
+   at this density would read as tiling. */
+kbd,
+code {
+  font-family: inherit;
+  font-size: 0.95em;
+  padding: 0 4px;
+  border-radius: 3px;
+  background-color: rgba(250, 235, 215, 0.12);
+}
+
+/* Cards size themselves off the panel: two columns while they fit, one below
+   about 560px, with no breakpoint to keep in step with the panel's own. */
+.games {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px 20px;
+}
+
+/* 3:2 is the handheld's own 318x212 screen, so the shots sit in the cards at
+   their true shape and nothing is cropped away. */
+.games img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: rgba(250, 235, 215, 0.08);
+}
+
+.games h3 {
+  margin: 10px 0 2px;
+  font-size: 1rem;
+}
+
+.games p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.game-links {
+  margin: 4px 0 8px;
+}
+
+.install {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.install li {
+  margin-bottom: 10px;
+}
+
+.credits {
+  font-size: 0.9rem;
+  opacity: 0.85;
 }
 
 /* The snail crawls along the bottom of the viewport, so the footer keeps
