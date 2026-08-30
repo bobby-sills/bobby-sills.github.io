@@ -346,7 +346,6 @@ h2::after {
   opacity: 0.6;
   text-decoration: underline;
   text-underline-offset: 4px;
-  transition: opacity 0.15s ease;
 }
 
 .project-nav button:hover,
