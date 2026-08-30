@@ -252,11 +252,30 @@ h2::after {
   cursor: pointer;
 }
 
+/* Every card sits in the same grid cell, so the list always stands as tall as
+   the tallest one. Letting `hidden` collapse the list instead made it shrink by
+   a line whenever a shorter description came up, which slid the index below out
+   from under the pointer that had just clicked it. */
 .projects {
   list-style: none;
   margin: 0;
   padding: 0;
   width: var(--card-width);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.projects li {
+  grid-area: 1 / 1;
+}
+
+/* `hidden` stays the one switch the script flips and the accessibility tree
+   reads. Overriding its display keeps the card in the cell so it still counts
+   toward the height; visibility is what takes it off screen, and takes its
+   links out of the tab order with it. */
+.projects li[hidden] {
+  display: block;
+  visibility: hidden;
 }
 
 .projects img {
@@ -301,6 +320,47 @@ h2::after {
 .project-links a {
   color: inherit;
   text-decoration: underline;
+}
+
+/* An index of the carousel, so every project is one click away and the card on
+   screen is named rather than only counted. */
+.project-nav {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 24px;
+}
+
+.project-nav button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  cursor: pointer;
+  opacity: 0.6;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.15s ease;
+}
+
+.project-nav button:hover,
+.project-nav button:focus-visible {
+  opacity: 1;
+}
+
+/* Weight and borders both re-measure the row every time the selection moves,
+   so the current item is marked by thickening a decoration that costs no
+   layout instead. Listed after :hover, which it ties with on specificity, so
+   hovering the current item can't reset the shorthand back to a thin rule. */
+.project-nav button[aria-current="true"] {
+  opacity: 1;
+  text-decoration-thickness: 2px;
 }
 
 /* Two columns of six items, so the six profiles land as 3 rows by 2 columns.

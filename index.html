@@ -239,6 +239,9 @@
           &rsaquo;
         </button>
       </div>
+      <!-- Filled in by the script from the cards above, so a new project only
+           ever has to be added in one place. -->
+      <ul class="project-nav"></ul>
       <h2>where to find me</h2>
       <ul class="profiles">
         <li>
@@ -580,10 +583,29 @@
           "--project-count",
           '"' + (index + 1) + "/" + items.length + '"',
         );
+        // The highlight is driven off aria-current, so the styling and what a
+        // screen reader is told can't drift apart.
+        navButtons.forEach((button, n) => {
+          if (n === index) button.setAttribute("aria-current", "true");
+          else button.removeAttribute("aria-current");
+        });
         if (withSound) playClick();
       }
 
       render();
+
+      const nav = document.querySelector(".project-nav");
+      const navButtons = [...items].map((item, n) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        // The h3's card counter is a ::after, so this is just the title.
+        button.textContent = item.querySelector("h3").textContent;
+        button.addEventListener("click", () => show(n, true));
+        const li = document.createElement("li");
+        li.append(button);
+        nav.append(li);
+        return button;
+      });
 
       document
         .querySelector(".prev")
