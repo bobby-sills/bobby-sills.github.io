@@ -1,0 +1,72 @@
+[
+  {
+    "name": "snake",
+    "file": "Snake.tns",
+    "image": "snake.png",
+    "alt": "Snake mid-game, the snake curling toward an apple",
+    "description": "apples are worth 10 × level, every 4 apples speeds you up to a cap at level 10, and following your own tail is legal. <kbd>m</kbd> toggles solid walls and wrap-around between rounds."
+  },
+  {
+    "name": "flappy bird",
+    "file": "Flappy.tns",
+    "image": "flappy.png",
+    "alt": "Flappy Bird with the bird lined up on a gap between pipes",
+    "description": "one tap per gap. the flap sets the bird's speed rather than adding to it, so panicking out of a dive works, and every gap is generated to be reachable from the one before it."
+  },
+  {
+    "name": "2048",
+    "file": "2048.tns",
+    "image": "2048.png",
+    "alt": "A 2048 board part way through a game",
+    "description": "slide the whole board with the arrows; equal tiles that collide merge. a move that changes nothing costs nothing, and <kbd>u</kbd> undoes — including the move that ended the game."
+  },
+  {
+    "name": "connect four",
+    "file": "Connect4.tns",
+    "image": "connect4.png",
+    "alt": "A Connect Four board with red and yellow counters stacked up",
+    "description": "two players on one calculator, or one against a bot with four difficulties. <kbd>1</kbd>–<kbd>7</kbd> drops straight into a column, and who opens alternates between rounds."
+  },
+  {
+    "name": "chess",
+    "file": "Chess.tns",
+    "image": "chess.png",
+    "alt": "A chess board with a picked-up piece and its legal moves marked",
+    "description": "full legal chess — castling, en passant, promotion, the fifty-move rule, threefold repetition — against a bot with three difficulties, or hot-seat. picking a piece up marks every square it may go to."
+  },
+  {
+    "name": "wordle",
+    "file": "Wordle.tns",
+    "image": "wordle.png",
+    "alt": "A Wordle grid with green and yellow letters from earlier guesses",
+    "description": "six goes at a five-letter word, typed on the calculator's own keyboard and checked against a 13,732-word dictionary baked into the document. <kbd>h</kbd> on the title screen turns on hard mode."
+  },
+  {
+    "name": "klondike",
+    "file": "Klondike.tns",
+    "image": "klondike.png",
+    "alt": "Klondike solitaire with a run picked up and legal piles marked",
+    "description": "draw one or draw three, unlimited or three stock passes, optional autoplay. every pile a card can legally go to is highlighted, which on a 318-pixel screen is the difference between playing and guessing."
+  },
+  {
+    "name": "slide",
+    "file": "Slide.tns",
+    "image": "slide.png",
+    "alt": "A sliding tile puzzle part way to being solved",
+    "description": "the 15-puzzle, at 3×3, 4×4 or 5×5. tiles already in their final place are drawn green, <kbd>h</kbd> plays one move toward a solution, and every puzzle it deals is guaranteed solvable."
+  },
+  {
+    "name": "fruits",
+    "file": "Fruits.tns",
+    "image": "fruits.png",
+    "alt": "A match-three board mid-cascade as cleared fruit fall in",
+    "description": "match three: swap two neighbouring fruit to line up three or more, and whatever falls in may line up again. longer matches leave special fruit behind, and cascades multiply the score up to ×12."
+  },
+  {
+    "name": "arkanoid",
+    "file": "Arkanoid.tns",
+    "image": "arkanoid.png",
+    "alt": "An Arkanoid wall part broken, the ball caught on the paddle",
+    "description": "break the wall. where the ball lands on the paddle sets the angle it leaves at, so the red rims are full deflection. broken bricks drop capsules — laser, catch, slow, three balls at once. eight hand-drawn levels, then generated ones for as long as you last."
+  }
+]
