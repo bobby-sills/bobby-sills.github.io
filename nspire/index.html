@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>ti-nspire games</title>
+  </head>
+  <body>
+    <main>
+      <p class="back"><a href="../">&lsaquo; bobby sills</a></p>
+      <h1>ti-nspire games</h1>
+      <p>
+        ten games for the ti-nspire cx ii, written in ti-nspire lua. they
+        install by drag-and-drop — no ndless, no jailbreak, no root. each
+        <code>.tns</code> is an ordinary ti-nspire document that happens to
+        contain a lua script, so the calculator runs it in its built-in sandbox
+        exactly like a ti-authored one.
+      </p>
+      <p>
+        every game is played with the arrow keys, <kbd>enter</kbd> and
+        <kbd>esc</kbd>; <kbd>esc</kbd> or <kbd>p</kbd> pauses and
+        <kbd>r</kbd> restarts. the touchpad works everywhere too.
+      </p>
+
+      <h2>the games</h2>
+      <ul class="games">
+        <li>
+          <img
+            src="images/snake.png"
+            alt="Snake mid-game, the snake curling toward an apple"
+            width="954"
+            height="636"
+            loading="lazy"
+          />
+          <h3>snake</h3>
+          <p class="game-links">
+            <a
+              href="https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/Snake.tns"
+              >download</a
+            >
+          </p>
+          <p>
+            apples are worth 10 × level, every 4 apples speeds you up to a cap
+            at level 10, and following your own tail is legal. <kbd>m</kbd>
+            toggles solid walls and wrap-around between rounds.
+          </p>
+        </li>
+        <li>
+          <img
+            src="images/flappy.png"
+            alt="Flappy Bird with the bird lined up on a gap between pipes"
+            width="954"
+            height="636"
+            loading="lazy"
+          />
+          <h3>flappy bird</h3>
+          <p class="game-links">
+            <a
+              href="https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/Flappy.tns"
+              >download</a
+            >
+          </p>
+          <p>
+            one tap per gap. the flap sets the bird's speed rather than adding
+            to it, so panicking out of a dive works, and every gap is generated
+            to be reachable from the one before it.
+          </p>
+        </li>
+        <li>
+          <img
+            src="images/2048.png"
+            alt="A 2048 board part way through a game"
+            width="954"
+            height="636"
+            loading="lazy"
+          />
+          <h3>2048</h3>
+          <p class="game-links">
+            <a
+              href="https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/2048.tns"
+              >download</a
+            >
+          </p>
+          <p>
+            slide the whole board with the arrows; equal tiles that collide
+            merge. a move that changes nothing costs nothing, and <kbd>u</kbd>
+            undoes — including the move that ended the game.
+          </p>
+        </li>
+        <li>
+          <img
+            src="images/connect4.png"
+            alt="A Connect Four board with red and yellow counters stacked up"
+            width="954"
+            height="636"
+            loading="lazy"
+          />
+          <h3>connect four</h3>
+          <p class="game-links">
+            <a
+              href="https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/Connect4.tns"
+              >download</a
+            >
+          </p>
+          <p>
+            two players on one calculator, or one against a bot with four
+            difficulties. <kbd>1</kbd>–<kbd>7</kbd> drops straight into a
+            column, and who opens alternates between rounds.
+          </p>
+        </li>
+        <li>
+          <img
+            src="images/chess.png"
+            alt="A chess board with a picked-up piece and its legal moves marked"
+            width="954"
+            height="636"
+            loading="lazy"
+          />
+          <h3>chess</h3>
+          <p class="game-links">
+            <a
+              href="https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/Chess.tns"
+              >download</a
+            >
+          </p>
+          <p>
+            full legal chess — castling, en passant, promotion, the fifty-move
+            rule, threefold repetition — against a bot with three difficulties,
+            or hot-seat. picking a piece up marks every square it may go to.
+          </p>
+        </li>
+        <li>
+          <img
+            src="images/wordle.png"
+            alt="A Wordle grid with green and yellow letters from earlier guesses"
+            width="954"
+            height="636"
+            loading="lazy"
+          />
+          <h3>wordle</h3>
+          <p class="game-links">
+            <a
+              href="https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/Wordle.tns"
+              >download</a
+            >
+          </p>
+          <p>
+            six goes at a five-letter word, typed on the calculator's own
+            keyboard and checked against a 13,732-word dictionary baked into the
+            document. <kbd>h</kbd> on the title screen turns on hard mode.
+          </p>
+        </li>
+        <li>
+          <img
+            src="images/klondike.png"
+            alt="Klondike solitaire with a run picked up and legal piles marked"
+            width="954"
+            height="636"
+            loading="lazy"
+          />
+          <h3>klondike</h3>
+          <p class="game-links">
+            <a
+              href="https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/Klondike.tns"
+              >download</a
+            >
+          </p>
+          <p>
+            draw one or draw three, unlimited or three stock passes, optional
+            autoplay. every pile a card can legally go to is highlighted, which
+            on a 318-pixel screen is the difference between playing and
+            guessing.
+          </p>
+        </li>
+        <li>
+          <img
+            src="images/slide.png"
+            alt="A sliding tile puzzle part way to being solved"
+            width="954"
+            height="636"
+            loading="lazy"
+          />
+          <h3>slide</h3>
+          <p class="game-links">
+            <a
+              href="https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/Slide.tns"
+              >download</a
+            >
+          </p>
+          <p>
+            the 15-puzzle, at 3×3, 4×4 or 5×5. tiles already in their final
+            place are drawn green, <kbd>h</kbd> plays one move toward a
+            solution, and every puzzle it deals is guaranteed solvable.
+          </p>
+        </li>
+        <li>
+          <img
+            src="images/fruits.png"
+            alt="A match-three board mid-cascade as cleared fruit fall in"
+            width="954"
+            height="636"
+            loading="lazy"
+          />
+          <h3>fruits</h3>
+          <p class="game-links">
+            <a
+              href="https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/Fruits.tns"
+              >download</a
+            >
+          </p>
+          <p>
+            match three: swap two neighbouring fruit to line up three or more,
+            and whatever falls in may line up again. longer matches leave
+            special fruit behind, and cascades multiply the score up to ×12.
+          </p>
+        </li>
+        <li>
+          <img
+            src="images/arkanoid.png"
+            alt="An Arkanoid wall part broken, the ball caught on the paddle"
+            width="954"
+            height="636"
+            loading="lazy"
+          />
+          <h3>arkanoid</h3>
+          <p class="game-links">
+            <a
+              href="https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/Arkanoid.tns"
+              >download</a
+            >
+          </p>
+          <p>
+            break the wall. where the ball lands on the paddle sets the angle it
+            leaves at, so the red rims are full deflection. broken bricks drop
+            capsules — laser, catch, slow, three balls at once. eight hand-drawn
+            levels, then generated ones for as long as you last.
+          </p>
+        </li>
+      </ul>
+
+      <h2>installing</h2>
+      <ol class="install">
+        <li>
+          connect the calculator over usb. on a mac the easiest route is
+          <a href="https://nspireconnect.ti.com" target="_blank" rel="noopener"
+            >ti-nspire cx ii connect</a
+          >
+          — free, web-based, nothing to install, but it needs chrome; safari has
+          no webusb and fails in a way that looks like a hardware fault. the
+          student or teacher software works too.
+        </li>
+        <li>
+          drag the <code>.tns</code> files into the calculator's file list. they
+          have to land in <strong>my documents</strong> directly, not a
+          subfolder.
+        </li>
+        <li>
+          on the handheld, open <strong>my documents</strong>, pick one, and
+          press <kbd>enter</kbd>.
+        </li>
+      </ol>
+      <p>
+        needs os 3.0.2 or newer, which every cx ii ships with. there is nothing
+        else to install. the source, the build instructions and a long write-up
+        of how each game works are on
+        <a
+          href="https://github.com/bobby-sills/tinspire-game"
+          target="_blank"
+          rel="noopener"
+          >github</a
+        >.
+      </p>
+
+      <h2>credits</h2>
+      <p class="credits">
+        the playing cards are
+        <a
+          href="https://the-wild-kin.itch.io/kin-pixel-playing-cards"
+          target="_blank"
+          rel="noopener"
+          >kin pixel playing cards</a
+        >
+        by kin. the chess pieces are
+        <a
+          href="https://brosen.itch.io/pixel-chess"
+          target="_blank"
+          rel="noopener"
+          >pixel chess</a
+        >
+        by brosen. wordle's accepted-guess list is scowl, copyright 2000–2011
+        kevin atkinson, filtered to five letters. everything else is original.
+      </p>
+
+      <footer>
+        <p>made with ♥︎ by bobby sills using html, css, and js</p>
+      </footer>
+    </main>
+    <script src="../site.js" defer></script>
+  </body>
+</html>
