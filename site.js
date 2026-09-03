@@ -172,46 +172,66 @@
   });
 
   const snail = document.querySelector(".snail");
-  // Grab the crawl by name: the hop below adds a second animation.
-  const crawl = snail.getAnimations().find((a) => a.animationName === "crawl");
   let hop = null;
 
-  // The keyframes travel (viewport width + 55px); a flat duration made
-  // wider screens crawl faster in absolute terms. Rescale the duration
-  // to the viewport instead, so px/s stays constant everywhere.
+  // A flat duration made wider screens crawl faster in absolute terms, so the
+  // duration is scaled to the distance and px/s stays constant everywhere.
   const SNAIL_SPEED = 10.45; // px per second
   const SNAIL_START = 1 / 3; // viewport fraction it sits at on arrival
-  function crawlDuration() {
-    return ((window.innerWidth + 55) / SNAIL_SPEED) * 1000;
+  const SNAIL_WIDTH = 55; // matches .snail in the stylesheet
+
+  // Off the left edge, across, and off the right.
+  function crawlKeyframes() {
+    return [
+      { transform: `translateX(${-SNAIL_WIDTH}px)` },
+      { transform: `translateX(${window.innerWidth}px)` },
+    ];
   }
 
-  // Seeking by time rather than rewriting the keyframes keeps one source of
-  // truth for the path: at this offset the -55px start has advanced exactly
+  function crawlDuration() {
+    return ((window.innerWidth + SNAIL_WIDTH) / SNAIL_SPEED) * 1000;
+  }
+
+  // Seeking by time rather than reshaping the keyframes keeps one source of
+  // truth for the path: at this offset the start has advanced exactly
   // SNAIL_START of the viewport. Only the first pass is skipped into — the
   // loop runs whole from the left edge after that.
   function crawlStart() {
-    return ((window.innerWidth * SNAIL_START + 55) / SNAIL_SPEED) * 1000;
+    return ((window.innerWidth * SNAIL_START + SNAIL_WIDTH) / SNAIL_SPEED) * 1000;
   }
 
-  if (crawl) {
-    crawl.effect.updateTiming({ duration: crawlDuration() });
-    crawl.currentTime = crawlStart();
-    let resizeTimer;
-    window.addEventListener("resize", () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        const oldDuration = crawl.effect.getTiming().duration;
-        const progress = (crawl.currentTime ?? 0) / oldDuration;
-        const newDuration = crawlDuration();
-        crawl.effect.updateTiming({ duration: newDuration });
-        crawl.currentTime = progress * newDuration;
-      }, 150);
-    });
-  }
+  // The crawl is built here rather than declared in CSS and read back with
+  // getAnimations(). Reading it back was a race: a CSS animation only exists
+  // once style has been resolved, and the snail is injected a moment earlier,
+  // so an engine that defers that work handed back an empty list. Everything
+  // guarded by `if (crawl)` then silently did nothing — the snail kept the
+  // animation's own left-edge start, and a click flipped the art without
+  // turning it round, because only the flip sat outside the guard.
+  const crawl = snail.animate(crawlKeyframes(), {
+    duration: crawlDuration(),
+    iterations: Infinity,
+    easing: "linear",
+  });
+  crawl.currentTime = crawlStart();
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      // The keyframes are in px now, so the far edge has to be rewritten as
+      // well as the duration; progress through the lap is what carries over.
+      const oldDuration = crawl.effect.getTiming().duration;
+      const progress = (crawl.currentTime ?? 0) / oldDuration;
+      const newDuration = crawlDuration();
+      crawl.effect.setKeyframes(crawlKeyframes());
+      crawl.effect.updateTiming({ duration: newDuration });
+      crawl.currentTime = progress * newDuration;
+    }, 150);
+  });
 
   snail.addEventListener("click", () => {
     // Flipping playbackRate reverses in place, so there's no jump in x.
-    if (crawl) crawl.playbackRate *= -1;
+    crawl.playbackRate *= -1;
     snail.classList.toggle("facing-left");
     play(boing);
     if (hop) hop.cancel();

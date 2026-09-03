@@ -148,7 +148,6 @@ main a {
   left: 0;
   width: 55px;
   cursor: pointer;
-  animation: crawl 150s linear infinite;
 }
 
 .snail img {
@@ -161,16 +160,6 @@ main a {
    the crawl — scaling the same element would mirror its x position too. */
 .snail.facing-left img {
   transform: scaleX(-1);
-}
-
-/* The art faces right, so it travels left-to-right. */
-@keyframes crawl {
-  from {
-    transform: translateX(-55px);
-  }
-  to {
-    transform: translateX(100vw);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
