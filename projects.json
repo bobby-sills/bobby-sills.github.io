@@ -1,0 +1,102 @@
+[
+  {
+    "name": "read lao",
+    "image": "read-lao.png",
+    "alt": "Three screens from the read lao app showing letter lessons",
+    "links": [
+      {
+        "text": "ios",
+        "href": "https://apps.apple.com/us/app/read-lao/id6749076081"
+      },
+      {
+        "text": "android",
+        "href": "https://play.google.com/store/apps/details?id=com.readlao.app"
+      },
+      {
+        "text": "github",
+        "href": "https://github.com/bobby-sills/read-lao-app"
+      }
+    ],
+    "description": "a language learning app for the lao language. uses spaced repeition with lessons and exercise to get you reading in lao."
+  },
+  {
+    "name": "nixos config",
+    "image": "nixos-config.jpg",
+    "alt": "Hyprland desktop running the config, with waybar and fastfetch",
+    "links": [
+      {
+        "text": "github",
+        "href": "https://github.com/bobby-sills/nixos-config"
+      }
+    ],
+    "description": "my custom built nixos configuation. it uses a minimal hyprland base styled with gruvbox."
+  },
+  {
+    "name": "danger-write",
+    "image": "danger-write.png",
+    "alt": "The danger-write editor with a countdown and word count",
+    "links": [
+      {
+        "text": "website",
+        "href": "https://bobbysills.dev/danger-write/"
+      },
+      {
+        "text": "cargo",
+        "href": "https://crates.io/crates/danger-write"
+      },
+      {
+        "text": "github",
+        "href": "https://github.com/bobby-sills/danger-write"
+      }
+    ],
+    "description": "a writing app that erases your words if you stop typing. hit the time limit or word count to survive and keep your text."
+  },
+  {
+    "name": "texturez",
+    "image": "texturez.jpg",
+    "alt": "A search page with a paper texture applied over it",
+    "links": [
+      {
+        "text": "firefox",
+        "href": "https://addons.mozilla.org/en-US/firefox/addon/texturez/"
+      },
+      {
+        "text": "chrome",
+        "href": "https://chromewebstore.google.com/detail/texturez/gjlnpfdahclcpddnjpmlobcjmfaigadj"
+      }
+    ],
+    "description": "a browser extension that lays a texture over any website. it has paper, water, sand, and more."
+  },
+  {
+    "name": "black hole simulation",
+    "image": "black-hole.jpg",
+    "alt": "Light rays bending around a black hole in the simulation",
+    "links": [
+      {
+        "text": "website",
+        "href": "https://bobbysills.dev/p5js-black-hole-simulation/"
+      },
+      {
+        "text": "github",
+        "href": "https://github.com/bobby-sills/p5js-black-hole-simulation"
+      }
+    ],
+    "description": "a realistic physics simulation of a black hole built with p5js. you can adjust the variables to understand how the light travels."
+  },
+  {
+    "name": "ti-nspire games",
+    "image": "tinspire-games.png",
+    "alt": "Four of the games: chess, arkanoid, wordle and fruits",
+    "links": [
+      {
+        "text": "website",
+        "href": "nspire/"
+      },
+      {
+        "text": "github",
+        "href": "https://github.com/bobby-sills/tinspire-game"
+      }
+    ],
+    "description": "ten games for the ti-nspire cx ii, written in ti-nspire lua. snake, chess, wordle, klondike and more, all drag-and-drop."
+  }
+]

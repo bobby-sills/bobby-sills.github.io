@@ -148,7 +148,6 @@ main a {
   left: 0;
   width: 55px;
   cursor: pointer;
-  animation: crawl 150s linear infinite;
 }
 
 .snail img {
@@ -161,16 +160,6 @@ main a {
    the crawl — scaling the same element would mirror its x position too. */
 .snail.facing-left img {
   transform: scaleX(-1);
-}
-
-/* The art faces right, so it travels left-to-right. */
-@keyframes crawl {
-  from {
-    transform: translateX(-55px);
-  }
-  to {
-    transform: translateX(100vw);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -257,28 +246,6 @@ h2::after {
 .projects img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
-}
-
-/* One card stands for ten games, so it shows four instead of picking one. The
-   block keeps the same 4:3 as the other five cards — the titles in a row line
-   up off the image, so a card of a different height would step out of line —
-   and dividing it in four leaves each tile 4:3 as well. */
-.projects .montage {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3px;
-  aspect-ratio: 4 / 3;
-  border-radius: 4px;
-  overflow: hidden;
-  background-color: rgba(250, 235, 215, 0.08);
-}
-
-.projects .montage img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: auto;
-  object-fit: cover;
-  border-radius: 0;
 }
 
 .games img {
