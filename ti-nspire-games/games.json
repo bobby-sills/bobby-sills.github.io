@@ -1,0 +1,62 @@
+[
+  {
+    "name": "snake",
+    "file": "Snake.tns",
+    "image": "snake.png",
+    "alt": "Snake mid-game, the snake curling toward an apple"
+  },
+  {
+    "name": "flappy bird",
+    "file": "Flappy.tns",
+    "image": "flappy.png",
+    "alt": "Flappy Bird with the bird lined up on a gap between pipes"
+  },
+  {
+    "name": "2048",
+    "file": "2048.tns",
+    "image": "2048.png",
+    "alt": "A 2048 board part way through a game"
+  },
+  {
+    "name": "connect four",
+    "file": "Connect4.tns",
+    "image": "connect4.png",
+    "alt": "A Connect Four board with red and yellow counters stacked up"
+  },
+  {
+    "name": "chess",
+    "file": "Chess.tns",
+    "image": "chess.png",
+    "alt": "A chess board with a picked-up piece and its legal moves marked"
+  },
+  {
+    "name": "wordle",
+    "file": "Wordle.tns",
+    "image": "wordle.png",
+    "alt": "A Wordle grid with green and yellow letters from earlier guesses"
+  },
+  {
+    "name": "klondike",
+    "file": "Klondike.tns",
+    "image": "klondike.png",
+    "alt": "Klondike solitaire with a run picked up and legal piles marked"
+  },
+  {
+    "name": "slide",
+    "file": "Slide.tns",
+    "image": "slide.png",
+    "alt": "A sliding tile puzzle part way to being solved"
+  },
+  {
+    "name": "fruits",
+    "file": "Fruits.tns",
+    "image": "fruits.png",
+    "alt": "A match-three board mid-cascade as cleared fruit fall in"
+  },
+  {
+    "name": "arkanoid",
+    "file": "Arkanoid.tns",
+    "image": "arkanoid.png",
+    "alt": "An Arkanoid wall part broken, the ball caught on the paddle"
+  }
+]

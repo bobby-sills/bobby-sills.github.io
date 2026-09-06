@@ -218,9 +218,9 @@ h2::after {
   opacity: 0.8;
 }
 
-/* Cards — the projects here and the games on /nspire/. Both size themselves off
-   the panel: as many columns as fit, dropping to one below about 560px, with no
-   breakpoint of their own to keep in step with the panel's. */
+/* Cards — the projects here and the games on /ti-nspire-games/. Both size
+   themselves off the panel: as many columns as fit, dropping to one below about
+   560px, with no breakpoint of their own to keep in step with the panel's. */
 .projects,
 .games {
   list-style: none;
@@ -254,22 +254,42 @@ h2::after {
 }
 
 .projects h3,
-.games h3 {
-  margin: 10px 0 2px;
+.game-head h3 {
   font-size: 1rem;
 }
 
-.projects p,
-.games p {
+.projects h3 {
+  margin: 10px 0 2px;
+}
+
+.projects p {
   margin: 0;
   font-size: 0.9rem;
 }
 
 /* Every card lists its destinations as links rather than wrapping the whole
    card in one, so cards with several links look the same as cards with one. */
-.project-links,
-.game-links {
+.project-links {
   margin: 4px 0 8px;
+}
+
+/* A game card says nothing but its name and its one download, so the link rides
+   the title's baseline instead of taking a line of its own under it, separated
+   by the same middot the project cards put between their links. */
+.game-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 6px;
+  margin: 10px 0 0;
+}
+
+.game-head h3 {
+  margin: 0;
+}
+
+.game-head a {
+  font-size: 0.9rem;
 }
 
 /* Two columns of six items, so the six profiles land as 3 rows by 2 columns.
@@ -299,30 +319,23 @@ h2::after {
   font-size: 0.9rem;
 }
 
-/* Key names and file names are the page's nouns — it names a lot of them — so
-   they get a quiet tint of the panel rather than a boxed-in code style, which
-   at this density would read as tiling. */
-kbd,
-code {
-  font-family: inherit;
-  font-size: 0.95em;
-  padding: 0 4px;
-  border-radius: 3px;
-  background-color: rgba(250, 235, 215, 0.12);
-}
-
 .install {
   margin: 0;
   padding-left: 1.2em;
 }
 
-.install li {
-  margin-bottom: 10px;
+/* Nothing heads the games list any more, so it carries its own separation from
+   the prose above it. */
+.games {
+  margin-top: 32px;
 }
 
-.credits {
-  font-size: 0.9rem;
-  opacity: 0.85;
+.download-all {
+  margin: 16px 0 0;
+}
+
+.install li {
+  margin-bottom: 10px;
 }
 
 /* The snail crawls along the bottom of the viewport, so the footer keeps

@@ -2,9 +2,9 @@
 """Regenerate the card lists on both pages from JSON.
 
 Adding a project: drop its image in images/, add an entry to projects.json,
-run this. Adding a game: drop its screenshot in nspire/images/, add an entry
-to nspire/games.json, run this — it also keeps the game count in the prose on
-both pages in step with the list.
+run this. Adding a game: drop its screenshot in ti-nspire-games/images/,
+add an entry to ti-nspire-games/games.json, run this — it also keeps the game
+count in the prose on both pages in step with the list.
 
 The cards are written into the HTML rather than built in the browser so the
 pages keep working with JavaScript off, and so a search engine can read them —
@@ -30,6 +30,12 @@ RAW = "https://raw.githubusercontent.com/bobby-sills/tinspire-game/main/"
 
 WORDS = """zero one two three four five six seven eight nine ten eleven twelve
 thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty""".split()
+
+# The phrases the spelled-out game count leads, one per page. Reword either
+# sentence and its phrase has to be reworded here too — otherwise the count
+# goes unfound and the run fails rather than quietly drifting.
+COUNT_PHRASES = ("games for the ti-nspire cx ii", "games to play on your calculator",
+                 "games at once")
 
 
 def image_size(path):
@@ -103,7 +109,7 @@ def project_card(project):
 
 
 def game_card(game):
-    image = ROOT / "nspire" / "images" / game["image"]
+    image = ROOT / "ti-nspire-games" / "images" / game["image"]
     if not image.exists():
         raise SystemExit(f"missing screenshot: {image}")
     width, height = image_size(image)
@@ -115,16 +121,14 @@ def game_card(game):
             height="{height}"
             loading="lazy"
           />
-          <h3>{esc(game["name"])}</h3>
-          <p class="game-links">
+          <div class="game-head">
+            <h3>{esc(game["name"])}</h3>
+            ·
             <a
               href="{RAW}{game["file"]}"
               >download</a
             >
-          </p>
-          <p>
-{wrap(game["description"], 12)}
-          </p>
+          </div>
         </li>
 """
 
@@ -138,7 +142,7 @@ def replace_list(text, ul, cards):
 
 def rewrite(projects, games):
     home = ROOT / "index.html"
-    page = ROOT / "nspire" / "index.html"
+    page = ROOT / "ti-nspire-games" / "index.html"
     out = {
         home: replace_list(home.read_text(encoding="utf-8"), "projects",
                            "".join(project_card(p) for p in projects)),
@@ -148,7 +152,8 @@ def rewrite(projects, games):
 
     # The game count is written out in prose on both pages; keep it honest.
     count = WORDS[len(games)] if len(games) < len(WORDS) else str(len(games))
-    pattern = re.compile(r"\b(%s|\d+)(\s+games for the ti-nspire cx ii)" % "|".join(WORDS))
+    pattern = re.compile(r"\b(%s|\d+)(\s+(?:%s))"
+                         % ("|".join(WORDS), "|".join(COUNT_PHRASES)))
     for path in (home, page):
         text, n = pattern.subn(lambda m: count + m.group(2), out[path])
         if not n:
@@ -165,7 +170,8 @@ def main():
     args = ap.parse_args()
 
     projects = json.loads((ROOT / "projects.json").read_text(encoding="utf-8"))
-    games = json.loads((ROOT / "nspire" / "games.json").read_text(encoding="utf-8"))
+    games_json = ROOT / "ti-nspire-games" / "games.json"
+    games = json.loads(games_json.read_text(encoding="utf-8"))
     if not projects or not games:
         raise SystemExit("projects.json and games.json must both have entries")
 
