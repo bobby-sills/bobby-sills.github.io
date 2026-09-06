@@ -177,28 +177,38 @@
   // A flat duration made wider screens crawl faster in absolute terms, so the
   // duration is scaled to the distance and px/s stays constant everywhere.
   const SNAIL_SPEED = 10.45; // px per second
-  const SNAIL_START = 1 / 3; // viewport fraction it sits at on arrival
   const SNAIL_WIDTH = 55; // matches .snail in the stylesheet
 
-  // Off the left edge, across, and off the right.
+  // Never zero, so a sliver of a viewport can't hand the animation a zero
+  // duration and make the seeks below divide by it.
+  function crawlTravel() {
+    return Math.max(window.innerWidth - SNAIL_WIDTH, 1);
+  }
+
+  // One iteration is the whole round trip: left edge, right edge, back. The
+  // turn is also where the art has to flip, so the flip rides in these same
+  // keyframes and can never drift out of step with the movement. scaleX comes
+  // after translateX in the list, so it mirrors the snail about its own centre
+  // instead of mirroring its position; the pair of keyframes at the halfway
+  // offset makes that flip instant rather than a squash through zero width.
   function crawlKeyframes() {
+    const far = crawlTravel();
     return [
-      { transform: `translateX(${-SNAIL_WIDTH}px)` },
-      { transform: `translateX(${window.innerWidth}px)` },
+      { offset: 0, transform: "translateX(0px) scaleX(1)" },
+      { offset: 0.5, transform: `translateX(${far}px) scaleX(1)` },
+      { offset: 0.5, transform: `translateX(${far}px) scaleX(-1)` },
+      { offset: 1, transform: "translateX(0px) scaleX(-1)" },
     ];
   }
 
   function crawlDuration() {
-    return ((window.innerWidth + SNAIL_WIDTH) / SNAIL_SPEED) * 1000;
+    return ((crawlTravel() * 2) / SNAIL_SPEED) * 1000;
   }
 
   // Seeking by time rather than reshaping the keyframes keeps one source of
-  // truth for the path: at this offset the start has advanced exactly
-  // SNAIL_START of the viewport. Only the first pass is skipped into — the
-  // loop runs whole from the left edge after that.
-  function crawlStart() {
-    return ((window.innerWidth * SNAIL_START + SNAIL_WIDTH) / SNAIL_SPEED) * 1000;
-  }
+  // truth for the path: a quarter of the round trip in, the snail stands at
+  // the centre of the viewport heading right.
+  const SNAIL_START = 0.25;
 
   // The crawl is built here rather than declared in CSS and read back with
   // getAnimations(). Reading it back was a race: a CSS animation only exists
@@ -212,7 +222,7 @@
     iterations: Infinity,
     easing: "linear",
   });
-  crawl.currentTime = crawlStart();
+  crawl.currentTime = crawlDuration() * SNAIL_START;
 
   let resizeTimer;
   window.addEventListener("resize", () => {
@@ -230,11 +240,20 @@
   });
 
   snail.addEventListener("click", () => {
-    // Flipping playbackRate reverses in place, so there's no jump in x.
-    crawl.playbackRate *= -1;
-    snail.classList.toggle("facing-left");
+    // Flipping playbackRate would reverse in place, but the iterations only
+    // extend forwards: it would rewind to time zero and strand the snail
+    // there. Reflecting the time within the round trip keeps it playing
+    // forwards, and because the path out and back is symmetric the mirrored
+    // time is the same x travelled the other way — no jump, and the keyframe
+    // flip turns the snail round with it.
+    const cycle = crawl.effect.getTiming().duration;
+    const now = crawl.currentTime ?? 0;
+    const intoLap = now % cycle;
+    crawl.currentTime = now - intoLap + (cycle - intoLap);
     play(boing);
     if (hop) hop.cancel();
+    // The hop rides the `translate` property, which composes with — rather
+    // than overwrites — the crawl's `transform`.
     hop = snail.animate(
       [{ translate: "0 0" }, { translate: "0 -10px" }, { translate: "0 0" }],
       { duration: 450, easing: "ease-out" },

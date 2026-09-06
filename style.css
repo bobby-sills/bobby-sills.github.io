@@ -156,12 +156,6 @@ main a {
   height: auto;
 }
 
-/* The flip lives on the inner image because the wrapper's transform belongs to
-   the crawl — scaling the same element would mirror its x position too. */
-.snail.facing-left img {
-  transform: scaleX(-1);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .snail {
     display: none;
