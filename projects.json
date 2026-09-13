@@ -32,6 +32,22 @@
     "description": "my custom built nixos configuation. it uses a minimal hyprland base styled with gruvbox."
   },
   {
+    "name": "ti-nspire games",
+    "image": "tinspire-games.png",
+    "alt": "Four of the games: chess, arkanoid, wordle and fruits",
+    "links": [
+      {
+        "text": "website",
+        "href": "ti-nspire-games/"
+      },
+      {
+        "text": "github",
+        "href": "https://github.com/bobby-sills/tinspire-game"
+      }
+    ],
+    "description": "ten games for the ti-nspire cx ii, written in ti-nspire lua. snake, chess, wordle, klondike and more, all drag-and-drop."
+  },
+  {
     "name": "danger-write",
     "image": "danger-write.png",
     "alt": "The danger-write editor with a countdown and word count",
@@ -82,21 +98,5 @@
       }
     ],
     "description": "a realistic physics simulation of a black hole built with p5js. you can adjust the variables to understand how the light travels."
-  },
-  {
-    "name": "ti-nspire games",
-    "image": "tinspire-games.png",
-    "alt": "Four of the games: chess, arkanoid, wordle and fruits",
-    "links": [
-      {
-        "text": "website",
-        "href": "ti-nspire-games/"
-      },
-      {
-        "text": "github",
-        "href": "https://github.com/bobby-sills/tinspire-game"
-      }
-    ],
-    "description": "ten games for the ti-nspire cx ii, written in ti-nspire lua. snake, chess, wordle, klondike and more, all drag-and-drop."
   }
 ]
