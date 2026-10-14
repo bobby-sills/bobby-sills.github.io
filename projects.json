@@ -48,6 +48,18 @@
     "description": "ten games for the ti-nspire cx ii, written in ti-nspire lua. snake, chess, wordle, klondike and more, all drag-and-drop."
   },
   {
+    "name": "apple dictionaries to stardict",
+    "image": "apple-dictionaries.jpg",
+    "alt": "The macOS Dictionary app icon",
+    "links": [
+      {
+        "text": "github",
+        "href": "https://github.com/bobby-sills/apple-dictionaries-to-stardict"
+      }
+    ],
+    "description": "converts the dictionaries built into macos into stardict files for e-readers like koreader. all 117 of them, with lookups that match how words are printed in books."
+  },
+  {
     "name": "danger-write",
     "image": "danger-write.png",
     "alt": "The danger-write editor with a countdown and word count",
