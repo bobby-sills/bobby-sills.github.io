@@ -83,11 +83,53 @@
   let ambience = null;
   let ambienceCtx = null;
 
+  // A page's audio dies with the page, so moving between pages would restart
+  // the loop from the top every time. Each page leaves its place in the loop
+  // behind and the next one picks up from there — there's still a beat of
+  // silence while it loads, but the sound carries on rather than restarting.
+  // Per tab, so a fresh tab starts from the beginning.
+  const POS_KEY = "ambience-pos";
+  const FADE_IN = 0.8; // seconds, so the pick-up eases in instead of cutting in
+  let ambiencePos = () => null;
+
+  function savedPos() {
+    try {
+      const pos = parseFloat(sessionStorage.getItem(POS_KEY));
+      if (pos >= 0) return pos;
+    } catch {}
+    return 0;
+  }
+
+  function savePos() {
+    const pos = ambiencePos();
+    if (pos === null) return;
+    try {
+      sessionStorage.setItem(POS_KEY, pos.toFixed(3));
+    } catch {}
+  }
+
+  // pagehide covers following a link; visibilitychange covers a phone
+  // backgrounding the tab, where pagehide may never come.
+  window.addEventListener("pagehide", savePos);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") savePos();
+  });
+
   function playAmbienceElement() {
     if (!ambience) {
       ambience = new Audio(asset("sounds/ambience.mp3"));
       ambience.loop = true;
       ambience.volume = ambienceVolume;
+      const from = savedPos();
+      // Seeking before the length is known is ignored.
+      ambience.addEventListener(
+        "loadedmetadata",
+        () => {
+          ambience.currentTime = from % ambience.duration;
+        },
+        { once: true },
+      );
+      ambiencePos = () => ambience.currentTime;
     }
     ambience.play().catch(() => {});
   }
@@ -109,13 +151,23 @@
       .then((bytes) => ambienceCtx.decodeAudioData(bytes))
       .then((buffer) => {
         const gain = ambienceCtx.createGain();
-        gain.gain.value = ambienceVolume;
+        const now = ambienceCtx.currentTime;
+        // The ramp runs on the context's clock, which stands still while
+        // the context is suspended, so a page that has to wait for a click
+        // before it may play still gets the whole fade once it does.
+        gain.gain.setValueAtTime(0, now);
+        gain.gain.linearRampToValueAtTime(ambienceVolume, now + FADE_IN);
         gain.connect(ambienceCtx.destination);
         const source = ambienceCtx.createBufferSource();
         source.buffer = buffer;
         source.loop = true;
         source.connect(gain);
-        source.start();
+        const from = savedPos() % buffer.duration;
+        source.start(now, from);
+        // The same clock stops while the toggle has the sound paused, so the
+        // position only counts time actually heard.
+        ambiencePos = () =>
+          (from + ambienceCtx.currentTime - now) % buffer.duration;
         // Decoding outlives a quick toggle back off, and a context built
         // without a gesture starts suspended either way.
         if (ambienceOn) ambienceCtx.resume().catch(() => {});

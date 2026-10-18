@@ -87,10 +87,12 @@ body::before {
   }
 }
 
+/* The snail crawls along the bottom of the viewport, so the panel ends with
+   enough clearance that the last of the content never sits under it. */
 main {
   width: 100%;
   max-width: 700px;
-  padding: 24px 20px 40px;
+  padding: 24px 20px 96px;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.65);
   min-height: 100vh;
@@ -196,6 +198,24 @@ main a {
   margin-bottom: 8px;
 }
 
+/* The row of links under the intro, centred like the headings it points to. */
+.contents {
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+/* A heading jumped to lands with room above it, not flush with the top edge. */
+h2[id] {
+  scroll-margin-top: 16px;
+}
+
+/* Jumping to a section glides rather than cuts, unless motion is unwanted. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 h2 {
   display: flex;
   align-items: center;
@@ -267,6 +287,36 @@ h2::after {
   margin: 4px 0 8px;
 }
 
+/* The homepage shows four projects until "show more" is pressed. A noscript
+   style in the page undoes this when there's no script to press it with. */
+.projects:not(.expanded) > li:nth-child(n + 5) {
+  display: none;
+}
+
+.show-more {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 24px auto 0;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.show-more[hidden] {
+  display: none;
+}
+
+/* One chevron, pointing down to show more and flipped up to show less. */
+.show-more[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
 /* A game card says nothing but its name and its one download, so the link rides
    the title's baseline instead of taking a line of its own under it, separated
    by the same middot the project cards put between their links. */
@@ -324,25 +374,214 @@ h2::after {
   margin-top: 32px;
 }
 
+/* Sits right under the title, so the heading's own margin spaces it. */
 .download-all {
-  margin: 16px 0 0;
+  margin: 0;
 }
 
 .install li {
   margin-bottom: 10px;
 }
 
-/* The snail crawls along the bottom of the viewport, so the footer keeps
-   enough clearance that the two never overlap. */
-footer {
-  margin-top: 48px;
-  padding-bottom: 36px;
-  text-align: center;
-  font-size: 0.85rem;
+/* --- the photography subpage --- */
+
+/* A mosaic: tiles span different numbers of columns and rows, so their edges
+   stagger instead of lining up in rows, and each photo is cropped to fill its
+   tile. The full photo is what the viewer shows. Rows are half a column tall,
+   sized off the panel's width, so the tiles keep their shapes at any width.
+   Dense packing back-fills the gaps the big tiles leave, which can move a
+   photo ahead of its place in the list; the viewer steps through them in the
+   order they appear, not the list order. */
+main:has(.photos) {
+  container-type: inline-size;
 }
 
-footer p {
+.photos {
+  --cols: 4;
+  --gap: 8px;
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  grid-auto-rows: calc((100cqi - (var(--cols) - 1) * var(--gap)) / var(--cols) / 2);
+  grid-auto-flow: dense;
+  gap: var(--gap);
+}
+
+/* columns x rows, roughly the aspect ratio in the comment */
+.photos .portrait {
+  grid-row: span 3; /* 2:3 */
+}
+
+.photos .landscape {
+  grid-column: span 2;
+  grid-row: span 3; /* 4:3 */
+}
+
+.photos .small {
+  grid-row: span 2; /* square */
+}
+
+.photos .panorama {
+  grid-column: span 2;
+  grid-row: span 2; /* 2:1 */
+}
+
+.photos .big {
+  grid-column: span 3;
+  grid-row: span 4; /* 3:2 */
+}
+
+.photos .big-portrait {
+  grid-column: span 2;
+  grid-row: span 5; /* 4:5 */
+}
+
+/* Phones get two columns; a big tile runs the full width instead of three. */
+@media (max-width: 500px) {
+  .photos {
+    --cols: 2;
+  }
+
+  .photos .big {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+}
+
+.photos a {
+  display: block;
+  height: 100%;
+}
+
+.photos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: rgba(250, 235, 215, 0.08);
+  transition: opacity 0.15s;
+}
+
+.photos a:hover img {
+  opacity: 0.85;
+}
+
+/* The viewer fills the screen itself rather than relying on ::backdrop, so
+   the arrows can sit in full-height columns either side of the photo. */
+.lightbox {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
   margin: 0;
+  padding: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.92);
+  color: antiquewhite;
+  /* Clicking through quickly reads as a double-click, which would select
+     the caption text and flash it blue. */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.lightbox[open] {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 64px;
+  align-items: center;
+}
+
+.lightbox::backdrop {
+  background: none;
+}
+
+html.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.lightbox button:hover,
+.lightbox button:focus-visible {
+  opacity: 1;
+}
+
+/* Full height, so the whole strip down each side is a target. */
+.lightbox-prev,
+.lightbox-next {
+  height: 100%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  z-index: 1;
+}
+
+.lightbox.single .lightbox-prev,
+.lightbox.single .lightbox-next {
+  visibility: hidden;
+}
+
+.lightbox figure {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 120px);
+  max-height: calc(100dvh - 120px);
+  border-radius: 4px;
+}
+
+.lightbox figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2px 12px;
+  padding: 0 8px;
+  text-align: center;
+}
+
+.lightbox-title {
+  font-style: italic;
+}
+
+.lightbox-camera,
+.lightbox-count {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.lightbox-camera[hidden] {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .lightbox[open] {
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+  }
 }
 
 .profiles li {

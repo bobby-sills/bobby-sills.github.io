@@ -20,7 +20,7 @@
     "description": "a language learning app for the lao language. uses spaced repeition with lessons and exercise to get you reading in lao."
   },
   {
-    "name": "nixos config",
+    "name": "nixos/neovim config",
     "image": "nixos-config.jpg",
     "alt": "Hyprland desktop running the config, with waybar and fastfetch",
     "links": [
@@ -29,7 +29,7 @@
         "href": "https://github.com/bobby-sills/nixos-config"
       }
     ],
-    "description": "my custom built nixos configuation. it uses a minimal hyprland base styled with gruvbox."
+    "description": "my custom built nixos configuration. it uses a minimal hyprland setup with gruvbox theming, and a neovim configuration with lsps, autocomplete, and fuzzy finding."
   },
   {
     "name": "ti-nspire games",
@@ -45,7 +45,7 @@
         "href": "https://github.com/bobby-sills/tinspire-game"
       }
     ],
-    "description": "ten games for the ti-nspire cx ii, written in ti-nspire lua. snake, chess, wordle, klondike and more, all drag-and-drop."
+    "description": "ten games for the ti-nspire cx ii, written in ti-nspire lua. snake, chess, wordle, klondike and more."
   },
   {
     "name": "apple dictionaries to stardict",
@@ -57,7 +57,7 @@
         "href": "https://github.com/bobby-sills/apple-dictionaries-to-stardict"
       }
     ],
-    "description": "converts the dictionaries built into macos into stardict files for e-readers like koreader. all 117 of them, with lookups that match how words are printed in books."
+    "description": "it turns out all the dictionaries on macos are completely unencrypted. this tool converts all of apple's special proprietary dictionary files into the open stardict standard for reading on ereaders, giving you access to world class dictionaries that are already on your computer."
   },
   {
     "name": "danger-write",
