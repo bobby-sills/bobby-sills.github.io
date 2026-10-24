@@ -117,5 +117,26 @@
     "image": "monorail.jpg",
     "alt": "A monorail passing in front of the sun over a seated crowd",
     "size": "portrait"
+  },
+  {
+    "title": "rock garden",
+    "image": "rock-garden.jpg",
+    "alt": "A pine tree, stone lantern and small waterfall in a courtyard garden behind a bamboo fence",
+    "size": "portrait",
+    "camera": "fujifilm x20"
+  },
+  {
+    "title": "yaowarat",
+    "image": "yaowarat.jpg",
+    "alt": "A rainy street at night under tall red and green neon signs in Chinese characters",
+    "size": "portrait",
+    "camera": "fujifilm x20"
+  },
+  {
+    "title": "tiny temple",
+    "image": "tiny-temple.jpg",
+    "alt": "Orange and green tiled temple roofs with gold trim, seen from above like a model",
+    "size": "landscape",
+    "camera": "fujifilm x20"
   }
 ]
