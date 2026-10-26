@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Replaced by the value of `flutter build web --base-href`. -->
+  <base href="/ambulance-taxi/patient/">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Call an ambulance in Laos in a few taps — clickable demo of the patient app.">
+  <meta name="theme-color" content="#D7262B">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Patient">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <title>Ambulance Taxi · Patient</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body { margin: 0; height: 100%; background: #F5F4F1; }
+    /* Shown until Flutter draws its first frame. */
+    #splash { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+    #splash img { width: 88px; height: 88px; animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 50% { transform: scale(0.9); opacity: 0.7; } }
+  </style>
+</head>
+<body>
+  <div id="splash"><img src="icons/Icon-192.png" alt=""></div>
+  <script>
+    window.addEventListener('flutter-first-frame', () => document.getElementById('splash')?.remove());
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
