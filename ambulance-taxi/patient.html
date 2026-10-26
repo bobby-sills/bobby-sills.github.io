@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Clickable demo of the patient app: call an ambulance in Laos in a few taps." />
+    <meta name="theme-color" content="#D7262B" />
+    <link rel="icon" type="image/png" href="patient/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>patient app · ambulance taxi laos</title>
+  </head>
+  <body class="patient">
+    <main>
+      <a class="back" href="./">← ambulance taxi laos</a>
+      <div class="single">
+        <div class="phone-fit">
+          <div class="phone">
+            <iframe src="patient/" title="Patient app demo"></iframe>
+          </div>
+        </div>
+        <div class="about">
+          <h1><img src="patient/icons/Icon-192.png" alt="" />patient app</h1>
+          <p>
+            for anyone who needs an ambulance: one obvious action per screen,
+            big type, hardly any typing. english and lao.
+          </p>
+          <ol>
+            <li>tap “skip for now”, then “request ambulance”.</li>
+            <li>answer what you can and send it.</li>
+            <li>
+              use the dark “demo” buttons at the top to skip the waiting: found,
+              drive, to hospital, arrive.
+            </li>
+          </ol>
+          <p>switch to ລາວ at the top of the first screen to see it in lao.</p>
+          <a class="open secondary" href="crew.html">try the crew app →</a>
+        </div>
+      </div>
+      <footer>
+        a prototype on sample data. it can’t call a real ambulance. ·
+        <a href="/">bobbysills.dev</a>
+      </footer>
+    </main>
+    <script>
+      // Keep the whole phone on screen when the window is narrower than it.
+      const fit = document.querySelector(".phone-fit");
+      const resize = () => {
+        const scale = Math.min(1, (innerWidth - 32) / 430);
+        fit.style.width = 430 * scale + "px";
+        fit.style.height = 932 * scale + "px";
+        fit.firstElementChild.style.transform = scale < 1 ? `scale(${scale})` : "";
+      };
+      addEventListener("resize", resize);
+      resize();
+    </script>
+  </body>
+</html>

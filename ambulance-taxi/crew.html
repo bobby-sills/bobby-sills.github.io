@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Clickable demo of the ambulance crew app: take calls, navigate and hand over at the ER." />
+    <meta name="theme-color" content="#157A47" />
+    <link rel="icon" type="image/png" href="crew/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>crew app · ambulance taxi laos</title>
+  </head>
+  <body class="crew">
+    <main>
+      <a class="back" href="./">← ambulance taxi laos</a>
+      <div class="single">
+        <div class="phone-fit">
+          <div class="phone">
+            <iframe src="crew/" title="Crew app demo"></iframe>
+          </div>
+        </div>
+        <div class="about">
+          <h1><img src="crew/icons/Icon-192.png" alt="" />crew app</h1>
+          <p>
+            for the ambulance driver or paramedic: one job at a time, from the
+            call to handover at the hospital.
+          </p>
+          <ol>
+            <li>the app starts on duty. a call rings after a few seconds.</li>
+            <li>accept it and tap “arrived at scene”.</li>
+            <li>
+              set each patient’s condition, pick a hospital, then load up and
+              hand over.
+            </li>
+          </ol>
+          <a class="open secondary" href="patient.html">try the patient app →</a>
+        </div>
+      </div>
+      <footer>
+        a prototype on sample data. it can’t dispatch a real ambulance. ·
+        <a href="/">bobbysills.dev</a>
+      </footer>
+    </main>
+    <script>
+      // Keep the whole phone on screen when the window is narrower than it.
+      const fit = document.querySelector(".phone-fit");
+      const resize = () => {
+        const scale = Math.min(1, (innerWidth - 32) / 430);
+        fit.style.width = 430 * scale + "px";
+        fit.style.height = 932 * scale + "px";
+        fit.firstElementChild.style.transform = scale < 1 ? `scale(${scale})` : "";
+      };
+      addEventListener("resize", resize);
+      resize();
+    </script>
+  </body>
+</html>
