@@ -1,0 +1,277 @@
+/* The apps ship Manrope already; reuse their copies. */
+@font-face {
+  font-family: "Manrope";
+  src: url("patient/assets/packages/core/assets/fonts/Manrope-500.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("patient/assets/packages/core/assets/fonts/Manrope-700.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("patient/assets/packages/core/assets/fonts/Manrope-800.ttf") format("truetype");
+  font-weight: 800;
+}
+
+:root {
+  color-scheme: light;
+  --ink: #15181c;
+  --muted: #5b6168;
+  --body: #3f454c;
+  --bg: #f5f4f1;
+  --surface: #fbfaf8;
+  --border: #e3e1dc;
+  --red: #d7262b;
+  --green: #157a47;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 16px 56px;
+}
+
+header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+header > img {
+  width: 64px;
+  height: 64px;
+  flex: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+header p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+a {
+  color: var(--ink);
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--ink);
+}
+
+.open {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.open.secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+.patient .open:not(.secondary) {
+  background: var(--red);
+}
+
+.crew .open:not(.secondary) {
+  background: var(--green);
+}
+
+.open:focus-visible,
+.card:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* Chooser */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.card:hover {
+  box-shadow: 0 16px 40px rgba(21, 24, 28, 0.1);
+  transform: translateY(-2px);
+}
+
+.card > img {
+  width: 150px;
+  height: auto;
+  aspect-ratio: 390 / 844;
+  flex: none;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.card div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.card p {
+  margin: 0;
+  color: var(--body);
+}
+
+/* One app in a phone frame */
+
+.single {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.phone-fit {
+  width: 430px;
+  height: 932px;
+  flex: none;
+}
+
+.phone {
+  /* A big phone screen (430 × 932, like a Pro Max). The page scrolls on
+     shorter windows; narrower ones scale the whole phone down (the script
+     on each page) so the app always lays out at full phone size. */
+  width: 430px;
+  height: 932px;
+  transform-origin: top left;
+  border: 1px solid var(--border);
+  border-radius: 44px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(21, 24, 28, 0.14);
+}
+
+.phone iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.about h1 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.about h1 img {
+  width: 44px;
+  height: 44px;
+}
+
+.about p,
+.about ol {
+  margin: 0;
+  color: var(--body);
+}
+
+.about ol {
+  padding-left: 22px;
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 15px;
+}
+
+@media (max-width: 860px) {
+  main {
+    padding-top: 28px;
+  }
+  header {
+    align-items: flex-start;
+    gap: 14px;
+  }
+  header > img {
+    width: 44px;
+    height: 44px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .card {
+    padding: 16px;
+    gap: 16px;
+  }
+  .card > img {
+    width: 96px;
+  }
+  .single {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .about {
+    order: -1;
+    padding-top: 0;
+  }
+}
