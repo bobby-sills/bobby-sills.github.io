@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    // This build is meant to be seen inside the phone frame on crew.html;
+    // opened on its own, go there instead of showing it full screen.
+    if (window.top === window.self) location.replace(new URL("../crew.html", location.href));
+  </script>
   <!-- Replaced by the value of `flutter build web --base-href`. -->
   <base href="/ambulance-taxi/crew/">
 
