@@ -96,6 +96,22 @@
     "description": "a browser extension that lays a texture over any website. it has paper, water, sand, and more."
   },
   {
+    "name": "still",
+    "image": "still.jpg",
+    "alt": "The still home screen, with session lengths and a begin button",
+    "links": [
+      {
+        "text": "website",
+        "href": "https://bobbysills.dev/sit-still/"
+      },
+      {
+        "text": "github",
+        "href": "https://github.com/bobby-sills/sit-still"
+      }
+    ],
+    "description": "a meditation timer that uses your camera to notice when your attention drifts. if your eyes open or your posture slumps, a soft tone and a quiet spoken line bring you back. everything runs on your device and no video ever leaves it."
+  },
+  {
     "name": "black hole simulation",
     "image": "black-hole.jpg",
     "alt": "Light rays bending around a black hole in the simulation",
