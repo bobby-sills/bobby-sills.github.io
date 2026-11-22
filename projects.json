@@ -60,6 +60,18 @@
     "description": "it turns out all the dictionaries on macos are completely unencrypted. this tool converts all of apple's special proprietary dictionary files into the open stardict standard for reading on ereaders, giving you access to world class dictionaries that are already on your computer."
   },
   {
+    "name": "garmin mcp for claude",
+    "image": "garmin-mcp.jpg",
+    "alt": "The Claude and Garmin app icons side by side",
+    "links": [
+      {
+        "text": "garmin-mcp",
+        "href": "https://github.com/rohankmr414/garmin-mcp"
+      }
+    ],
+    "description": "a custom connector that hooks claude up to garmin connect, running on my own cloudflare worker. claude can read my runs, sleep and training data, and build workouts and push them straight to my watch. built on rohankmr414's garmin-mcp."
+  },
+  {
     "name": "danger-write",
     "image": "danger-write.png",
     "alt": "The danger-write editor with a countdown and word count",
