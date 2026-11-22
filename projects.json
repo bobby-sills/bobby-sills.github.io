@@ -65,15 +65,15 @@
     "alt": "The Claude app icon linked to the Garmin, ManageBac and StayFree icons",
     "links": [
       {
-        "text": "managebac",
+        "text": "managebac-mcp",
         "href": "https://github.com/bobby-sills/managebac-mcp"
       },
       {
-        "text": "stayfree",
+        "text": "stayfree-mcp",
         "href": "https://github.com/bobby-sills/stayfree-mcp"
       },
       {
-        "text": "garmin",
+        "text": "garmin-mcp",
         "href": "https://github.com/rohankmr414/garmin-mcp"
       }
     ],
